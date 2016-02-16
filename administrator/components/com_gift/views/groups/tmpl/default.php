@@ -1,11 +1,4 @@
 <?php
-/**
- * @package     Joomla.Administrator
- * @subpackage  com_contact
- *
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
 
 defined('_JEXEC') or die;
 
@@ -68,15 +61,6 @@ $assoc      = JLanguageAssociations::isEnabled();
 						<th width="20%" class="nowrap hidden-phone">
 							<?php echo JHtml::_('searchtools.sort', 'name', 'a.name', $listDirn, $listOrder); ?>
 						</th>
-						<th width="20%" class="nowrap hidden-phone">
-							<?php echo JText::_('Web Site'); ?>
-						</th>
-						<th width="20%" class="nowrap hidden-phone">
-							<?php echo JText::_('Hot Line'); ?>
-						</th>
-						<th width="20%" class="nowrap hidden-phone">
-							<?php echo JText::_('Currency'); ?>
-						</th>
 						<th width="1%" class="nowrap hidden-phone">
 							<?php echo JText::_('Published'); ?>
 						</th>
@@ -114,15 +98,6 @@ $assoc      = JLanguageAssociations::isEnabled();
 							<a href="<?php  echo JRoute::_('index.php?option='.JRequest::getVar('option').'&task='.$this->edit_view.'.edit&id='.(int) $item->id); ?>">
 							<?php echo $item->name; ?>
 							</a>
-						</td>
-						<td class="hidden-phone">
-							<?php echo $item->website; ?>
-						</td>
-						<td class="hidden-phone">
-							<?php echo $item->hot_line; ?>
-						</td>
-						<td class="hidden-phone">
-							<?php echo $item->currency; ?>
 						</td>
 						<td class="hidden-phone">
 							<?php echo JHtml::_('jgrid.published', $item->published, $i, $this->view.'.', TRUE); ?>

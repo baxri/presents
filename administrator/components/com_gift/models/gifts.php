@@ -1,11 +1,4 @@
 <?php
-/**
- * @package     Joomla.Administrator
- * @subpackage  com_contact
- *
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
 
 defined('_JEXEC') or die;
 
@@ -30,17 +23,23 @@ class GiftModelGifts extends JModelList
 
     protected function populateState($ordering = null, $direction = null)
     {
-        parent::populateState('a.name', 'asc');
+        parent::populateState('a.id', 'desc');
     }
 
     protected function getListQuery()
     {
-        $status = $this->getState('filter.status');
+        $group = (int)$this->getState('filter.group');
+        $status = (int)$this->getState('filter.status');
         $db = $this->getDbo();
         $query = $db->getQuery(true);
 
-        $query->select('*');
+        $query->select('a.*, g.name as category');
         $query->from($db->quoteName('#__gifcards','a'));
+        $query->leftJoin( '#__groups as g on g.id = a.group_id' );
+
+        if( !empty( $group ) ){
+            $query->where( 'group_id = '.$group );
+        }
 
         $query->order($db->escape($this->getState('list.ordering', 'a.id')) . ' ' . $db->escape($this->getState('list.direction', 'ASC')));
         return $query;

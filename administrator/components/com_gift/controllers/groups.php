@@ -18,6 +18,7 @@ class GiftControllerGroups extends JControllerAdmin
         $option = JRequest::getVar('option');
         $clearName = substr( $option, 4 );
         $prefix = ucfirst( $clearName ).'Model';
+        $name = str_replace( 's', '', str_replace( ucfirst($clearName).'Controller', '', get_class() ) );
         return parent::getModel($name, $prefix, $config);
     }
 

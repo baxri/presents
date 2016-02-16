@@ -30,7 +30,7 @@ class GiftModelGroups extends JModelList
 
     protected function populateState($ordering = null, $direction = null)
     {
-        parent::populateState('a.name', 'asc');
+        parent::populateState('a.id', 'desc');
     }
 
     protected function getListQuery()
@@ -40,7 +40,8 @@ class GiftModelGroups extends JModelList
         $query = $db->getQuery(true);
 
         $query->select('*');
-        $query->from($db->quoteName('#__gifcards','a'));
+        $query->from($db->quoteName('#__groups','a'));
+
 
         $query->order($db->escape($this->getState('list.ordering', 'a.id')) . ' ' . $db->escape($this->getState('list.direction', 'ASC')));
         return $query;

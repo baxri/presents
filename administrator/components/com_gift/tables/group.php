@@ -6,7 +6,7 @@ class GiftTableGroup extends JTable
 {
     function __construct(&$db,  $field = 'id')
     {
-        parent::__construct('#__gifcards', $field, $db);
+        parent::__construct('#__groups', $field, $db);
     }
 }
 ?>

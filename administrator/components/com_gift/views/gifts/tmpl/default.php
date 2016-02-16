@@ -77,6 +77,9 @@ $assoc      = JLanguageAssociations::isEnabled();
 						<th width="20%" class="nowrap hidden-phone">
 							<?php echo JText::_('Currency'); ?>
 						</th>
+						<th width="20%" class="nowrap hidden-phone">
+							<?php echo JText::_('Category'); ?>
+						</th>
 						<th width="1%" class="nowrap hidden-phone">
 							<?php echo JText::_('Published'); ?>
 						</th>
@@ -123,6 +126,9 @@ $assoc      = JLanguageAssociations::isEnabled();
 						</td>
 						<td class="hidden-phone">
 							<?php echo $item->currency; ?>
+						</td>
+						<td class="hidden-phone">
+							<?php echo $item->category; ?>
 						</td>
 						<td class="hidden-phone">
 							<?php echo JHtml::_('jgrid.published', $item->published, $i, $this->view.'.', TRUE); ?>

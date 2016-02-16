@@ -15,7 +15,7 @@ class ComponentHelper extends JHelperContent
 		);
 
 		JHtmlSidebar::addEntry(
-			JText::_('Groups'),
+			JText::_('Categories'),
 			'index.php?option='.$option.'&view=groups',
 			$vName == 'groups'
 		);

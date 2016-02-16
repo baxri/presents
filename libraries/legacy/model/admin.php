@@ -989,6 +989,8 @@ abstract class JModelAdmin extends JModelForm
 		$table = $this->getTable();
 		$pks = (array) $pks;
 
+
+
 		// Include the plugins for the change of state event.
 		JPluginHelper::importPlugin($this->events_map['change_state']);
 
@@ -996,6 +998,8 @@ abstract class JModelAdmin extends JModelForm
 		foreach ($pks as $i => $pk)
 		{
 			$table->reset();
+
+
 
 			if ($table->load($pk))
 			{

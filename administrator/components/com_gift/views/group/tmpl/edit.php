@@ -45,18 +45,6 @@ JFactory::getDocument()->addScriptDeclaration("
 					<?php endforeach; ?>
 				</fieldset>
 			</td>
-			<td valign="top">
-				<fieldset>
-					<legend><?php echo  ucfirst( $this->view ).' '.JText::_('Description') ;?></legend>
-					<?php foreach($this->form->getFieldset('right_fields') as $field): ?>
-						<div class="control-group">
-							<div class="controls">
-								<?php echo $field->input; ?>
-							</div>
-						</div>
-					<?php endforeach; ?>
-				</fieldset>
-			</td>
 		</tr>
 	</table>
 
