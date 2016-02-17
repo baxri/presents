@@ -80,7 +80,7 @@ if ($saveOrder)
 					$ordering  = ($listOrder == 'ordering');
 
 					?>
-					<tr class="row<?php echo $i % 2; ?>" sortable-group-id="<?php echo $item->id?>">
+					<tr class="row<?php echo $i % 2; ?>" sortable-group-id="<?php echo $item->group_id?>">
 						<td class="order nowrap center hidden-phone">
 							<?php
 							$iconClass = '';

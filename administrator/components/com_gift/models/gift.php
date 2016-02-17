@@ -49,20 +49,10 @@ class GiftModelGift extends JModelAdmin
 		if (empty($data))
 		{
 			$data = $this->getItem();
-
-			if ($this->getState('contact.id') == 0)
-			{
-				$data->set('catid', $app->input->get('catid', $app->getUserState($option.'.'.strtolower($type).'.filter.category_id'), 'int'));
-			}
 		}
 
 		$this->preprocessData($option.'.'.strtolower($type).'', $data);
 		return $data;
-	}
-
-	protected function canEditState($record)
-	{
-		return true;
 	}
 
 	protected function getReorderConditions($table)

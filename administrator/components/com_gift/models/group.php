@@ -61,4 +61,23 @@ class GiftModelGroup extends JModelAdmin
 		return $data;
 	}
 
+	protected function prepareTable($table)
+	{
+		if (empty($table->id))
+		{
+			if (empty($table->ordering))
+			{
+				$db = $this->getDbo();
+				$query = $db->getQuery(true)
+					->select('MAX(ordering)')
+					->from( $table->getTableName() );
+
+				$db->setQuery($query);
+				$max = $db->loadResult();
+
+				$table->ordering = $max + 1;
+			}
+		}
+	}
+
 }

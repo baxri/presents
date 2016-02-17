@@ -15,12 +15,10 @@ $listOrder = $this->escape($this->state->get('list.ordering'));
 $listDirn  = $this->escape($this->state->get('list.direction'));
 $saveOrder = $listOrder == 'a.ordering';
 
-
-
 if ($saveOrder)
 {
 	$saveOrderingUrl = 'index.php?option='.$this->option.'&task='.$this->view.'.saveOrderAjax&tmpl=component';
-	JHtml::_('sortablelist.sortable', 'contactList', 'adminForm', strtolower($listDirn), $saveOrderingUrl);
+	JHtml::_('sortablelist.sortable', 'itemList', 'adminForm', strtolower($listDirn), $saveOrderingUrl);
 }
 
 $assoc      = JLanguageAssociations::isEnabled();
@@ -43,7 +41,7 @@ $assoc      = JLanguageAssociations::isEnabled();
 				<?php echo JText::_('JGLOBAL_NO_MATCHING_RESULTS'); ?>
 			</div>
 		<?php else : ?>
-			<table class="table table-striped" id="contactList">
+			<table class="table table-striped" id="itemList">
 				<thead>
 					<tr>
 						<th width="1%" class="nowrap center hidden-phone">
@@ -67,7 +65,7 @@ $assoc      = JLanguageAssociations::isEnabled();
 				<?php
 				$n = count($this->items);
 				foreach ($this->items as $i => $item) :?>
-					<tr class="row<?php echo $i % 2; ?>" sortable-group-id="<?php echo $item->id?>">
+					<tr class="row<?php echo $i % 2; ?>" sortable-group-id="1">
 						<td class="order nowrap center hidden-phone">
 							<?php
 							$iconClass = '';
