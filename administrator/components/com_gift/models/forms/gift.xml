@@ -19,6 +19,15 @@
 			   required="true"
 		/>
 
+		<field name="published" type="radio"
+			   class="btn-group btn-group-yesno"
+			   label="Published"
+			   default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
 		<field name="group_id"
 			   type="groups"
 			   label="Category"
