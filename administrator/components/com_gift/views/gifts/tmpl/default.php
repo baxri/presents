@@ -22,23 +22,7 @@ if ($saveOrder)
 
 ?>
 
-	<script type="text/javascript">
-		Joomla.orderTable = function()
-		{
-			table = document.getElementById("ItemList");
-			direction = document.getElementById("directionTable");
-			order = table.options[table.selectedIndex].value;
-			if (order != '<?php echo $listOrder; ?>')
-			{
-				dirn = 'asc';
-			}
-			else
-			{
-				dirn = direction.options[direction.selectedIndex].value;
-			}
-			Joomla.tableOrdering(order, dirn, '');
-		}
-	</script>
+	
 
 <form action="<?php echo JRoute::_('index.php?option='.$this->option.'&view='.$this->view); ?>" method="post" name="adminForm" id="adminForm">
 <?php if (!empty($this->sidebar)) : ?>
