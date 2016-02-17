@@ -1,11 +1,14 @@
-/**
- * Created by giorgi on 2/17/2016.
- */
-
 
 jQuery(document).ready(function(){
 
     jQuery(".categories-button").bind('click', function(){
+
+        if( jQuery(".categories").hasClass('active') ){
+            jQuery(".categories").removeClass('active');
+        }else{
+            jQuery(".categories").addClass('active');
+        }
+
         jQuery(".categories-block").toggle();
     });
 

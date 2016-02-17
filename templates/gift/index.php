@@ -16,63 +16,70 @@
 <body>
     <!-- background for expandable header -->
     <div id="headerbg" class="header">
-        <a href="http://www.cinemax.ge:80/"class="logo">
-            <img src="http://www.cinemax.ge:80/templates/cinemax/images/cinemax.svg" alt="Siurpriz.ge">
+        <a href="index.php"class="logo">
+            <img src="images/logo.png" alt="Siurpriz.ge" height="80">
         </a>
 
-        <div class="categories">
+        <div class="categories ">
             <button class="categories-button"><span class="">კატეგორიები</span></button>
         </div>
-
-        <div class="categories-block" style="display: none;">
-            <ul>
-                <li>
-                    <a href="javascript:void(0)">
-                        <img src="http://www.cinemax.ge:80/templates/cinemax/images/large_cinema_002.svg" alt="" width="100" height="100">
-                        <div class="clear"></div>
-                        <span>რუსთაველი</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <img src="http://www.cinemax.ge:80/templates/cinemax/images/large_cinema_002.svg" alt="" width="100" height="100">
-                        <div class="clear"></div>
-                        <span>რუსთაველი</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <img src="http://www.cinemax.ge:80/templates/cinemax/images/large_cinema_002.svg" alt="" width="100" height="100">
-                        <div class="clear"></div>
-                        <span>რუსთაველი</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <img src="http://www.cinemax.ge:80/templates/cinemax/images/large_cinema_002.svg" alt="" width="100" height="100">
-                        <div class="clear"></div>
-                        <span>რუსთაველი</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <img src="http://www.cinemax.ge:80/templates/cinemax/images/large_cinema_002.svg" alt="" width="100" height="100">
-                        <div class="clear"></div>
-                        <span>რუსთაველი</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <img src="http://www.cinemax.ge:80/templates/cinemax/images/large_cinema_002.svg" alt="" width="100" height="100">
-                        <div class="clear"></div>
-                        <span>რუსთაველი</span>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-
     </div>
+
+
+
+    <div class="categories-block" style="display: none;">
+        <ul>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/foods.png" alt="" width="100" height="100">
+                    <div class="clear"></div>
+                    <span>კვება</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/technic.png" alt="" width="100" height="100">
+                    <div class="clear"></div>
+                    <span>ტექნიკა</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/cloth.png" alt="" width="100" height="100">
+                    <div class="clear"></div>
+                    <span>ტანსაცმელი</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/beauty.png" alt="" width="100" height="100">
+                    <div class="clear"></div>
+                    <span>პარფიუმერია</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/foods.png" alt="" width="100" height="100">
+                    <div class="clear"></div>
+                    <span>კვება</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="images/cloth.png" alt="" width="100" height="100">
+                    <div class="clear"></div>
+                    <span>ტანსაცმელი</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+
+
+
 
     <!-- CENTER CONTENT -->
     <div id="container">
