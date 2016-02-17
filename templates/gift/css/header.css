@@ -49,7 +49,7 @@ If you prefer you could right or left align it.*/
     text-align: center;
     outline: none;
     border: 0px;
-    #background-color: transparent;
+    background-color: transparent;
 }
 
 .header .categories button:hover{
