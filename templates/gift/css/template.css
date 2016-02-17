@@ -8,6 +8,9 @@ h1, p, body, html {
     padding:0;
 }
 
+a{
+
+}
 
 body {
     background: #F2F2F2;
@@ -16,19 +19,108 @@ body {
 }
 
 
-
 /*Center Content*/
-#container {
+.container {
     position:relative;
     margin:0 auto;
     width:1400px;
+    top: 150px;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
+
+.giftItem{
+    position: relative;
+    float: left;
+    width: 230px;
+    height: auto;
+    margin: 0 5px 30px;
+    background-color: #ffffff;
+    -webkit-transition: all 0.2s ease-in-out;
+    -khtml-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.giftPopup{
+    opacity: 0;
+    position: absolute;
+    z-index: 5000;
+
+}
+
+.giftItem .poster img {
+    display: block;
+    width: 230px;
+    height: 340px;
+}
+
+.giftItem h2 {
+    height: 50px;
+    line-height: 18px;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.giftItem h2 a{
+    text-decoration: none;
+    color: #999999;
+}
+
+.giftItem .poster {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 230px;
+    height: 340px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Full width footer*/
 #footer {
-    background:#cccc66;
+    background: #191919;
     padding:10px;
     text-align:center;
+    color: #cccccc;
 }
 
 /*If you are going to use floats then you will NEED to clear the

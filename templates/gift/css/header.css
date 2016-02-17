@@ -74,16 +74,16 @@ If you prefer you could right or left align it.*/
     position: absolute;
     right: 0;
     top: 0;
-    width: 37px;
+    width: 25px;
     height: 22px;
-    background-image: url("http://localhost/giftcards/images/arrow_down.png");
-    background-position: 6px 3px;
+    background-image: url("http://localhost/giftcards/images/sprite.png_");
+    background-position: -3px 3px;
     background-repeat: no-repeat;
-    background-size: 26px;
+
 }
 
 .header .categories.active button span:after {
-    background-image: url("http://localhost/giftcards/images/arrow_up.png");
+    background-position: -30px 3px;
 }
 
 
@@ -98,7 +98,7 @@ If you prefer you could right or left align it.*/
     min-height: 260px;
     background-color: rgba(255, 255, 255, 0.95);
     text-align: center;
-    border-bottom: 1px solid #DC0000;
+    border-bottom: 1px solid #cccccc;
 }
 
 ul {
@@ -116,13 +116,18 @@ ul {
     display: inline-block;
     height: 150px;
     padding: 15px 40px;
-    border-right: 1px solid #cccccc;
+    border: 1px solid #cccccc;
+    #border-right: 1px solid #cccccc;
+    #border: 1px solid red;
+    margin-left: -5px;
+    margin-top: -1px;
+
     -webkit-transition: all 0.2s ease-in-out;
     -khtml-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s
+    transition: all 0.2s ease-in-out;
 }
 
 .categories-block ul li:hover{

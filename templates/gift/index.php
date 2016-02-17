@@ -17,7 +17,7 @@
     <!-- background for expandable header -->
     <div id="headerbg" class="header">
         <a href="index.php"class="logo">
-            <img src="images/logo.png" alt="Siurpriz.ge" height="80">
+            <img src="images/logo.png_" alt="" height="80">
         </a>
 
         <div class="categories ">
@@ -82,12 +82,29 @@
 
 
     <!-- CENTER CONTENT -->
-    <div id="container">
+    <div id="container" class="container">
+
+
+
+        <div class="giftItem">
+            <div class="poster startTrailer" data-trailer="https://www.youtube.com/watch?v=vUFZOO9zO0Q">
+
+                <div class="giftPopup">
+                    ტრეილერი
+                </div>
+                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
+            </div>
+            <h2><a href="http://www.cinemax.ge:80/movie/56ab1c70956167e76fa7f6f6/" class="ng-binding">MOVIE</a></h2>
+        </div>
+
+
 
 
     </div>
+
     <!--CLEAR FOOTER TO PREVENT BUNCHING-->
     <div class="clear"></div>
+
     <div id="footer"><p>HEY HERE IS MY FULL WIDTH FOOTER</p></div>
 </body>
 </html>
