@@ -13,6 +13,12 @@ class ComponentHelper extends JHelperContent
 			'index.php?option='.$option.'&view=gifts',
 			$vName == 'gifts'
 		);
+
+		JHtmlSidebar::addEntry(
+			JText::_('Categories'),
+			'index.php?option='.$option.'&view=groups',
+			$vName == 'groups'
+		);
 	}
 
 }

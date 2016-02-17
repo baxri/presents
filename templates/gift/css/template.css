@@ -1,0 +1,36 @@
+/*Simple CSS reset for items we will use JUST for this example.
+Please use full reset when designing!
+Reseting the margin and padding is important for the body tag so the
+header and footer will hug the whole screen.*/
+
+h1, p, body, html {
+    margin:0;
+    padding:0;
+}
+
+
+body {
+    background: #F2F2F2;
+    font:12px verdana, sans-serif;
+    color:#000;
+}
+
+
+
+/*Center Content*/
+#container {
+    position:relative;
+    margin:0 auto;
+    width:1400px;
+}
+
+/*Full width footer*/
+#footer {
+    background:#cccc66;
+    padding:10px;
+    text-align:center;
+}
+
+/*If you are going to use floats then you will NEED to clear the
+footer so it doesn't bunch the content up*/
+.clear {clear:both;}

@@ -1,4 +1,5 @@
 <?php
+
 defined('_JEXEC') or die;
 
 use Joomla\Registry\Registry;
@@ -6,7 +7,7 @@ use Joomla\Utilities\ArrayHelper;
 
 JLoader::register('ContactHelper', JPATH_ADMINISTRATOR . '/components/com_contact/helpers/contact.php');
 
-class GiftModelGift extends JModelAdmin
+class GiftModelGroup extends JModelAdmin
 {
 	public function getTable($type = '', $prefix = '', $config = array())
 	{
@@ -49,17 +50,15 @@ class GiftModelGift extends JModelAdmin
 		if (empty($data))
 		{
 			$data = $this->getItem();
+
+			if ($this->getState('contact.id') == 0)
+			{
+				$data->set('catid', $app->input->get('catid', $app->getUserState($option.'.'.strtolower($type).'.filter.category_id'), 'int'));
+			}
 		}
 
 		$this->preprocessData($option.'.'.strtolower($type).'', $data);
 		return $data;
-	}
-
-	protected function getReorderConditions($table)
-	{
-		$condition = array();
-		$condition[] = 'group_id = ' . (int) $table->group_id;
-		return $condition;
 	}
 
 	protected function prepareTable($table)

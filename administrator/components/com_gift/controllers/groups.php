@@ -5,7 +5,7 @@ defined('_JEXEC') or die;
 use Joomla\Utilities\ArrayHelper;
 
 
-class GiftControllerGifts extends JControllerAdmin
+class GiftControllerGroups extends JControllerAdmin
 {
     public function __construct($config = array())
     {

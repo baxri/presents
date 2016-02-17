@@ -5,21 +5,11 @@
 			name="search"
 			type="text"
 			label="COM_CONTACT_FILTER_SEARCH_DESC"
+			description="Search CinemaX"
 			hint="JSEARCH_FILTER"
 		/>
-
-		<field
-				name="group"
-				type="groups"
-				default=""
-				label="COM_CONTACT_LIST_LIMIT"
-				onchange="this.form.submit();"
-		/>
-
 	</fields>
 	<fields name="list">
-
-
 
 		<field
 				name="limit"
@@ -27,6 +17,7 @@
 				class="input-mini"
 				default="25"
 				label="COM_CONTACT_LIST_LIMIT"
+				description="COM_CONTACT_LIST_LIMIT_DESC"
 				onchange="this.form.submit();"
 		/>
 	</fields>
