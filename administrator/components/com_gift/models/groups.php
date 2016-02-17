@@ -1,11 +1,4 @@
 <?php
-/**
- * @package     Joomla.Administrator
- * @subpackage  com_contact
- *
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
 
 defined('_JEXEC') or die;
 
@@ -35,13 +28,11 @@ class GiftModelGroups extends JModelList
 
     protected function getListQuery()
     {
-        $status = $this->getState('filter.status');
         $db = $this->getDbo();
         $query = $db->getQuery(true);
 
         $query->select('*');
         $query->from($db->quoteName('#__groups','a'));
-
 
         $query->order($db->escape($this->getState('list.ordering', 'a.id')) . ' ' . $db->escape($this->getState('list.direction', 'ASC')));
         return $query;

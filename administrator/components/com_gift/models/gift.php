@@ -1,12 +1,4 @@
 <?php
-/**
- * @package     Joomla.Administrator
- * @subpackage  com_contact
- *
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
-
 defined('_JEXEC') or die;
 
 use Joomla\Registry\Registry;
@@ -66,6 +58,37 @@ class GiftModelGift extends JModelAdmin
 
 		$this->preprocessData($option.'.'.strtolower($type).'', $data);
 		return $data;
+	}
+
+	protected function canEditState($record)
+	{
+		return true;
+	}
+
+	protected function getReorderConditions($table)
+	{
+		$condition = array();
+		$condition[] = 'group_id = ' . (int) $table->group_id;
+		return $condition;
+	}
+
+	protected function prepareTable($table)
+	{
+		if (empty($table->id))
+		{
+			if (empty($table->ordering))
+			{
+				$db = $this->getDbo();
+				$query = $db->getQuery(true)
+					->select('MAX(ordering)')
+					->from( $table->getTableName() );
+
+				$db->setQuery($query);
+				$max = $db->loadResult();
+
+				$table->ordering = $max + 1;
+			}
+		}
 	}
 
 }

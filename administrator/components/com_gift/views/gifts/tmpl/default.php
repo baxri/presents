@@ -1,14 +1,5 @@
 <?php
-/**
- * @package     Joomla.Administrator
- * @subpackage  com_contact
- *
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
-
 defined('_JEXEC') or die;
-
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 
 JHtml::_('bootstrap.tooltip');
@@ -21,20 +12,33 @@ $userId    = $user->get('id');
 $listOrder = $this->escape($this->state->get('list.ordering'));
 $listDirn  = $this->escape($this->state->get('list.direction'));
 
-
-//$archived  = $this->state->get('filter.published') == 2 ? true : false;
-//$trashed   = $this->state->get('filter.published') == -2 ? true : false;
-//$canOrder  = $user->authorise('core.edit.state', 'com_contact.category');
 $saveOrder = $listOrder == 'a.ordering';
 
 if ($saveOrder)
 {
-	$saveOrderingUrl = 'index.php?option='.$this->option.'&task='.$this->view.'.saveOrderAjax&tmpl=component';
-	JHtml::_('sortablelist.sortable', 'contactList', 'adminForm', strtolower($listDirn), $saveOrderingUrl);
+	$saveOrderingUrl = 'index.php?option='.$this->option.'&task='.strtolower( $this->view ).'.saveOrderAjax&tmpl=component';
+	JHtml::_('sortablelist.sortable', 'ItemList', 'adminForm', strtolower($listDirn), $saveOrderingUrl);
 }
 
-$assoc      = JLanguageAssociations::isEnabled();
 ?>
+
+	<script type="text/javascript">
+		Joomla.orderTable = function()
+		{
+			table = document.getElementById("ItemList");
+			direction = document.getElementById("directionTable");
+			order = table.options[table.selectedIndex].value;
+			if (order != '<?php echo $listOrder; ?>')
+			{
+				dirn = 'asc';
+			}
+			else
+			{
+				dirn = direction.options[direction.selectedIndex].value;
+			}
+			Joomla.tableOrdering(order, dirn, '');
+		}
+	</script>
 
 <form action="<?php echo JRoute::_('index.php?option='.$this->option.'&view='.$this->view); ?>" method="post" name="adminForm" id="adminForm">
 <?php if (!empty($this->sidebar)) : ?>
@@ -53,11 +57,12 @@ $assoc      = JLanguageAssociations::isEnabled();
 				<?php echo JText::_('JGLOBAL_NO_MATCHING_RESULTS'); ?>
 			</div>
 		<?php else : ?>
-			<table class="table table-striped" id="contactList">
+			<table class="table table-striped" id="ItemList">
 				<thead>
 					<tr>
 						<th width="1%" class="nowrap center hidden-phone">
-							<?php echo JHtml::_('searchtools.sort', '', 'a.ordering', $listDirn, $listOrder, null, 'asc', 'JGRID_HEADING_ORDERING', 'icon-menu-2'); ?>
+							<?php //echo JHtml::_('searchtools.sort', '', 'a.ordering', $listDirn, $listOrder, null, 'asc', 'JGRID_HEADING_ORDERING', 'icon-menu-2'); ?>
+							<?php echo JHtml::_('grid.sort', '<i class="icon-menu-2"></i>', 'a.ordering', $listDirn, $listOrder, null, 'asc', 'JGRID_HEADING_ORDERING'); ?>
 						</th>
 						<th width="1%" class="nowrap hidden-phone">
 							<?php echo JHtml::_('searchtools.sort', 'id', 'a.id', $listDirn, $listOrder); ?>
@@ -88,7 +93,10 @@ $assoc      = JLanguageAssociations::isEnabled();
 				<tbody>
 				<?php
 				$n = count($this->items);
-				foreach ($this->items as $i => $item) :?>
+				foreach ($this->items as $i => $item) :
+					$ordering  = ($listOrder == 'ordering');
+
+					?>
 					<tr class="row<?php echo $i % 2; ?>" sortable-group-id="<?php echo $item->id?>">
 						<td class="order nowrap center hidden-phone">
 							<?php
@@ -102,7 +110,7 @@ $assoc      = JLanguageAssociations::isEnabled();
 							<span class="sortable-handler <?php echo $iconClass ?>">
 									<span class="icon-menu"></span>
 								</span>
-							<?php if ( $saveOrder) : ?>
+							<?php if ( $saveOrder ) : ?>
 								<input type="text" style="display:none" name="order[]" size="5"
 									   value="<?php echo $item->ordering; ?>" class="width-20 text-area-order " />
 							<?php endif; ?>

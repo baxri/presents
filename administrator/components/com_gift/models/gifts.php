@@ -26,6 +26,12 @@ class GiftModelGifts extends JModelList
         parent::populateState('a.id', 'desc');
     }
 
+    protected function getStoreId($id = '')
+    {
+        $id .= ':' . $this->getState('filter.group');
+        return parent::getStoreId($id);
+    }
+
     protected function getListQuery()
     {
         $group = (int)$this->getState('filter.group');
