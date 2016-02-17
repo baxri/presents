@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="template">
+    <name>Gift</name>
+    <creationDate>2016-02-17</creationDate>
+    <author>BAXRI</author>
+    <authorEmail>giorgi.bibilashvili8(@gmail.com</authorEmail>
+    <authorUrl>http://www.siurpriz.ge</authorUrl>
+    <copyright>Gio Baxri 2016</copyright>
+    <license>GNU/GPL</license>
+    <version>1.0.2</version>
+    <description>Gift Template</description>
+    <files>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+        <folder>images</folder>
+        <folder>css</folder>
+    </files>
+    <positions>
+        <position>breadcrumb</position>
+    </positions>
+</extension>
