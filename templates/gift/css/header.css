@@ -101,12 +101,23 @@ If you prefer you could right or left align it.*/
     border-bottom: 1px solid #cccccc;
 }
 
-ul {
-    list-style: none;
+.categories-block-inner{
+    position: relative;
+    height:100vh;
+    overflow: hidden;
+    margin-bottom: 300px;
+    padding-bottom: 500px;
+}
+
+
+.categories-block-inner-content{
+    height: 100%;
+    overflow:auto;
+
 }
 
 .categories-block ul{
-    display: inline-block;
+    display: block;
     margin: 55px 0 20px;
     width: auto;
     height: auto;
@@ -115,7 +126,7 @@ ul {
 .categories-block ul li {
     display: inline-block;
     height: 150px;
-    padding: 15px 40px;
+    padding: -1px 40px;
     border: 1px solid #cccccc;
     #border-right: 1px solid #cccccc;
     #border: 1px solid red;

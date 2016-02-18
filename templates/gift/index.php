@@ -23,58 +23,81 @@
         <div class="categories ">
             <button class="categories-button"><span class="">კატეგორიები</span></button>
         </div>
+
+        <div class="categories-block" style="display: none;">
+
+            <div class="categories-block-inner">
+
+                <div class="categories-block-inner-content">
+
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="images/foods.png" alt="" width="100" height="100">
+                            <div class="clear"></div>
+                            <span>კვება</span>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="images/technic.png" alt="" width="100" height="100">
+                                <div class="clear"></div>
+                                <span>ტექნიკა</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="images/cloth.png" alt="" width="100" height="100">
+                                <div class="clear"></div>
+                                <span>ტანსაცმელი</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="images/beauty.png" alt="" width="100" height="100">
+                                <div class="clear"></div>
+                                <span>პარფიუმერია</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="images/foods.png" alt="" width="100" height="100">
+                                <div class="clear"></div>
+                                <span>კვება</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="images/cloth.png" alt="" width="100" height="100">
+                                <div class="clear"></div>
+                                <span>ტანსაცმელი</span>
+                            </a>
+                        </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="images/foods.png" alt="" width="100" height="100">
+                            <div class="clear"></div>
+                            <span>კვება</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="images/cloth.png" alt="" width="100" height="100">
+                            <div class="clear"></div>
+                            <span>ტანსაცმელი</span>
+                        </a>
+                    </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
     </div>
-
-
-
-    <div class="categories-block" style="display: none;">
-        <ul>
-            <li>
-                <a href="javascript:void(0)">
-                    <img src="images/foods.png" alt="" width="100" height="100">
-                    <div class="clear"></div>
-                    <span>კვება</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0)">
-                    <img src="images/technic.png" alt="" width="100" height="100">
-                    <div class="clear"></div>
-                    <span>ტექნიკა</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0)">
-                    <img src="images/cloth.png" alt="" width="100" height="100">
-                    <div class="clear"></div>
-                    <span>ტანსაცმელი</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0)">
-                    <img src="images/beauty.png" alt="" width="100" height="100">
-                    <div class="clear"></div>
-                    <span>პარფიუმერია</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0)">
-                    <img src="images/foods.png" alt="" width="100" height="100">
-                    <div class="clear"></div>
-                    <span>კვება</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0)">
-                    <img src="images/cloth.png" alt="" width="100" height="100">
-                    <div class="clear"></div>
-                    <span>ტანსაცმელი</span>
-                </a>
-            </li>
-
-        </ul>
-    </div>
-
 
 
 
@@ -82,19 +105,80 @@
 
 
     <!-- CENTER CONTENT -->
-    <div id="container" class="container">
+    <div id="gift-container" class="gift-container">
 
 
 
         <div class="giftItem">
-            <div class="poster startTrailer" data-trailer="https://www.youtube.com/watch?v=vUFZOO9zO0Q">
+            <div class="poster" >
 
                 <div class="giftPopup">
-                    ტრეილერი
+                    <div>შეძენა</div>
                 </div>
+
                 <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
             </div>
-            <h2><a href="http://www.cinemax.ge:80/movie/56ab1c70956167e76fa7f6f6/" class="ng-binding">MOVIE</a></h2>
+            <h2><a href="javascript:void(0)">MOVIE</a></h2>
+        </div>
+
+        <div class="giftItem">
+            <div class="poster startTrailer" >
+
+                <div class="giftPopup">
+                    <div>შეძენა</div>
+                </div>
+
+                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
+            </div>
+            <h2><a href="javascript:void(0)">MOVIE</a></h2>
+        </div>
+
+        <div class="giftItem">
+            <div class="poster startTrailer" >
+
+                <div class="giftPopup">
+                    <div>შეძენა</div>
+                </div>
+
+                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
+            </div>
+            <h2><a href="javascript:void(0)">MOVIE</a></h2>
+        </div>
+
+        <div class="giftItem">
+            <div class="poster startTrailer" >
+
+                <div class="giftPopup">
+                    <div>შეძენა</div>
+                </div>
+
+                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
+            </div>
+            <h2><a href="javascript:void(0)">MOVIE</a></h2>
+        </div>
+
+        <div class="giftItem">
+            <div class="poster startTrailer" >
+
+                <div class="giftPopup">
+                    <div>შეძენა</div>
+                </div>
+
+                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
+            </div>
+            <h2><a href="javascript:void(0)">MOVIE</a></h2>
+        </div>
+
+        <div class="giftItem">
+            <div class="poster startTrailer" >
+
+                <div class="giftPopup">
+                    <div>შეძენა</div>
+                </div>
+
+                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
+            </div>
+            <h2><a href="javascript:void(0)">MOVIE</a></h2>
         </div>
 
 
@@ -102,9 +186,22 @@
 
     </div>
 
-    <!--CLEAR FOOTER TO PREVENT BUNCHING-->
+
     <div class="clear"></div>
 
-    <div id="footer"><p>HEY HERE IS MY FULL WIDTH FOOTER</p></div>
+    <footer class="footer">
+        <div class="footer-container">
+            <ul class="nav menu">
+                <li class="item-110">
+                    <a href="http://www.cinemax.ge/">მთავარი</a></li>
+                   <li class="item-109"><a href="/terms-and-conditions">წესები და პირობები</a></li></ul>
+
+        </div>
+    </footer>
+
+
+
+
+
 </body>
 </html>
