@@ -49,10 +49,19 @@ body {
 }
 
 .giftPopup{
-    opacity: 0;
+    background-color: black;
     position: absolute;
-    z-index: 5000;
+    width: 230px;
+    height: 419px;
+    opacity: 0.7;
+}
 
+.giftPopup div{
+    position: absolute;
+    width: 230px;
+    height: 70px;
+    background-color: #DC0000;
+    top: 210px;
 }
 
 .giftItem .poster img {

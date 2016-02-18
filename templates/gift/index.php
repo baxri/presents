@@ -87,14 +87,39 @@
 
 
         <div class="giftItem">
-            <div class="poster startTrailer" data-trailer="https://www.youtube.com/watch?v=vUFZOO9zO0Q">
+            <div class="poster startTrailer" >
 
                 <div class="giftPopup">
-                    ტრეილერი
+                    <div>BUY</div>
                 </div>
+
                 <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
             </div>
-            <h2><a href="http://www.cinemax.ge:80/movie/56ab1c70956167e76fa7f6f6/" class="ng-binding">MOVIE</a></h2>
+            <h2><a href="javascript:void(0)">MOVIE</a></h2>
+        </div>
+
+        <div class="giftItem">
+            <div class="poster startTrailer" >
+
+                <div class="giftPopup">
+                    <div>BUY</div>
+                </div>
+
+                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
+            </div>
+            <h2><a href="javascript:void(0)">MOVIE</a></h2>
+        </div>
+
+        <div class="giftItem">
+            <div class="poster startTrailer" >
+
+                <div class="giftPopup">
+                    <div>BUY</div>
+                </div>
+
+                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
+            </div>
+            <h2><a href="javascript:void(0)">MOVIE</a></h2>
         </div>
 
 
