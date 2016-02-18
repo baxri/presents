@@ -1,15 +1,38 @@
 
 jQuery(document).ready(function(){
 
+    /*
+    * Click on category button
+    *
+    * */
+
     jQuery(".categories-button").bind('click', function(){
 
-        if( jQuery(".categories").hasClass('active') ){
-            jQuery(".categories").removeClass('active');
+        var category = jQuery(".categories");
+
+        if( category.hasClass('active') ){
+            category.removeClass('active');
         }else{
-            jQuery(".categories").addClass('active');
+            category.addClass('active');
         }
 
         jQuery(".categories-block").toggle();
     });
+
+
+    /*
+     * List view hover show BUY button
+     *
+     * */
+
+    jQuery(".giftItem").bind('hover', function(){
+        jQuery(this).find(".giftPopup").toggle();
+    });
+
+
+
+
+
+
 
 });

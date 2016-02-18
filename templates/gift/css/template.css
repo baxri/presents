@@ -9,7 +9,7 @@ h1, p, body, html {
 }
 
 a{
-
+    text-decoration: none;
 }
 
 body {
@@ -19,18 +19,59 @@ body {
 }
 
 
-/*Center Content*/
-.container {
+.gift-container {
     position:relative;
+    overflow:auto;
     margin:0 auto;
-    width:1400px;
+    width:1000px;
     top: 150px;
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
+
+.footer-container {
+    overflow:auto;
+    position:relative;
+    margin:0 auto;
+    width: 1000px;
+}
+
+.footer {
+    position:relative;
+    overflow:auto;
+    margin:0 auto;
+    width: 100%;
+    height: 100px;
+    top: 150px;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background-color: #333333;
+}
+
+.footer ul{
+    display: block;
+    list-style: none;
+    margin-left: -32px;
+}
+
+.footer li {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #808080;
+
+}
+
+.footer li a{
+    color: #808080;
+}
+
+
 
 
 .giftItem{
@@ -54,6 +95,8 @@ body {
     width: 230px;
     height: 419px;
     opacity: 0.7;
+    display: none;
+
 }
 
 .giftPopup div{
@@ -62,6 +105,10 @@ body {
     height: 70px;
     background-color: #DC0000;
     top: 210px;
+    line-height: 70px;
+    text-align: center;
+    color: white;
+    font-size: 15pt;
 }
 
 .giftItem .poster img {
@@ -93,44 +140,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Full width footer*/
-#footer {
-    background: #191919;
-    padding:10px;
-    text-align:center;
-    color: #cccccc;
-}
 
 /*If you are going to use floats then you will NEED to clear the
 footer so it doesn't bunch the content up*/
