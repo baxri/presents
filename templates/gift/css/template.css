@@ -18,12 +18,16 @@ body {
     color:#000;
 }
 
+ul {
+    list-style: none;
+}
+
 
 .gift-container {
     position:relative;
     overflow:auto;
     margin:0 auto;
-    width:1000px;
+    width:400px;
     top: 150px;
     padding: 0;
     border: 0;
@@ -35,7 +39,7 @@ body {
     overflow:auto;
     position:relative;
     margin:0 auto;
-    width: 1000px;
+    width: 400px;
 }
 
 .footer {

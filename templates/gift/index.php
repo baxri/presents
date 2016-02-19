@@ -25,51 +25,76 @@
         </div>
 
         <div class="categories-block" style="display: none;">
-            <ul>
-                <li>
-                    <a href="javascript:void(0)">
-                        <img src="images/foods.png" alt="" width="100" height="100">
-                        <div class="clear"></div>
-                        <span>კვება</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <img src="images/technic.png" alt="" width="100" height="100">
-                        <div class="clear"></div>
-                        <span>ტექნიკა</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <img src="images/cloth.png" alt="" width="100" height="100">
-                        <div class="clear"></div>
-                        <span>ტანსაცმელი</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <img src="images/beauty.png" alt="" width="100" height="100">
-                        <div class="clear"></div>
-                        <span>პარფიუმერია</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <img src="images/foods.png" alt="" width="100" height="100">
-                        <div class="clear"></div>
-                        <span>კვება</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <img src="images/cloth.png" alt="" width="100" height="100">
-                        <div class="clear"></div>
-                        <span>ტანსაცმელი</span>
-                    </a>
-                </li>
 
-            </ul>
+            <div class="categories-block-inner">
+
+                <div class="categories-block-inner-content">
+
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="images/foods.png" alt="" width="100" height="100">
+                            <div class="clear"></div>
+                            <span>კვება</span>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="images/technic.png" alt="" width="100" height="100">
+                                <div class="clear"></div>
+                                <span>ტექნიკა</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="images/cloth.png" alt="" width="100" height="100">
+                                <div class="clear"></div>
+                                <span>ტანსაცმელი</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="images/beauty.png" alt="" width="100" height="100">
+                                <div class="clear"></div>
+                                <span>პარფიუმერია</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="images/foods.png" alt="" width="100" height="100">
+                                <div class="clear"></div>
+                                <span>კვება</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="images/cloth.png" alt="" width="100" height="100">
+                                <div class="clear"></div>
+                                <span>ტანსაცმელი</span>
+                            </a>
+                        </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="images/foods.png" alt="" width="100" height="100">
+                            <div class="clear"></div>
+                            <span>კვება</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="images/cloth.png" alt="" width="100" height="100">
+                            <div class="clear"></div>
+                            <span>ტანსაცმელი</span>
+                        </a>
+                    </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
         </div>
 
     </div>
