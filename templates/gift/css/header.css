@@ -76,7 +76,7 @@ If you prefer you could right or left align it.*/
     top: 0;
     width: 25px;
     height: 22px;
-    background-image: url("http://localhost/giftcards/images/sprite.png_");
+    background-image: url("http://localhost/giftcards/images/sprite.png");
     background-position: -3px 3px;
     background-repeat: no-repeat;
 
@@ -126,7 +126,7 @@ If you prefer you could right or left align it.*/
 .categories-block ul li {
     display: inline-block;
     height: 150px;
-    padding: -1px 40px;
+    padding: 15px 40px;
     border: 1px solid #cccccc;
     #border-right: 1px solid #cccccc;
     #border: 1px solid red;

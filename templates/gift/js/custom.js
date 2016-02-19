@@ -34,7 +34,7 @@ jQuery(document).ready(function(){
     jQuery('.categories-block-inner').css({ height: jQuery('.categories-block-inner').height() - 130 });
 
 
-    $(window).resize(function(){
+    jQuery(window).resize(function(){
         jQuery('.categories-block-inner').css({ height: jQuery('.categories-block-inner').height() - 130 });
     });
 

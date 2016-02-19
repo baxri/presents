@@ -17,7 +17,7 @@
     <!-- background for expandable header -->
     <div id="headerbg" class="header">
         <a href="index.php"class="logo">
-            <img src="images/logo.png_" alt="" height="80">
+            <img src="images/logo.png" alt="" height="80">
         </a>
 
         <div class="categories ">
@@ -107,6 +107,7 @@
     <!-- CENTER CONTENT -->
     <div id="gift-container" class="gift-container">
 
+        <div class="gift-container-inner clear">
 
 
         <div class="giftItem">
@@ -182,7 +183,7 @@
         </div>
 
 
-
+        </div>
 
     </div>
 
