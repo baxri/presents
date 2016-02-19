@@ -16,6 +16,7 @@
         <folder>css</folder>
     </files>
     <positions>
-        <position>breadcrumb</position>
+        <position>categories</position>
+        <position>footer_menu</position>
     </positions>
 </extension>

@@ -19,6 +19,13 @@
 			   required="true"
 		/>
 
+		<field name="alias"
+			   type="text"
+			   label="Alias"
+			   default=""
+			   required="true"
+		/>
+
 		<field name="published" type="radio"
 			   class="btn-group btn-group-yesno"
 			   label="Published"

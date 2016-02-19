@@ -3,28 +3,6 @@ Please use full reset when designing!
 Reseting the margin and padding is important for the body tag so the
 header and footer will hug the whole screen.*/
 
-h1, p, body, html {
-    margin:0;
-    padding:0;
-}
-
-a{
-    text-decoration: none;
-}
-
-body {
-    background: #F2F2F2;
-    font:12px verdana, sans-serif;
-    color:#000;
-}
-
-ul {
-    list-style: none;
-}
-
-div{
-    display: block;
-}
 
 
 @media (min-width: 360px) {
@@ -131,13 +109,14 @@ div{
 }
 
 .giftPopup{
-    background-color: black;
+    #background-color: black;
     position: absolute;
     width: 230px;
-    height: 419px;
-    opacity: 0.7;
+    height: 390px;
     display: none;
-
+    background-image: url("http://localhost/giftcards/images/list_hover.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
 }
 
 .giftPopup div{
@@ -159,7 +138,7 @@ div{
 }
 
 .giftItem h2 {
-    height: 50px;
+    height: 19px;
     line-height: 18px;
     overflow: hidden;
     text-align: center;

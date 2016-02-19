@@ -29,6 +29,10 @@ jQuery(document).ready(function(){
         jQuery(this).find(".giftPopup").toggle();
     });
 
+    jQuery(".giftItem").hover(function(){
+        jQuery(this).find(".giftPopup").toggle();
+    });
+
 
     var a = jQuery('.categories-block-inner').height();
     jQuery('.categories-block-inner').css({ height: jQuery('.categories-block-inner').height() - 130 });
