@@ -5,7 +5,7 @@ header and footer will hug the whole screen.*/
 
 
 
-@media (min-width: 360px) {
+@media (min-width: 300px) {
     .gift-container {
         width: 250px;
     }
@@ -117,6 +117,7 @@ header and footer will hug the whole screen.*/
     background-image: url("http://localhost/giftcards/images/list_hover.png");
     background-position: 0px 0px;
     background-repeat: no-repeat;
+    cursor: default;
 }
 
 .giftPopup div{
@@ -128,7 +129,9 @@ header and footer will hug the whole screen.*/
     line-height: 70px;
     text-align: center;
     color: white;
-    font-size: 15pt;
+    font-size: 12pt;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
 }
 
 .giftItem .poster img {

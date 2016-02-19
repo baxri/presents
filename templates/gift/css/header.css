@@ -61,7 +61,6 @@ div{
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
 }
@@ -76,6 +75,7 @@ div{
     outline: none;
     border: 0px;
     background-color: transparent;
+
 }
 
 .header .categories button:hover{
@@ -88,11 +88,12 @@ div{
     position: relative;
     color: #ffffff;
     font-family: "dejavusans-extralight";
-    font-size: 18px;
+    font-size: 15px;
     font-weight: lighter;
     padding-right: 44px;
     margin: 36px auto;
-    line-height: 1;
+    line-height: 2;
+
 }
 
 .header .categories button span:after {
