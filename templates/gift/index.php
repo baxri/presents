@@ -13,8 +13,12 @@
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lib/jquery-1.11.3.min.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/custom.js"></script>
 
+
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lib/angular.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/app.js"></script>
+
 </head>
-<body>
+<body ng-app="gift" ng-controller="GiftController">
 
     <div id="headerbg" class="header">
         <a href="index.php"class="logo">
