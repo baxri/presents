@@ -7,18 +7,23 @@ class ComponentHelper extends JHelperContent
 	public static function addSubmenu($vName)
 	{
 		$option = JRequest::getVar('option');
+		$canDo = JHelperContent::getActions( $option );
 
-		JHtmlSidebar::addEntry(
-			JText::_('GiftCards'),
-			'index.php?option='.$option.'&view=gifts',
-			$vName == 'gifts'
-		);
+		if( $canDo->get('core.show.giftcards') ) {
+			JHtmlSidebar::addEntry(
+				JText::_('GiftCards'),
+				'index.php?option=' . $option . '&view=gifts',
+				$vName == 'gifts'
+			);
+		}
 
-		JHtmlSidebar::addEntry(
-			JText::_('Categories'),
-			'index.php?option='.$option.'&view=groups',
-			$vName == 'groups'
-		);
+		if( $canDo->get('core.show.groups') ){
+			JHtmlSidebar::addEntry(
+				JText::_('Categories'),
+				'index.php?option='.$option.'&view=groups',
+				$vName == 'groups'
+			);
+		}
 	}
 
 }

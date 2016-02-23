@@ -19,6 +19,12 @@
 			   required="true"
 		/>
 
+		<field name="merchant_id"
+			   type="user"
+			   label="Merchant"
+			   default=""
+		/>
+
 		<field name="alias"
 			   type="text"
 			   label="Alias"
