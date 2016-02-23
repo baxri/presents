@@ -52,7 +52,7 @@ class GiftViewSearchs extends JViewLegacy
 		$canDo = JHelperContent::getActions( $this->option, $this->edit_view, $this->state->get('filter.category_id'));
 		$user  = JFactory::getUser();
 
-		JToolbarHelper::title( 'Vaucher Search', 'address contact');
+		JToolbarHelper::title( 'ვაუჩერის ძებნა', 'address contact');
 
 		if ($canDo->get('core.create') || (count($user->getAuthorisedCategories($this->option, 'core.create'))) > 0)
 		{
