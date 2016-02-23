@@ -10,197 +10,36 @@
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/header.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
 
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lib/jquery-1.11.3.min.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/custom.js"></script>
 
+
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lib/angular.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/app.js"></script>
+
 </head>
-<body>
-    <!-- background for expandable header -->
+<body ng-app="gift" ng-controller="GiftController">
+
     <div id="headerbg" class="header">
         <a href="index.php"class="logo">
-            <img src="images/logo.png_" alt="" height="80">
+            <img src="images/logo.png" alt="" height="80">
         </a>
 
-        <div class="categories ">
-            <button class="categories-button"><span class="">კატეგორიები</span></button>
-        </div>
-
-        <div class="categories-block" style="display: none;">
-
-            <div class="categories-block-inner">
-
-                <div class="categories-block-inner-content">
-
-                <ul>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <img src="images/foods.png" alt="" width="100" height="100">
-                            <div class="clear"></div>
-                            <span>კვება</span>
-                        </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <img src="images/technic.png" alt="" width="100" height="100">
-                                <div class="clear"></div>
-                                <span>ტექნიკა</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <img src="images/cloth.png" alt="" width="100" height="100">
-                                <div class="clear"></div>
-                                <span>ტანსაცმელი</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <img src="images/beauty.png" alt="" width="100" height="100">
-                                <div class="clear"></div>
-                                <span>პარფიუმერია</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <img src="images/foods.png" alt="" width="100" height="100">
-                                <div class="clear"></div>
-                                <span>კვება</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <img src="images/cloth.png" alt="" width="100" height="100">
-                                <div class="clear"></div>
-                                <span>ტანსაცმელი</span>
-                            </a>
-                        </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <img src="images/foods.png" alt="" width="100" height="100">
-                            <div class="clear"></div>
-                            <span>კვება</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <img src="images/cloth.png" alt="" width="100" height="100">
-                            <div class="clear"></div>
-                            <span>ტანსაცმელი</span>
-                        </a>
-                    </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-        </div>
+        <jdoc:include type="modules" name="categories" />
 
     </div>
 
 
-
-
-
-
-    <!-- CENTER CONTENT -->
-    <div id="gift-container" class="gift-container">
-
-
-
-        <div class="giftItem">
-            <div class="poster" >
-
-                <div class="giftPopup">
-                    <div>შეძენა</div>
-                </div>
-
-                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
-            </div>
-            <h2><a href="javascript:void(0)">MOVIE</a></h2>
-        </div>
-
-        <div class="giftItem">
-            <div class="poster startTrailer" >
-
-                <div class="giftPopup">
-                    <div>შეძენა</div>
-                </div>
-
-                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
-            </div>
-            <h2><a href="javascript:void(0)">MOVIE</a></h2>
-        </div>
-
-        <div class="giftItem">
-            <div class="poster startTrailer" >
-
-                <div class="giftPopup">
-                    <div>შეძენა</div>
-                </div>
-
-                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
-            </div>
-            <h2><a href="javascript:void(0)">MOVIE</a></h2>
-        </div>
-
-        <div class="giftItem">
-            <div class="poster startTrailer" >
-
-                <div class="giftPopup">
-                    <div>შეძენა</div>
-                </div>
-
-                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
-            </div>
-            <h2><a href="javascript:void(0)">MOVIE</a></h2>
-        </div>
-
-        <div class="giftItem">
-            <div class="poster startTrailer" >
-
-                <div class="giftPopup">
-                    <div>შეძენა</div>
-                </div>
-
-                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
-            </div>
-            <h2><a href="javascript:void(0)">MOVIE</a></h2>
-        </div>
-
-        <div class="giftItem">
-            <div class="poster startTrailer" >
-
-                <div class="giftPopup">
-                    <div>შეძენა</div>
-                </div>
-
-                <img src="https://cinerp.com:9000/media/movies/posters/images/zoolander.jpg">
-            </div>
-            <h2><a href="javascript:void(0)">MOVIE</a></h2>
-        </div>
-
-
-
-
-    </div>
-
+    <jdoc:include type="message" />
+    <jdoc:include type="component" />
 
     <div class="clear"></div>
 
     <footer class="footer">
         <div class="footer-container">
-            <ul class="nav menu">
-                <li class="item-110">
-                    <a href="http://www.cinemax.ge/">მთავარი</a></li>
-                   <li class="item-109"><a href="/terms-and-conditions">წესები და პირობები</a></li></ul>
-
+            <jdoc:include type="modules" name="footer_menu" />
         </div>
     </footer>
-
-
-
 
 
 </body>

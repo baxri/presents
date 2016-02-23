@@ -1,0 +1,457 @@
+
+
+
+.left img{
+    position: absolute;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.left{
+    position: relative;
+    display: block;
+    width: 33%;
+    height: 100vh;
+    background-size: auto 100%;
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: left;
+    border: 0;
+
+
+}
+
+
+
+.buy-div{
+    top: 200px;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    height: 300px;
+    padding-top: 100px;
+}
+
+.myButton {
+    background-color: #DC0000;
+    border-radius:42px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:15px;
+    text-decoration:none;
+    width: 250px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 25px;
+
+}
+
+.myButton:hover{
+     background-color: darkred;
+}
+
+.myButton[disabled="disabled"]{
+    background-color: darkred !important;
+    color: lightgray;
+}
+
+.buy-div input{
+    width: 200px;
+    font-size:50pt;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 0;
+    border-bottom: 2px solid white;
+    text-align: center;
+    height: 58px;
+    line-height: 50px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    font-style:  italic;
+}
+
+.buy-div p input{
+    font-size: 11pt;
+    height: 30px;
+    line-height: 30px;
+}
+
+.after{
+    position: relative;
+    float: left;
+    padding-left: 10px;
+    width: 325px;
+    height: 100vh;
+}
+
+.info{
+    padding-top:  20px;
+}
+
+.info a{
+     color: lightgrey;
+}
+
+.info span{
+    color: lightgrey;
+}
+
+.info p{
+    padding: 5px;
+}
+
+.footer{
+    display: none;
+}
+
+
+
+
+.user-form span{
+    display: block;
+    position: relative;
+    top: 200px;
+}
+
+.user-form input{
+    width: 300px;
+    padding: 5px;
+    padding-left: 20px;
+    color: grey;
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+    margin-bottom: 10px;
+    border: 0;
+    border: 1px solid lightgray;
+}
+
+.amount-input{
+    background-image: url("/giftcards/images/currency.png");
+    background-position: 180px 3px;
+    background-repeat: no-repeat;
+
+}
+
+.user-form textarea{
+    width: 300px;
+    padding: 5px;
+    padding-left: 20px;
+    color: grey;
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+    margin-bottom: 10px;
+    border: 0;
+    border: 1px solid lightgray;
+    height: 232px;
+}
+
+.preview{
+    position: relative;
+    float: left;
+    padding-left: 10px;
+    width: 50%;
+    height: 100vh;
+    border:  1px solid red;
+}
+
+
+.gift-preview{
+    border: 2px dotted white;
+    width: 500px;
+    height: 500px;
+    background: gray;
+}
+
+
+.confirm-window{
+    position: absolute;
+    background: black;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.confirm-window .content{
+    position: relative;
+    top: 10%;
+    width: 1000px;
+    height: 592px;
+
+    background-color: #F2F2F2;
+    margin: 0px auto;
+}
+
+.confirm-window .content .content-warning{
+    position: relative;
+    width: 985px;
+    height: 30px;
+    background-color: #FCA000;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 12pt;
+    font-style: italic;
+    color: white;
+}
+
+.confirm-window .content .content-warning div{
+    float: left;
+}
+
+.confirm-window .content .content-warning .notice-icon{
+    width: 30px;
+    height: 30px;
+    background-image: url("/giftcards/images/sprite.png");
+    background-position: -1px -21px;
+    background-repeat: no-repeat;
+}
+
+
+
+.confirm-window .content .rows{
+    position: relative;
+    width: 100%;
+}
+
+.confirm-window .content .top{
+    background-color: #E6E6E6;
+    border-bottom: 4px solid lightgray;
+    height: 430px;
+}
+
+.email-prev{
+    top: 5px;
+    position: relative;
+    width: 600px;
+    height: 80%;
+    float: left;
+    padding-right: 20px;
+}
+
+
+.email-prev .gift-email-preview{
+    margin-top: 20px;
+    float: right;
+    font-size: 13pt;
+    width: 540px;
+    height: 370px;
+    background-image: url("/giftcards/images/email-preview.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+.gift-avatar{
+
+    right: 70px;
+    width: 150px;
+    height: 150px;
+    border: 5px solid white;
+    background-size: 100% auto;
+}
+
+
+
+.email-prev .gift-left{
+    position: relative;
+    top: 75px;
+    left: 20px;
+    font-style: italic;
+    float: left;
+    font-size: 10pt;
+    color: gray;
+    width: 90%;
+
+}
+
+.email-prev .gift-left p{
+    line-height: 30px;
+}
+
+.email-prev .gift-text{
+    position: relative;
+    font-size: 9pt;
+    color: gray;
+    font-style: italic;
+
+}
+
+.email-prev .gift-text-center{
+    text-align: center;
+}
+
+
+
+.gift-text p{
+    line-height: 20px !important;
+}
+
+.gift-amount{
+    text-align: center;
+    background-position: 310px 0px;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.gift-amount p{
+    color: #DC0000;
+    font-size: 35pt;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.no-additional-text p{
+    margin-top: 30px;
+    font-size: 40pt;
+}
+
+
+.email-prev .gift-sender{
+    position: absolute;
+    bottom: 30px;
+    left: 75px;
+    font-size: 10pt;
+    color: gray;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+.mobile-prev{
+    position: relative;
+    top: 20px;
+    width: 300px;
+    height: 300px;
+    float: left;
+    border-left: 2px solid white;
+    padding-top: 84px;
+    padding-left: 26px;
+    text-align: center;
+}
+
+.mobile-prev h2{
+    color: white;
+}
+
+.mobile-prev p{
+    color: gray;
+}
+
+.mobile-prev div{
+
+    position: relative;
+    width: auto;
+    height: auto;
+
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    color: gray;
+
+}
+
+.mobile-prev .answer{
+    width: 100px;
+    float: right;
+}
+
+
+.confirm-window .content .bottom{
+    text-align: center;
+}
+
+.confirm-window .content .bottom p{
+    font-size: 15pt;
+    margin-top: 20px;
+    color: gray;
+}
+
+.confirm-window .content .bottom span input{
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30pt;
+    text-align: center;
+    border: 0;
+    border-bottom: 4px solid white;
+    background: none;
+    padding: 5px;
+    outline: none;
+    margin-top: 10px;
+}
+
+
+
+.confirm-window .content .bottom button{
+    position: relative;
+    background-color: green;
+    float: left;
+    width: 50%;
+    height: 100px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 11pt;
+    line-height: 30px;
+}
+
+.confirm-window .content .bottom button:hover{
+    opacity: 0.9;
+}
+
+
+.required-field{
+    border-left: 2px solid red !important;
+}
+
+.confirm-window .content .bottom .buy, .close {
+    padding-left: 200px;
+}
+
+.confirm-window .content .bottom .buy span, .close span{
+    display: block;
+    float: left;
+    margin: 5px;
+}
+
+
+
+/*.confirm-window .content .bottom .buy .yes{
+    background-image: url("/giftcards/images/sprite.png");
+    background-position: 2px -49px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.confirm-window .content .bottom .close .yes{
+    background-image: url("/giftcards/images/sprite.png");
+    background-position: -27px -49px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}*/
+
+
+
+
+
+
+

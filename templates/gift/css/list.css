@@ -1,0 +1,205 @@
+/*Simple CSS reset for items we will use JUST for this example.
+Please use full reset when designing!
+Reseting the margin and padding is important for the body tag so the
+header and footer will hug the whole screen.*/
+
+
+
+@media (min-width: 300px) {
+    .gift-container {
+        width: 250px;
+    }
+    .footer-container {
+        width: 250px;
+    }
+
+    .footer li{
+        #width: 188px;
+        text-align: center;
+        border-right: 0px solid #808080 !important;
+        line-height: 30px;
+    }
+}
+
+@media (min-width: 518px) {
+    .gift-container {
+        width: 480px;
+    }
+    .footer-container {
+        width: 480px;
+    }
+}
+
+@media (min-width: 767px) {
+    .gift-container {
+        width: 720px;
+    }
+    .footer-container {
+        width: 720px;
+    }
+}
+
+@media (min-width: 960px){
+    .gift-container {
+        width: 960px;
+    }
+    .footer-container {
+        width: 960px;
+    }
+}
+@media (min-width: 1280px) {
+    .gift-container {
+        width: 1200px;
+    }
+    .footer-container {
+        width: 1200px;
+    }
+
+}
+
+@media (min-width: 1478px) {
+    .gift-container {
+        width: 1440px;
+    }
+    .footer-container {
+        width: 1440px;
+    }
+
+}
+
+
+
+
+.gift-container {
+    position:relative;
+    overflow:auto;
+    margin:0 auto;
+    top: 180px;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+
+}
+
+
+
+
+.footer-container {
+    overflow:auto;
+    position:relative;
+    margin:0 auto;
+}
+
+
+
+.gift-container-inner{
+    width: 100%;
+    height: auto;
+}
+
+
+.giftItem{
+    position: relative;
+    float: left;
+    width: 230px;
+    height: auto;
+    margin: 0 5px 30px;
+    background-color: #ffffff;
+}
+
+.giftPopup{
+    #background-color: black;
+    position: absolute;
+    width: 230px;
+    height: 390px;
+    display: none;
+    background-image: url("http://localhost/giftcards/images/list_hover.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    cursor: default;
+}
+
+.giftPopup div{
+    position: absolute;
+    width: 230px;
+    height: 70px;
+    background-color: #DC0000;
+    top: 210px;
+    line-height: 70px;
+    text-align: center;
+    color: white;
+    font-size: 12pt;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+.giftItem .poster img {
+    display: block;
+    width: 230px;
+    height: 340px;
+}
+
+.giftItem h2 {
+    height: 19px;
+    line-height: 18px;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.giftItem h2 a{
+    text-decoration: none;
+    color: #999999;
+}
+
+.giftItem .poster {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 230px;
+    height: 340px;
+}
+
+
+
+
+
+.footer {
+    position:relative;
+    overflow:auto;
+    margin:0 auto;
+    width: 100%;
+    height: 100px;
+    top: 200px;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background-color: #333333;
+}
+
+.footer ul{
+    display: block;
+    list-style: none;
+    margin-left: -32px;
+}
+
+.footer li {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #808080;
+    line-height: 20px;
+
+}
+
+.footer li a{
+    color: #808080;
+}
+
+
+/*If you are going to use floats then you will NEED to clear the
+footer so it doesn't bunch the content up*/
+.clear {clear:both;}

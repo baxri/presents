@@ -1,6 +1,32 @@
 /*Our full length header.
 We align the text center so it shows up in the middle.
 If you prefer you could right or left align it.*/
+
+h1, p, body, html {
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    background: #F2F2F2;
+    font:12px verdana, sans-serif;
+    color:#000;
+}
+
+ul {
+    list-style: none;
+}
+
+div{
+    display: block;
+}
+
+
+
 .header {
     display: block;
     position: fixed;
@@ -21,7 +47,7 @@ If you prefer you could right or left align it.*/
     float: left;
     width: auto;
     height: 40px;
-    margin: 25px 0 25px 40px;
+    margin: 25px 0 25px 12%;
 }
 
 .header .categories {
@@ -35,7 +61,6 @@ If you prefer you could right or left align it.*/
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
 }
@@ -50,6 +75,7 @@ If you prefer you could right or left align it.*/
     outline: none;
     border: 0px;
     background-color: transparent;
+
 }
 
 .header .categories button:hover{
@@ -62,11 +88,12 @@ If you prefer you could right or left align it.*/
     position: relative;
     color: #ffffff;
     font-family: "dejavusans-extralight";
-    font-size: 18px;
+    font-size: 15px;
     font-weight: lighter;
     padding-right: 44px;
     margin: 36px auto;
-    line-height: 1;
+    line-height: 2;
+
 }
 
 .header .categories button span:after {
@@ -76,7 +103,7 @@ If you prefer you could right or left align it.*/
     top: 0;
     width: 25px;
     height: 22px;
-    background-image: url("http://localhost/giftcards/images/sprite.png_");
+    background-image: url("http://localhost/giftcards/images/sprite.png");
     background-position: -3px 3px;
     background-repeat: no-repeat;
 
@@ -126,19 +153,13 @@ If you prefer you could right or left align it.*/
 .categories-block ul li {
     display: inline-block;
     height: 150px;
-    padding: -1px 40px;
+    padding: 15px 40px;
     border: 1px solid #cccccc;
     #border-right: 1px solid #cccccc;
     #border: 1px solid red;
     margin-left: -5px;
     margin-top: -1px;
 
-    -webkit-transition: all 0.2s ease-in-out;
-    -khtml-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
 }
 
 .categories-block ul li:hover{
