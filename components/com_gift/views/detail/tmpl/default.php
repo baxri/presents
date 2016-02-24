@@ -44,65 +44,96 @@
         <div class="top">
 
 
-            <div class="choose">
-                <span>აირჩიე</span>
-                <div class="dropdown" style="display: none;">
-                    <p>გაუგზავნე მობილურზე</p>
-                    <p>გაუგზავნე ელ-ფოსტაზე</p>
-                    <p>გაუგზავნე მობილურზე და ელ-ფოსტაზე</p>
+            <div class="field">
+
+                <div class="choose">
+                    <span ng-show="destination == 1">გაუგზავნე მობილურზე</span>
+                    <span ng-show="destination == 2">გაუგზავნე ელ-ფოსტაზე</span>
+                    <span ng-show="destination == 3">გაუგზავნე მობილურზე და ელ-ფოსტაზე</span>
+                    <span ng-show="destination == 0">სად გაუგზავნო?</span>
+                    <div class="dropdown" style="display: none;">
+                        <p ng-click="setDestination(1)"><span>გაუგზავნე მობილურზე</span></p>
+                        <p ng-click="setDestination(2)"><span>გაუგზავნე ელ-ფოსტაზე</span></p>
+                        <p ng-click="setDestination(3)"><span>გაუგზავნე მობილურზე და ელ-ფოსტაზე</span></p>
+                    </div>
+
                 </div>
 
+                <div class="tooltip destination-tooltip" style="display: block;" >
+                    აირჩიე სად მიუვუდეს თქვენს მეგობარს შეძენილი ვაუჩერი
+                </div>
             </div>
 
-            <div>
-                <input type="text" class="mobile" placeholder="მობილური">
-                <input type="text" class="email" placeholder="ელ-ფოსტა">
+
+
+
+
+
+            <div class="field">
+                <input name="mobile" ng-model="mobile" ng-show="destination == 1 || destination == 3" type="text" class="mobile" placeholder="მაგალითი: 598xxxxxx">
+                <div class="tooltip">
+                    საჩუქარი მიმღებს მიუვა მობილურის ნომერზე
+                </div>
             </div>
 
 
-            <p class="notice-receive-date">შეტყობინების მისვლის თარიღი</p>
+            <div class="field">
+                <input name="email" ng-model="email" ng-show="destination == 2 || destination == 3" type="text" class="email" placeholder="tosomeone@email.com">
+                <div class="tooltip">
+                    საჩუქარი მიმღებს მიუვა ელ-ფოსტაზე
+                </div>
+            </div>
 
-            <div class="date">
+
+            <p class="notice-receive-date" ng-show="destination > 0">შეტყობინების მისვლის თარიღი</p>
+
+            <div class="date" ng-show="destination > 0">
+
                 <div class="d">
                     <span>8</span>
                     <div class="dropdown" style="display: none;">
-                        <p>11</p>
-                        <p>12</p>
-
+                        <?php for( $i = 1; $i <= 31; $i++ ): ?>
+                         <p><span><?php echo $i ?></span></p>
+                        <?php endfor; ?>
                     </div>
 
                 </div>
 
                 <div class="m">
-                    სექტემბერი
-
+                    <span>სექტემბერი</span>
                     <div class="dropdown" style="display: none;">
-                        <p>October</p>
-                        <p>November</p>
-                        <p>December</p>
-                        <p>Januaery</p>
-                        <p>March</p>
+                        <p><span>სექტემბერი</span></p>
+                        <p><span>ოქტომბერი</span></p>
+                        <p><span>ნოემბერი</span></p>
+                        <p><span>დეკემბერი</span></p>
+                        <p><span>იანვარი</span></p>
+                        <p><span>თებერვალი</span></p>
+                        <p><span>მარტი</span></p>
+                        <p><span>აპრილი</span></p>
+                        <p><span>მაისი</span></p>
+                        <p><span>ივნისი</span></p>
+                        <p><span>ივლისი</span></p>
+                        <p><span>აგვისტო</span></p>
                     </div>
 
                 </div>
 
                 <div class="y">
-                    2016
+                    <span>2016</span>
                     <div class="dropdown" style="display: none;">
-                        <p>2016</p>
+                        <p><span>2016</span></p>
+                        <p><span>2017</span></p>
                     </div>
                 </div>
 
                 <div class="time">
 
                     <div class="h">
-                        15
+                        <span>16</span>
                         <div class="dropdown" style="display: none;">
-                            <p>11</p>
-                            <p>12</p>
-                            <p>13</p>
-                            <p>14</p>
-                            <p>15</p>
+                            <?php for( $i = 1; $i <= 24; $i++ ): ?>
+                                <p><?php echo $i ?></p>
+                            <?php endfor; ?>
                         </div>
                     </div>
 
@@ -111,22 +142,33 @@
                     <input type="text" value="00" maxlength="2">
                 </div>
 
-
-                <input type="text" class="sender_fullname" placeholder="თქვენი სახელი და გვარი">
-                <input type="text" class="sender_email" placeholder="თქვენი ელ-ფოსტა">
-
-                <textarea placeholder="დამატებითი ტექსტი" style="height: 80px; width: 282px;"></textarea>
-
             </div>
+
+
+
+            <div class="field">
+                <input type="text" name="sender_fullname" ng-model="sender_fullname" class="sender_fullname" placeholder="თქვენი სახელი და გვარი">
+                <div class="tooltip">
+                    ელექტრონულ სასაჩუქრე ბარათზე ბარათზე იქნება მითეთებული თქვენი სახელი და გვარი როგორ გამგზავნი
+                </div>
+            </div>
+
+            <div class="field">
+                <input type="text" name="sender_email" ng-model="sender_email" class="sender_email" placeholder="თქვენი ელ-ფოსტა">
+                <div class="tooltip">
+                    ელ-ფოსტაზე გამოგეგზავნებათ ვაუჩერის შეძენის დასტური და ასევე თქვენს მიერ შეძენული ვაუჩერი
+                </div>
+            </div>
+
+            <textarea placeholder="დამატებითი ტექსტი" style=" height: 80px; width: 282px;"></textarea>
+
 
 
         </div>
 
         <div class="bottom">
 
-            <div class="sender">
 
-            </div>
 
         </div>
 

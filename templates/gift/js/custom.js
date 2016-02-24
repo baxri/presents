@@ -118,9 +118,27 @@ jQuery(document).ready(function(){
     });
 
 
+    /*
+    * Show/Hide Tooltip
+    *
+    * */
+
+    $('.field input').bind('focus', function(){
+        $('.destination-tooltip').hide();
+        $(this).parent().find('div').show();
+    });
+
+
+    $('.field input').bind('blur', function(){
+        $(this).parent().find('div').hide();
+    });
 
 
 
+    /*
+     * END Show/Hide Tooltip
+     *
+     * */
 
 
 

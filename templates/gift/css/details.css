@@ -10,15 +10,13 @@
 .left{
     position: relative;
     display: block;
-    width: 40%;
+    width: 35%;
     height: 100vh;
     background-size: auto 100%;
     background-position: left top;
     background-repeat: no-repeat;
     float: left;
     border: 0;
-
-
 }
 
 
@@ -133,8 +131,8 @@
 .user-form .choose{
     position: relative;
     width: 310px;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
     background: white;
     margin-bottom: 20px;
     border-bottom: 3px solid red;
@@ -144,15 +142,23 @@
     position: relative;
     display: block;
     left: 10px;
+    font-size: 10pt;
 }
 
 .choose div p{
     position: relative;
-    left: 10px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 0px;
 }
 
 .choose, .d, .m, .y, .h{
     cursor: pointer;
+}
+
+.dropdown  p:hover{
+    background-color: #f9f9f9;
 }
 
 .dropdown{
@@ -160,8 +166,14 @@
     width: 100%;
     height: auto !important;
     background: white;
-    #padding-left: 10px;
     border-bottom: 3px solid red;
+    z-index: 999;
+    max-height: 350px;
+    overflow: auto;
+}
+
+.choose .dropdown{
+    overflow: hidden;
 }
 
 .user-form .bottom{
@@ -174,12 +186,15 @@
     width: 300px;
     outline: none;
     margin-bottom: 10px;
-    padding-left: 10px;
+    padding-left: 10px !important;
     #color: gray;
     font-size: 10pt;
     border: 0;
 }
 
+.user-form textarea{
+    width: 295px !important;
+}
 
 
 .notice-receive-date{
@@ -209,17 +224,17 @@
 
 .d{
     width: 47px;
-    border-right: 3px solid orange;
+    border-right: 3px solid lightgray;
 }
 
 .m{
     width: 100px;
-    border-right: 3px solid orange;
+    border-right: 3px solid lightgray;
 }
 
 .y{
     width: 60px;
-    border-right: 3px solid orange;
+    border-right: 3px solid lightgray;
 }
 
 .time{
@@ -612,6 +627,25 @@
     margin: 5px;
 }
 
+
+.field .tooltip{
+    position: absolute;
+    right: -250px;
+    background-color: #f7b542;
+    color: white;
+    height: auto;
+    width: 270px;
+    z-index: 998;
+    margin-top: -27%;
+    display: none;
+    padding: 15px;
+    border-radius: 7px;
+    border: 0px;
+
+    -webkit-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.23);
+    -moz-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.23);
+    box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.23);
+}
 
 
 /*.confirm-window .content .bottom .buy .yes{
