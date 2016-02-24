@@ -10,7 +10,7 @@
 .left{
     position: relative;
     display: block;
-    width: 33%;
+    width: 40%;
     height: 100vh;
     background-size: auto 100%;
     background-position: left top;
@@ -29,7 +29,7 @@
     text-align: center;
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.5);
-    height: 300px;
+    height: 350px;
     padding-top: 100px;
 }
 
@@ -109,8 +109,192 @@
 }
 
 
+.user-form{
+    position: absolute;
+    width: 300px;
+    height: 450px;
+    top: 180px;
+    padding: 15px;
+}
+
+.user-form p{
+    color: gray;
+    margin-bottom: 10px;
+    font-size: 10pt;
+}
 
 
+
+.user-form .top{
+    position: absolute;
+}
+
+
+.user-form .choose{
+    position: relative;
+    width: 310px;
+    height: 40px;
+    line-height: 40px;
+    background: white;
+    margin-bottom: 20px;
+    border-bottom: 3px solid red;
+}
+
+.choose span{
+    position: relative;
+    display: block;
+    left: 10px;
+}
+
+.choose div p{
+    position: relative;
+    left: 10px;
+}
+
+.choose, .d, .m, .y, .h{
+    cursor: pointer;
+}
+
+.dropdown{
+    position: absolute;
+    width: 100%;
+    height: auto !important;
+    background: white;
+    #padding-left: 10px;
+    border-bottom: 3px solid red;
+}
+
+.user-form .bottom{
+    position: absolute;
+    bottom: 0px;
+}
+.user-form input, textarea{
+    height: 40px;
+    line-height: 40px;
+    width: 300px;
+    outline: none;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    #color: gray;
+    font-size: 10pt;
+    border: 0;
+}
+
+
+
+.notice-receive-date{
+    margin-top: 20px;
+}
+
+.sender-email-notice{
+    padding: 10px;
+    border: 1px dashed red !important;
+    width: 288px;
+    color: red !important;
+    font-size: 10pt !important;
+}
+
+
+.sender_fullname{
+    margin-top: 10px;
+}
+
+.date{
+    position: relative;
+    width: 310px;
+    height: 40px;
+    height: 40px;
+    background: white;
+}
+
+.d{
+    width: 47px;
+    border-right: 3px solid orange;
+}
+
+.m{
+    width: 100px;
+    border-right: 3px solid orange;
+}
+
+.y{
+    width: 60px;
+    border-right: 3px solid orange;
+}
+
+.time{
+    width: 90px;
+}
+
+
+.h{
+    width: 40px;
+    background-image: url("/giftcards/images/time_dots.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+.date div{
+    position: relative;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+.date .time input, select{
+    width: 50px;
+    border: 0;
+}
+
+.time input{
+    width: 30px !important;
+    height: 30px;
+    padding: 0px !important;
+    font-size: 10pt;
+}
+
+
+
+
+.date .time{
+    position: absolute;
+    right: 0px;
+}
+
+.year{
+    width: 310px;
+    height: 40px;
+    background: white;
+    margin-top: 10px;
+    line-height: 40px;
+}
+
+.year span{
+    position: relative;
+    display: block;
+    float: left;
+    height: 100%;
+    text-align: center;
+}
+
+.year .disable{
+    color: lightgray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .user-form span{
     display: block;
     position: relative;
@@ -128,26 +312,23 @@
     margin-bottom: 10px;
     border: 0;
     border: 1px solid lightgray;
-}
+}*/
 
 .amount-input{
     background-image: url("/giftcards/images/currency.png");
     background-position: 180px 3px;
     background-repeat: no-repeat;
-
 }
 
 .user-form textarea{
     width: 300px;
     padding: 5px;
     padding-left: 20px;
-    color: grey;
     height: 30px;
     line-height: 30px;
     outline: none;
     margin-bottom: 10px;
     border: 0;
-    border: 1px solid lightgray;
     height: 232px;
 }
 

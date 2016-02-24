@@ -109,4 +109,20 @@ jQuery(document).ready(function(){
     });
 
 
+
+
+    $('.choose, .d, .m, .y, .h').bind('click', function(){
+
+        $(this).find('.dropdown').toggle();
+
+    });
+
+
+
+
+
+
+
+
+
 });

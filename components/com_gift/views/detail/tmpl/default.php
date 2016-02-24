@@ -37,8 +37,100 @@
 
 <div class="after" >
 
-    <div class="user-form">
 
+
+    <div class="user-form" >
+
+        <div class="top">
+
+
+            <div class="choose">
+                <span>აირჩიე</span>
+                <div class="dropdown" style="display: none;">
+                    <p>გაუგზავნე მობილურზე</p>
+                    <p>გაუგზავნე ელ-ფოსტაზე</p>
+                    <p>გაუგზავნე მობილურზე და ელ-ფოსტაზე</p>
+                </div>
+
+            </div>
+
+            <div>
+                <input type="text" class="mobile" placeholder="მობილური">
+                <input type="text" class="email" placeholder="ელ-ფოსტა">
+            </div>
+
+
+            <p class="notice-receive-date">შეტყობინების მისვლის თარიღი</p>
+
+            <div class="date">
+                <div class="d">
+                    <span>8</span>
+                    <div class="dropdown" style="display: none;">
+                        <p>11</p>
+                        <p>12</p>
+
+                    </div>
+
+                </div>
+
+                <div class="m">
+                    სექტემბერი
+
+                    <div class="dropdown" style="display: none;">
+                        <p>October</p>
+                        <p>November</p>
+                        <p>December</p>
+                        <p>Januaery</p>
+                        <p>March</p>
+                    </div>
+
+                </div>
+
+                <div class="y">
+                    2016
+                    <div class="dropdown" style="display: none;">
+                        <p>2016</p>
+                    </div>
+                </div>
+
+                <div class="time">
+
+                    <div class="h">
+                        15
+                        <div class="dropdown" style="display: none;">
+                            <p>11</p>
+                            <p>12</p>
+                            <p>13</p>
+                            <p>14</p>
+                            <p>15</p>
+                        </div>
+                    </div>
+
+
+
+                    <input type="text" value="00" maxlength="2">
+                </div>
+
+
+                <input type="text" class="sender_fullname" placeholder="თქვენი სახელი და გვარი">
+                <input type="text" class="sender_email" placeholder="თქვენი ელ-ფოსტა">
+
+                <textarea placeholder="დამატებითი ტექსტი" style="height: 80px; width: 282px;"></textarea>
+
+            </div>
+
+
+        </div>
+
+        <div class="bottom">
+
+            <div class="sender">
+
+            </div>
+
+        </div>
+
+    <?php /* ?>
     <span>
         <input type="text" ng-model="mobile" name="mobile" placeholder="მიმღების მობილური" class="">
     </span>
@@ -55,7 +147,11 @@
         <textarea ng-model="text" name="text" placeholder="დამატებით ტექსტი"></textarea>
     </span>
 
+    <?php */ ?>
+
     </div>
+
+
 
 </div>
 
