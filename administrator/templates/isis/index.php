@@ -158,7 +158,11 @@ function colorIsLight($color)
 				</a>
 			<?php endif; ?>
 
-			<a class="admin-logo <?php echo ($hidden ? 'disabled' : ''); ?>" <?php echo ($hidden ? '' : 'href="' . $this->baseurl . '"'); ?>><span class="icon-joomla"></span></a>
+			<a class="admin-logo <?php echo ($hidden ? 'disabled' : ''); ?>" <?php echo ($hidden ? '' : 'href="' . $this->baseurl . '"'); ?>>
+				<?php /* ?>
+					<span class="icon-joomla"></span>
+				<?php */ ?>
+			</a>
 
 			<a class="brand hidden-desktop hidden-tablet" href="<?php echo JUri::root(); ?>" title="<?php echo JText::sprintf('TPL_ISIS_PREVIEW', $sitename); ?>" target="_blank"><?php echo JHtml::_('string.truncate', $sitename, 14, false, false); ?>
 				<span class="icon-out-2 small"></span></a>
@@ -200,7 +204,9 @@ function colorIsLight($color)
 <?php if ($displayHeader) : ?>
 	<header class="header<?php echo $header_is_light ? ' header-inverse' : ''; ?>">
 		<div class="container-logo">
-			<img src="<?php echo $logo; ?>" class="logo" alt="<?php echo $sitename;?>" />
+			<?php /* ?>
+				<img src="<?php echo $logo; ?>" class="logo" alt="<?php echo $sitename;?>" />
+ 			<?php */ ?>
 		</div>
 		<div class="container-title">
 			<jdoc:include type="modules" name="title" />

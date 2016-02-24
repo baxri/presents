@@ -3549,7 +3549,7 @@ input[type="submit"].btn.btn-mini {
 	border-radius: 6px 0 6px 6px;
 }
 .navbar-inverse .navbar-inner {
-	background-color: #13294a;
+	background-color: #004080;
 	background-image: -moz-linear-gradient(top,#152d53,#10223e);
 	background-image: -webkit-gradient(linear,0 0,0 100%,from(#152d53),to(#10223e));
 	background-image: -webkit-linear-gradient(top,#152d53,#10223e);
@@ -7029,7 +7029,7 @@ a:focus {
 	outline: none;
 }
 .view-login {
-	background-color: #10223e;
+	#background-color: #b3b3b3;
 	padding-top: 0;
 }
 .view-login .container {
@@ -7056,6 +7056,11 @@ a:focus {
 .view-login .well {
 	padding-bottom: 0;
 }
+
+.view-login .well p {
+	color: gray;
+}
+
 .view-login .login-joomla {
 	position: absolute;
 	left: 50%;
@@ -7068,7 +7073,7 @@ a:focus {
 	position: absolute;
 }
 .view-login .input-medium {
-	width: 176px;
+	width: 245px;
 }
 .navbar-inverse {
 	color: #333;
@@ -7112,7 +7117,6 @@ body .navbar-fixed-top {
 	font-size: 15px;
 }
 .navbar-inverse .navbar-inner {
-	background: #10223e;
 	background-image: none;
 	filter: none;
 }
@@ -7168,7 +7172,7 @@ body .navbar-fixed-top {
 	box-shadow: none;
 }
 .header {
-	background-color: #1a3867;
+	background-color: #999999;
 	border-top: 1px solid rgba(255,255,255,0.2);
 	padding: 5px 25px;
 }
@@ -8143,3 +8147,5 @@ body.modal-open {
 	overflow: hidden;
 	-ms-overflow-style: none;
 }
+
+

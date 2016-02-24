@@ -320,8 +320,7 @@ if ($im || $mm || $pm || $tm || $lm)
 }
 
 /*
- * Help Submenu
- */
+
 if ($showhelp == 1)
 {
 	$menu->addChild(new JMenuNode(JText::_('MOD_MENU_HELP'), '#'), true);
@@ -362,3 +361,5 @@ if ($showhelp == 1)
 	$menu->addChild(new JMenuNode(JText::_('MOD_MENU_HELP_SHOP'), 'http://shop.joomla.org', 'class:help-shop', false, '_blank'));
 	$menu->getParent();
 }
+
+*/

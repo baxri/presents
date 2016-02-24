@@ -4,19 +4,10 @@
 defined('_JEXEC') or die;
 
 
-class GiftViewGifts extends JViewLegacy
+class GiftViewSearchs extends JViewLegacy
 {
-	protected $items;
-	protected $pagination;
-	protected $state;
-	public $filterForm;
-	public $activeFilters;
-	protected $sidebar;
-
-
 	public function display($tpl = null)
 	{
-		$this->app = JFactory::getApplication();
 		$this->option = JRequest::getVar('option');
 		$canDo = JHelperContent::getActions( $this->option );
 
@@ -28,8 +19,10 @@ class GiftViewGifts extends JViewLegacy
 		$this->items      = $this->get('Items');
 		$this->pagination = $this->get('Pagination');
 		$this->state      = $this->get('State');
+
 		$this->filterForm    = $this->get('FilterForm');
 		$this->activeFilters = $this->get('ActiveFilters');
+
 
 		ComponentHelper::addSubmenu( $this->clearName );
 
@@ -47,11 +40,10 @@ class GiftViewGifts extends JViewLegacy
 
 		$this->addToolbar();
 
-		if( !$canDo->get('core.show.giftcards') && !$canDo->get('core.show.groups') ){
-			$this->app->redirect(JRoute::_('index.php?option='.$this->option.'&view=searchs', false));
+		if( $canDo->get('core.show.giftcards') || $canDo->get('core.show.groups') ){
+			$this->sidebar = JHtmlSidebar::render();
 		}
 
-		$this->sidebar = JHtmlSidebar::render();
 		return parent::display($tpl);
 	}
 
@@ -60,7 +52,7 @@ class GiftViewGifts extends JViewLegacy
 		$canDo = JHelperContent::getActions( $this->option, $this->edit_view, $this->state->get('filter.category_id'));
 		$user  = JFactory::getUser();
 
-		JToolbarHelper::title( ucfirst( $this->view ), 'address contact');
+		JToolbarHelper::title( 'ვაუჩერის ძებნა', 'address contact');
 
 		if ($canDo->get('core.create') || (count($user->getAuthorisedCategories($this->option, 'core.create'))) > 0)
 		{
