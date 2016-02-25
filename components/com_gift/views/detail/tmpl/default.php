@@ -1,17 +1,14 @@
 <?php defined('_JEXEC') or die; ?>
 
-<form  name="giftForm" novalidate>
+<form  name="giftForm" id="giftForm" novalidate>
 
 <div class="left" style="background-image: url("<?php echo $this->gift->big_image ?>");">
     <img src="<?php echo $this->gift->big_image ?>" style="height: 100%; display: none;" >
     <div class="buy-div">
-        <input type="text" ng-model="amount" name="amount" class="amount-input"  value="">
+        <input type="text" ng-model="amount" name="amount" class="amount-input"  value="" required>
         <div class="clear"></div>
 
-        <a href="#" class="myButton"
-                ng-disabled="validateGift()"
-            >შეძენა</a>
-
+        <a href="javascript:void(0)" class="myButton" ng-disabled="!giftForm.$valid" >შეძენა</a>
 
         <div class="clear"></div>
 
@@ -39,7 +36,9 @@
 
 
 
-    <div class="user-form" >
+    <div class="user-form"
+         ng-init="setFullDate( <?php echo $this->today['mday'] ?>, '<?php echo $this->today['month'] ?>', <?php echo $this->today['year'] ?>, <?php echo $this->today['hours'] ?> )"
+    >
 
         <div class="top">
 
@@ -59,18 +58,19 @@
 
                 </div>
 
-                <div class="tooltip destination-tooltip" style="display: block;" >
-                    აირჩიე სად მიუვუდეს თქვენს მეგობარს შეძენილი ვაუჩერი
-                </div>
+
             </div>
 
 
-
-
-
-
             <div class="field">
-                <input name="mobile" ng-model="mobile" ng-show="destination == 1 || destination == 3" type="text" class="mobile" placeholder="მაგალითი: 598xxxxxx">
+                <input
+                        name="mobile"
+                        ng-model="mobile"
+                        ng-required="( !mobile && !email )"
+                        ng-show="destination == 1 || destination == 3"
+                        type="text" class="mobile" placeholder="მაგალითი: 598xxxxxx"
+                        maxlength="9"
+                >
                 <div class="tooltip">
                     საჩუქარი მიმღებს მიუვა მობილურის ნომერზე
                 </div>
@@ -78,7 +78,11 @@
 
 
             <div class="field">
-                <input name="email" ng-model="email" ng-show="destination == 2 || destination == 3" type="text" class="email" placeholder="tosomeone@email.com">
+                <input name="email"
+                       ng-model="email"
+                       ng-required="( !mobile && !email )"
+                       ng-show="destination == 2 || destination == 3"
+                       type="text" class="email" placeholder="someoneemail@email.com">
                 <div class="tooltip">
                     საჩუქარი მიმღებს მიუვა ელ-ფოსტაზე
                 </div>
@@ -90,49 +94,45 @@
             <div class="date" ng-show="destination > 0">
 
                 <div class="d">
-                    <span>8</span>
+                    <span>{{d}}</span>
                     <div class="dropdown" style="display: none;">
                         <?php for( $i = 1; $i <= 31; $i++ ): ?>
-                         <p><span><?php echo $i ?></span></p>
+                            <p ng-click="setDate(<?php echo $i ?>)"><span><?php echo $i ?></span></p>
                         <?php endfor; ?>
                     </div>
 
                 </div>
 
                 <div class="m">
-                    <span>სექტემბერი</span>
+                    <span>{{m}}</span>
                     <div class="dropdown" style="display: none;">
-                        <p><span>სექტემბერი</span></p>
-                        <p><span>ოქტომბერი</span></p>
-                        <p><span>ნოემბერი</span></p>
-                        <p><span>დეკემბერი</span></p>
-                        <p><span>იანვარი</span></p>
-                        <p><span>თებერვალი</span></p>
-                        <p><span>მარტი</span></p>
-                        <p><span>აპრილი</span></p>
-                        <p><span>მაისი</span></p>
-                        <p><span>ივნისი</span></p>
-                        <p><span>ივლისი</span></p>
-                        <p><span>აგვისტო</span></p>
+                        <?php foreach( $this->months as $month ): ?>
+                            <p ng-click="setMonth('<?php echo $month ?>')"><?php echo $month ?></p>
+                        <?php endforeach; ?>
                     </div>
 
                 </div>
 
                 <div class="y">
-                    <span>2016</span>
+                    <span>{{y}}</span>
                     <div class="dropdown" style="display: none;">
-                        <p><span>2016</span></p>
-                        <p><span>2017</span></p>
+
+                        <?php foreach( $this->years as $year ): ?>
+                        <p ng-click="setYear(<?php echo $year ?>)"><span><?php echo $year ?></span></p>
+                        <?php endforeach; ?>
+
+
+
                     </div>
                 </div>
 
                 <div class="time">
 
                     <div class="h">
-                        <span>16</span>
+                        <span>{{h}}</span>
                         <div class="dropdown" style="display: none;">
                             <?php for( $i = 1; $i <= 24; $i++ ): ?>
-                                <p><?php echo $i ?></p>
+                                <p ng-click="setHour(<?php echo $i ?>)"><?php echo $i ?></p>
                             <?php endfor; ?>
                         </div>
                     </div>
@@ -160,7 +160,7 @@
                 </div>
             </div>
 
-            <textarea placeholder="დამატებითი ტექსტი" style=" height: 80px; width: 282px;"></textarea>
+            <textarea placeholder="დამატებითი ტექსტი" style=" height: 80px; width: 282px;" ng-model="text"></textarea>
 
 
 
@@ -219,7 +219,7 @@
                             <p><b>მაღაზია / ობიექტი</b>: <?php echo $this->gift->name ?></p>
                             <p ng-show="mobile.length > 0"><b>მიმღების მობილური</b>: {{mobile}}</p>
                             <p ng-show="email.length > 0"><b>მიმღების ელ-ფოსტა</b>: {{email}}</p>
-                            <p ng-show="sender.length > 0"><b>გამგზავნის ელ-ფოსტა</b>: {{sender}}</p>
+                            <p ng-show="sender_fullname.length > 0"><b>გამგზავნი</b>: {{sender_fullname}}</p>
                         </div>
 
                         <div class="gift-left gift-amount" ng-class="{ 'no-additional-text' : text.length == 0 }">
@@ -233,8 +233,10 @@
                             <p ng-show="text.length == 0" align="center" >დამატებით ტექსტი არ არის მითითებული</p>
                             <p ng-show="text.length > 0">{{text}}</p>
 
-
                         </div>
+
+
+
 
                     </div>
 

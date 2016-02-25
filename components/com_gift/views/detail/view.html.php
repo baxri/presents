@@ -21,7 +21,22 @@ class GiftViewDetail extends JViewLegacy
 		$doc =& JFactory::getDocument();
 		$doc->addStyleSheet( $this->baseurl.'/templates/gift/css/details.css' );
 
+		$this->months = array();
 
+		for ($m=1; $m<=12; $m++) {
+			$month = date('F', mktime(0,0,0,$m, 1, date('Y')));
+			$this->months[] = $month;
+		}
+
+		$this->today = getdate();
+
+		$this_year = $this->today['year'];
+		$next_year = $this_year + 1;
+
+		$this->years = array();
+
+		$this->years[] = $this_year;
+		$this->years[] = $next_year;
 
 		parent::display($tpl);
 	}
