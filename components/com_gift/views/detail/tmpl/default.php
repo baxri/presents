@@ -46,15 +46,20 @@
             <div class="field">
 
                 <div class="choose">
-                    <span ng-show="destination == 1">გაუგზავნე მობილურზე</span>
-                    <span ng-show="destination == 2">გაუგზავნე ელ-ფოსტაზე</span>
-                    <span ng-show="destination == 3">გაუგზავნე მობილურზე და ელ-ფოსტაზე</span>
-                    <span ng-show="destination == 0">სად გაუგზავნო?</span>
+                    <span ng-show="destination == 1">მობილურზე</span>
+                    <span ng-show="destination == 2">ელ-ფოსტაზე</span>
+                    <span ng-show="destination == 3">მობილურზე და ელ-ფოსტაზე</span>
+                    <span ng-show="destination == 0">აირჩიე სად გავუგზავნო eGiftcard?</span>
+
+                    <div class="icon"></div>
+
                     <div class="dropdown" style="display: none;">
-                        <p ng-click="setDestination(1)"><span>გაუგზავნე მობილურზე</span></p>
-                        <p ng-click="setDestination(2)"><span>გაუგზავნე ელ-ფოსტაზე</span></p>
-                        <p ng-click="setDestination(3)"><span>გაუგზავნე მობილურზე და ელ-ფოსტაზე</span></p>
+                        <p ng-click="setDestination(1)"><span>მობილურზე</span></p>
+                        <p ng-click="setDestination(2)"><span>ელ-ფოსტაზე</span></p>
+                        <p ng-click="setDestination(3)"><span>მობილურზე და ელ-ფოსტაზე</span></p>
                     </div>
+
+
 
                 </div>
 
@@ -68,7 +73,7 @@
                         ng-model="mobile"
                         ng-required="( !mobile && !email )"
                         ng-show="destination == 1 || destination == 3"
-                        type="text" class="mobile" placeholder="მაგალითი: 598xxxxxx"
+                        type="text" class="mobile" placeholder="მობილური"
                         maxlength="9"
                 >
                 <div class="tooltip">
@@ -82,7 +87,7 @@
                        ng-model="email"
                        ng-required="( !mobile && !email )"
                        ng-show="destination == 2 || destination == 3"
-                       type="text" class="email" placeholder="someoneemail@email.com">
+                       type="text" class="email" placeholder="ელ-ფოსტა">
                 <div class="tooltip">
                     საჩუქარი მიმღებს მიუვა ელ-ფოსტაზე
                 </div>
@@ -139,7 +144,7 @@
 
 
 
-                    <input type="text" value="00" maxlength="2">
+                    <input type="text" value="00" ng-model="mm" maxlength="2">
                 </div>
 
             </div>
@@ -236,7 +241,9 @@
                         </div>
 
 
-
+                        <div class="receive-date">
+                            {{d}} {{m}} {{y}} {{h}} სთ.
+                        </div>
 
                     </div>
 

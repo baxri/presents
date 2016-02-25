@@ -3,10 +3,10 @@ var app = angular.module('gift', []);
 
 app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  '$timeout', '$window', function ($scope, $http, $location, $interval, $timeout, $window) {
 
-    $scope.destination = '1';
+    $scope.destination = '0';
     $scope.amount = '50';
 
-    $scope.mobile = '598602084';
+    $scope.mobile = '';
     $scope.email = '';
 
     $scope.sender_fullname = '';
@@ -20,7 +20,7 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
     $scope.m = '';
     $scope.y = '';
     $scope.h = '';
-    $scope.mm = 00;
+    $scope.mm = '00';
 
     $scope.setFullDate = function( d, m, y, h ){
         $scope.d = d;
