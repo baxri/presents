@@ -19,7 +19,22 @@
     border: 0;
 }
 
+.arrow-fint{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    #border: 1px solid red;
+}
 
+.arrow-fint div{
+    position: absolute;
+    color: white;
+    width: 100%;
+    font-size: 10pt;
+    bottom: 0px;
+    #border: 1px solid red;
+}
 
 .buy-div{
     top: 200px;
@@ -58,18 +73,17 @@
 
 .buy-div input{
     width: 200px;
-    font-size:50pt;
-    padding: 5px;
+    font-size:40pt;
     margin-bottom: 20px;
     border: 0;
     border-bottom: 2px solid white;
     text-align: center;
-    height: 58px;
-    line-height: 50px;
     background-color: transparent;
     color: white;
     outline: none;
     font-style:  italic;
+    padding-right: 30px;
+    #border: 1px solid white;
 }
 
 .buy-div p input{
@@ -322,29 +336,10 @@
 
 
 
-/*
-.user-form span{
-    display: block;
-    position: relative;
-    top: 200px;
-}
-
-.user-form input{
-    width: 300px;
-    padding: 5px;
-    padding-left: 20px;
-    color: grey;
-    height: 30px;
-    line-height: 30px;
-    outline: none;
-    margin-bottom: 10px;
-    border: 0;
-    border: 1px solid lightgray;
-}*/
 
 .amount-input{
     background-image: url("/giftcards/images/currency.png");
-    background-position: 180px 3px;
+    background-position: 170px 3px;
     background-repeat: no-repeat;
 }
 
@@ -535,23 +530,23 @@
 
 
 
-
-
-
-
-
-
 .mobile-prev{
     position: relative;
+    left: 10px;
     top: 20px;
-    width: 300px;
+    width: 350px;
     height: 300px;
     float: left;
     border-left: 2px solid white;
     padding-top: 84px;
     padding-left: 26px;
-    text-align: center;
+    #text-align: center;
 }
+
+.popup-right-list p{
+    margin: 10px;
+}
+
 
 .mobile-prev h2{
     color: white;
@@ -561,19 +556,6 @@
     color: gray;
 }
 
-.mobile-prev div{
-
-    position: relative;
-    width: auto;
-    height: auto;
-
-    background-color: white;
-    border-radius: 10px;
-    margin: 20px;
-    padding: 20px;
-    color: gray;
-
-}
 
 .mobile-prev .answer{
     width: 100px;

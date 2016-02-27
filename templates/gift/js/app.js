@@ -3,16 +3,17 @@ var app = angular.module('gift', []);
 
 app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  '$timeout', '$window', function ($scope, $http, $location, $interval, $timeout, $window) {
 
-    $scope.destination = '0';
-    $scope.amount = '50';
+    $scope.destination = '3';
+    $scope.amount = '30';
 
     $scope.mobile = '';
     $scope.email = '';
 
-    $scope.sender_fullname = '';
-    $scope.sender_email = '';
+    $scope.sender_fullname = 'გიორგი ბიბილაშვილი';
+    $scope.sender_mobile = '598602084  ';
+    $scope.sender_email = 'giorgi.bibilashvili@gmail.com';
 
-    $scope.text = '';
+    $scope.text = 'მიყვრახააააააააააააააარ!';
 
     $scope.date = '0000-00-00';
 
@@ -28,8 +29,6 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
         $scope.y = y;
         $scope.h = h;
     }
-
-
 
     $scope.setDestination = function( destination ){
         $scope.destination = destination;

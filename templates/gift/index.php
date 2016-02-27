@@ -23,9 +23,16 @@
 <body ng-app="gift" ng-controller="GiftController">
 
     <div id="headerbg" class="header">
-        <a href="index.php"class="logo">
-            <img src="images/logo.png" alt="" height="80">
-        </a>
+
+        <div>
+            <a href="index.php"class="logo">
+                <img src="images/logo.png" alt="" height="80">
+            </a>
+        </div>
+
+        <div class="slogan">
+           <p>შეიძინე სხვადასხვა ბრენდის სასაჩუქრე ბარათები ონლაინ!</p>
+        </div>
 
         <jdoc:include type="modules" name="categories" />
 
