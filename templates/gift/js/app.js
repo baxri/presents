@@ -4,12 +4,13 @@ var app = angular.module('gift', []);
 app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  '$timeout', '$window', function ($scope, $http, $location, $interval, $timeout, $window) {
 
     $scope.destination = '0';
-    $scope.amount = '50';
+    $scope.amount = '0.00';
 
     $scope.mobile = '';
     $scope.email = '';
 
     $scope.sender_fullname = '';
+    $scope.sender_mobile = '';
     $scope.sender_email = '';
 
     $scope.text = '';
@@ -28,8 +29,6 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
         $scope.y = y;
         $scope.h = h;
     }
-
-
 
     $scope.setDestination = function( destination ){
         $scope.destination = destination;

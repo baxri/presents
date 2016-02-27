@@ -5,8 +5,12 @@
 <div class="left" style="background-image: url("<?php echo $this->gift->big_image ?>");">
     <img src="<?php echo $this->gift->big_image ?>" style="height: 100%; display: none;" >
     <div class="buy-div">
-        <input type="text" ng-model="amount" name="amount" class="amount-input"  value="" required>
+        <input type="text" ng-model="amount" name="amount" class="amount-input" placeholder="თანხა"  value="0.00" ng-required="amount < 1">
         <div class="clear"></div>
+
+        <div class="arrow-fint">
+            <span></span>
+        </div>
 
         <a href="javascript:void(0)" class="myButton" ng-disabled="!giftForm.$valid" >შეძენა</a>
 
@@ -46,17 +50,17 @@
             <div class="field">
 
                 <div class="choose">
-                    <span ng-show="destination == 1">მობილურზე</span>
-                    <span ng-show="destination == 2">ელ-ფოსტაზე</span>
-                    <span ng-show="destination == 3">მობილურზე და ელ-ფოსტაზე</span>
-                    <span ng-show="destination == 0">აირჩიე სად გავუგზავნო eGiftcard?</span>
+                    <span ng-show="destination == 1">გაუგზავნე მობილურზე</span>
+                    <span ng-show="destination == 2">გაუგზავნე ელ-ფოსტაზე</span>
+                    <span ng-show="destination == 3">შეუკვეთე ფიზიკურად</span>
+                    <span ng-show="destination == 0">აირჩიე სად გავუგზავნო ბარათი?</span>
 
                     <div class="icon"></div>
 
                     <div class="dropdown" style="display: none;">
-                        <p ng-click="setDestination(1)"><span>მობილურზე</span></p>
-                        <p ng-click="setDestination(2)"><span>ელ-ფოსტაზე</span></p>
-                        <p ng-click="setDestination(3)"><span>მობილურზე და ელ-ფოსტაზე</span></p>
+                        <p ng-click="setDestination(1)"><span>გაუგზავნე მობილურზე</span></p>
+                        <p ng-click="setDestination(2)"><span>გაუგზავნე ელ-ფოსტაზე</span></p>
+                        <p ng-click="setDestination(3)"><span>შეუკვეთე ფიზიკურად</span></p>
                     </div>
 
 
@@ -72,7 +76,7 @@
                         name="mobile"
                         ng-model="mobile"
                         ng-required="( !mobile && !email )"
-                        ng-show="destination == 1 || destination == 3"
+                        ng-show="destination == 1"
                         type="text" class="mobile" placeholder="მობილური"
                         maxlength="9"
                 >
@@ -86,86 +90,102 @@
                 <input name="email"
                        ng-model="email"
                        ng-required="( !mobile && !email )"
-                       ng-show="destination == 2 || destination == 3"
+                       ng-show="destination == 2"
                        type="text" class="email" placeholder="ელ-ფოსტა">
                 <div class="tooltip">
                     საჩუქარი მიმღებს მიუვა ელ-ფოსტაზე
                 </div>
             </div>
 
+            <div>
 
-            <p class="notice-receive-date" ng-show="destination > 0">შეტყობინების მისვლის თარიღი</p>
+                <p class="notice-receive-date" ng-show="(destination == 1 || destination == 2)">საჩუქრის მისვლის დრო</p>
+                <div class="date" ng-show="(destination == 1 || destination == 2)" style="border-bottom: 2px solid orange; margin-bottom: 20px;">
 
-            <div class="date" ng-show="destination > 0">
-
-                <div class="d">
-                    <span>{{d}}</span>
-                    <div class="dropdown" style="display: none;">
-                        <?php for( $i = 1; $i <= 31; $i++ ): ?>
-                            <p ng-click="setDate(<?php echo $i ?>)"><span><?php echo $i ?></span></p>
-                        <?php endfor; ?>
-                    </div>
-
-                </div>
-
-                <div class="m">
-                    <span>{{m}}</span>
-                    <div class="dropdown" style="display: none;">
-                        <?php foreach( $this->months as $month ): ?>
-                            <p ng-click="setMonth('<?php echo $month ?>')"><?php echo $month ?></p>
-                        <?php endforeach; ?>
-                    </div>
-
-                </div>
-
-                <div class="y">
-                    <span>{{y}}</span>
-                    <div class="dropdown" style="display: none;">
-
-                        <?php foreach( $this->years as $year ): ?>
-                        <p ng-click="setYear(<?php echo $year ?>)"><span><?php echo $year ?></span></p>
-                        <?php endforeach; ?>
-
-
-
-                    </div>
-                </div>
-
-                <div class="time">
-
-                    <div class="h">
-                        <span>{{h}}</span>
+                    <div class="d">
+                        <span>{{d}}</span>
                         <div class="dropdown" style="display: none;">
-                            <?php for( $i = 1; $i <= 24; $i++ ): ?>
-                                <p ng-click="setHour(<?php echo $i ?>)"><?php echo $i ?></p>
+                            <?php for( $i = 1; $i <= 31; $i++ ): ?>
+                                <p ng-click="setDate(<?php echo $i ?>)"><span><?php echo $i ?></span></p>
                             <?php endfor; ?>
+                        </div>
+
+                    </div>
+
+                    <div class="m">
+                        <span>{{m}}</span>
+                        <div class="dropdown" style="display: none;">
+                            <?php foreach( $this->months as $month ): ?>
+                                <p ng-click="setMonth('<?php echo $month ?>')"><?php echo $month ?></p>
+                            <?php endforeach; ?>
+                        </div>
+
+                    </div>
+
+                    <div class="y">
+                        <span>{{y}}</span>
+                        <div class="dropdown" style="display: none;">
+
+                            <?php foreach( $this->years as $year ): ?>
+                                <p ng-click="setYear(<?php echo $year ?>)"><span><?php echo $year ?></span></p>
+                            <?php endforeach; ?>
+
+
+
                         </div>
                     </div>
 
+                    <div class="time">
+
+                        <div class="h">
+                            <span>{{h}}</span>
+                            <div class="dropdown" style="display: none;">
+                                <?php for( $i = 1; $i <= 24; $i++ ): ?>
+                                    <p ng-click="setHour(<?php echo $i ?>)"><?php echo $i ?></p>
+                                <?php endfor; ?>
+                            </div>
+                        </div>
 
 
-                    <input type="text" value="00" ng-model="mm" maxlength="2">
+
+                        <input type="text" value="00" ng-model="mm" maxlength="2">
+                    </div>
+
                 </div>
+
+
+                <div class="field">
+                    <input ng-disabled="destination == 0"  type="text" name="sender_fullname" ng-model="sender_fullname" class="sender_fullname" placeholder="თქვენი სახელი და გვარი">
+                    <div class="tooltip">
+                        ელექტრონულ სასაჩუქრე ბარათზე ბარათზე იქნება მითეთებული თქვენი სახელი და გვარი როგორ გამგზავნი
+                    </div>
+                </div>
+
+                <div class="field">
+                    <input ng-disabled="destination == 0" type="text" name="sender_mobile" ng-model="sender_mobile" class="sender_mobile" placeholder="თქვენი მობილური">
+                    <div class="tooltip">
+                        ჩვენი ოპერატორი დაგიკავშირდებათ მითითებულ მობილურის ნომერზე
+                    </div>
+                </div>
+
+                <div class="field">
+                    <input ng-disabled="destination == 0" type="text" name="sender_email" ng-model="sender_email" class="sender_email" placeholder="თქვენი ელ-ფოსტა">
+                    <div class="tooltip">
+                        ელ-ფოსტაზე გამოგეგზავნებათ ვაუჩერის შეძენის დასტური და ასევე თქვენს მიერ შეძენული ვაუჩერი
+                    </div>
+                </div>
+
+                <textarea ng-disabled="destination == 0" placeholder="მისალოცი ტექსტი ბარათზე" style=" height: 80px; width: 282px;" ng-model="text"></textarea>
+
 
             </div>
 
 
 
-            <div class="field">
-                <input type="text" name="sender_fullname" ng-model="sender_fullname" class="sender_fullname" placeholder="თქვენი სახელი და გვარი">
-                <div class="tooltip">
-                    ელექტრონულ სასაჩუქრე ბარათზე ბარათზე იქნება მითეთებული თქვენი სახელი და გვარი როგორ გამგზავნი
-                </div>
-            </div>
 
-            <div class="field">
-                <input type="text" name="sender_email" ng-model="sender_email" class="sender_email" placeholder="თქვენი ელ-ფოსტა">
-                <div class="tooltip">
-                    ელ-ფოსტაზე გამოგეგზავნებათ ვაუჩერის შეძენის დასტური და ასევე თქვენს მიერ შეძენული ვაუჩერი
-                </div>
-            </div>
 
-            <textarea placeholder="დამატებითი ტექსტი" style=" height: 80px; width: 282px;" ng-model="text"></textarea>
+
+
 
 
 

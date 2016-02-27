@@ -2,6 +2,14 @@
 We align the text center so it shows up in the middle.
 If you prefer you could right or left align it.*/
 
+@font-face {
+    font-family: 'alokado';
+    src: url('../fonts/alokado.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 h1, p, body, html {
     margin:0;
     padding:0;
@@ -15,6 +23,23 @@ body {
     background: #F2F2F2;
     font:12px verdana, sans-serif;
     color:#000;
+    font-family: 'alokado';
+}
+
+input{
+    font-family: 'alokado';
+}
+
+div{
+    font-family: 'alokado';
+}
+
+p{
+    font-family: 'alokado';
+}
+
+textarea{
+    font-family: 'alokado';
 }
 
 ul {
