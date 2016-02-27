@@ -17,6 +17,8 @@
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lib/angular.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/app.js"></script>
 
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
 </head>
 <body ng-app="gift" ng-controller="GiftController">
 

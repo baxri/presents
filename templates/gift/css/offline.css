@@ -1,0 +1,19 @@
+
+body{
+	background: black;
+	margin: 0px;
+	padding: 0px;
+}
+
+.container{
+	position: relative;
+	top: 200px;
+	width: 600px;
+	height: 700px;
+	margin:0 auto;
+	text-align: center;
+}
+
+
+
+
