@@ -3,8 +3,9 @@ var app = angular.module('gift', []);
 
 app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  '$timeout', '$window', function ($scope, $http, $location, $interval, $timeout, $window) {
 
-    $scope.destination = '3';
+    $scope.destination = 0;
     $scope.amount = '30';
+    $scope.deliver = 0;
 
     $scope.mobile = '';
     $scope.email = '';
@@ -32,6 +33,12 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
 
     $scope.setDestination = function( destination ){
         $scope.destination = destination;
+
+        if( destination == 3 ){
+            $scope.deliver = 5;
+        }else{
+            $scope.deliver = 0;
+        }
     }
 
     $scope.setDate = function( date ){
@@ -49,5 +56,10 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
     $scope.setYear = function( year ){
         $scope.y = year;
     }
+
+    $scope.prepareFormData = function(){
+
+    }
+
 
 }]);

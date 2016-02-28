@@ -57,17 +57,13 @@
                     <span ng-show="destination == 2">გაუგზავნე ელ-ფოსტაზე</span>
                     <span ng-show="destination == 3">შეუკვეთე ფიზიკურად</span>
                     <span ng-show="destination == 0">აირჩიე სად გავუგზავნო ბარათი?</span>
-
                     <div class="icon"></div>
-
                     <div class="dropdown" style="display: none;">
-                        <p ng-click="setDestination(1)"><span>გაუგზავნე მობილურზე</span></p>
+                        <p ng-click="setDestination(1)" ><span>გაუგზავნე მობილურზე</span></p>
                         <p ng-click="setDestination(2)"><span>გაუგზავნე ელ-ფოსტაზე</span></p>
                         <p ng-click="setDestination(3)"><span>შეუკვეთე ფიზიკურად</span></p>
                     </div>
-
-
-
+                    <input type="hidden" ng-model="destination" >
                 </div>
 
 
@@ -156,6 +152,10 @@
 
                 </div>
 
+                <div class="field pay-note" ng-show="destination == 3">
+                    <p class="" >გადახდის შემდეგ 2-3 სამუშაო დღის განმავლობაში დაბლა მითითებულ მობილურის ნომერზე დაგიკავშირდებათ ოპერატორი, დააზუსტებს მისამართს და ჩვენი კურიერი მოგაწვდით სასაჩუქრე ბარათს.</p>
+                    <p>კურიერის მომსახურების საკომიო შეადგენს 5 ლარს</p>
+                </div>
 
                 <div class="field">
                     <input ng-disabled="destination == 0"  type="text" name="sender_fullname" ng-model="sender_fullname" class="sender_fullname" placeholder="თქვენი სახელი და გვარი">
@@ -280,9 +280,21 @@
 
 
                    <div class="popup-right-list">
-                       <p>თქვენი სახელი: {{sender_fullname}}</p>
-                       <p>თქვენი მობილური: {{sender_mobile}}</p>
-                       <p>თქვენი მობილური: {{sender_email}}</p>
+                       <p class="item">თქვენი სახელი: {{sender_fullname}}</p>
+                       <p class="item">თქვენი მობილური: {{sender_mobile}}</p>
+                       <p class="item">თქვენი ელ-ფოსტა: {{sender_email}}</p>
+
+
+                       <div class="amount-info">
+                           <p class="item">ბარათის ღირებულება: {{amount| currency: ""}} ლარი</p>
+                           <p class="item" ng-show="destination == 3">კურიერის მომსახურება: {{deliver | currency: ""}} ლარი</p>
+                           <p class="item">სულ გადასახდელი: {{amount*1 + deliver*1| currency: ""}} ლარი</p>
+                       </div>
+
+                       <p class="item">
+                           <a href="#">ვეთანხმები ბილეთის ყიდვის წესებს და პირობებს</a>
+                       </p>
+
                    </div>
 
 

@@ -16,6 +16,7 @@ $twofactormethods = UsersHelper::getTwoFactorMethods();
 <head>
 	<jdoc:include type="head" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/gift/css/offline.css" type="text/css" />
+	<link rel="shortcut icon" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/icon/favicon.ico" />
 </head>
 <body>
 <jdoc:include type="message" />
