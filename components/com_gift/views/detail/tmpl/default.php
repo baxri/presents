@@ -1,6 +1,6 @@
 <?php defined('_JEXEC') or die; ?>
 
-<form  name="giftForm" id="giftForm" novalidate>
+<form  name="giftForm" id="giftForm" action="<?php echo JUri::root().'toPay' ?>" method="post" novalidate>
 
 <div class="left" style="background-image: url("<?php echo $this->gift->big_image ?>");">
     <img src="<?php echo $this->gift->big_image ?>" style="height: 100%; display: none;" >
@@ -15,7 +15,7 @@
 
 
 
-        <a href="javascript:void(0)" class="myButton" ng-disabled="!giftForm.$valid" >შეძენა</a>
+        <a href="javascript:void(0)" class="myButton" ng-click="prepareFormData()" ng-disabled="!giftForm.$valid" >შეძენა</a>
 
         <div class="clear"></div>
 
@@ -63,7 +63,7 @@
                         <p ng-click="setDestination(2)"><span>გაუგზავნე ელ-ფოსტაზე</span></p>
                         <p ng-click="setDestination(3)"><span>შეუკვეთე ფიზიკურად</span></p>
                     </div>
-                    <input type="hidden" ng-model="destination" >
+                    <input type="hidden" name="destination" value="{{destination}}">
                 </div>
 
 
@@ -147,7 +147,10 @@
 
 
 
-                        <input type="text" value="00" ng-model="mm" maxlength="2">
+                        <input type="text" value="{{mm}}" ng-model="mm" maxlength="2">
+
+
+                        <input type="hidden" name="date" value="{{date}}">
                     </div>
 
                 </div>
@@ -182,11 +185,6 @@
 
 
             </div>
-
-
-
-
-
 
 
 
@@ -337,12 +335,14 @@
 
             <div class="rows bottom">
                 <button class="close close-window" style="background-color: #4D4D4D;"><span>გაუქმება</span><span class="yes"></span></button>
-                <button class="buy" style="background-color: #BA0000;"><span>შეძენა</span><span class="yes"></span></button>
+                <button onclick="$(this).form().submit()" class="buy" style="background-color: #BA0000;"><span>შეძენა</span><span class="yes"></span></button>
             </div>
 
         </div>
 
     </div>
+
+
 
 </form>
 

@@ -10,13 +10,16 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
     $scope.mobile = '';
     $scope.email = '';
 
-    $scope.sender_fullname = 'გიორგი ბიბილაშვილი';
-    $scope.sender_mobile = '598602084  ';
-    $scope.sender_email = 'giorgi.bibilashvili@gmail.com';
+    $scope.sender_fullname = '';
+    $scope.sender_mobile = '';
+    $scope.sender_email = '';
 
-    $scope.text = 'მიყვრახააააააააააააააარ!';
+    $scope.text = '';
+    $scope.date = '0000-00-00|00:00';
 
-    $scope.date = '0000-00-00';
+
+
+
 
     $scope.d = '';
     $scope.m = '';
@@ -58,7 +61,7 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
     }
 
     $scope.prepareFormData = function(){
-
+        $scope.date = $scope.y + "-" + $scope.m + "-" + $scope.d + "|" + $scope.h + ":" + $scope.mm;
     }
 
 

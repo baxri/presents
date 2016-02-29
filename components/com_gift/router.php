@@ -28,6 +28,12 @@ class GiftRouter extends JComponentRouterBase
 
 	public function parse(&$segments)
 	{
+		$vars = $this->_toTask( $segments );
+
+		if( $vars ){
+			return $vars;
+		}
+
 		$vars = array();
 
 		if( !empty( $segments[0]) && $segments[0] == 'login' ){
@@ -78,6 +84,20 @@ class GiftRouter extends JComponentRouterBase
 		$id = $db->loadResult();
 
 		return $id;
+	}
+
+	private function _toTask( $segments ){
+
+		$tasks = array( 'toPay' );
+
+		if( !empty( $segments[0] ) && in_array( $segments[0], $tasks ) ){
+			return array(
+				'option' => 'com_gift',
+				'task' => $segments[0]
+			);
+		}
+
+		return false;
 	}
 }
 

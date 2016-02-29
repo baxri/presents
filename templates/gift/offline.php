@@ -17,12 +17,49 @@ $twofactormethods = UsersHelper::getTwoFactorMethods();
 	<jdoc:include type="head" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/gift/css/offline.css" type="text/css" />
 	<link rel="shortcut icon" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/icon/favicon.ico" />
+
+	<meta property="og:url"           content="http://www.siurpriz.ge/" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="siurpriz.ge" />
+	<meta property="og:description"   content="შეიძინე ნებისმიერი ბრენდის სასაჩუქრე ვაუჩერი ონლაინ" />
+	<meta property="og:image"         content="http://www.siurpriz.ge/images/logo.png" />
+
+
 </head>
 <body>
 <jdoc:include type="message" />
 
 	<div class="container">
-		<img width="600" src="images/offline-avatar.png" />
+		<img width="300" src="images/offline-avatar.png" />
+		<div class="panel">
+			<div class="happy">
+
+			</div>
+			<div class="text">
+
+				<div style="clear: both; margin: 20px; font-size: 11pt; ">
+					რა არის siurpriz.ge?... ამას ძალიან... ძალიან მალე შეიტყობთ :)
+				</div>
+
+				<div class="fb-block">
+
+
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+							var js, fjs = d.getElementsByTagName(s)[0];
+							if (d.getElementById(id)) return;
+							js = d.createElement(s); js.id = id;
+							js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+							fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));</script>
+
+					<div class="fb-like" data-href="https://www.facebook.com/siurprizge-1000968356632423/" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>
+
+
+				</div>
+
+			</div>
+		</div>
 	<div>
 
 	<?php /* ?>
@@ -53,6 +90,18 @@ $twofactormethods = UsersHelper::getTwoFactorMethods();
 		</fieldset>
 		</form>
 	<?php */ ?>
+
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-74420440-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
 
 
 </body>

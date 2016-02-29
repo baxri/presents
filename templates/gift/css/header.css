@@ -162,7 +162,7 @@ input.ng-invalid.ng-touched{
     top: 0;
     width: 25px;
     height: 22px;
-    background-image: url("http://localhost/giftcards/images/sprite.png");
+    background-image: url("http://192.168.16.125/giftcards/images/sprite.png");
     background-position: -3px 3px;
     background-repeat: no-repeat;
 
