@@ -36,8 +36,15 @@ class GiftRouter extends JComponentRouterBase
 
 		$vars = array();
 
-		if( !empty( $segments[0]) && $segments[0] == 'login' ){
-			die('magaziis paneli');
+		if( !empty( $segments[0]) && !empty( $segments[1]) && $segments[0] == 'tovisa' ){
+			$vars['option']  = 'com_gift';
+			$vars['view']  = 'tovisa';
+			$vars['id']  = $segments[1];
+		}
+		elseif( !empty( $segments[0]) && !empty( $segments[1]) && $segments[0] == 'giftcard' ){
+			$vars['option']  = 'com_gift';
+			$vars['view']  = 'order';
+			$vars['id']  = $segments[1];
 		}
 		elseif( !empty( $segments[0] ) && empty( $segments[1] ) ){
 			$vars['option']  = 'com_gift';
@@ -88,7 +95,7 @@ class GiftRouter extends JComponentRouterBase
 
 	private function _toTask( $segments ){
 
-		$tasks = array( 'toPay' );
+		$tasks = array( 'toPay', 'callback' );
 
 		if( !empty( $segments[0] ) && in_array( $segments[0], $tasks ) ){
 			return array(

@@ -9,6 +9,8 @@ function d($str){
 }
 
 
+
+$task = JRequest::getVar('task');
 $controller = JControllerLegacy::getInstance('Gift');
-$controller->execute(JFactory::getApplication()->input->get('task'));
+$controller->execute( $task );
 $controller->redirect();
