@@ -26,13 +26,15 @@
 
         <div>
             <a href="index.php"class="logo">
-                <img src="images/logo.png" alt="" height="80">
+               <?php /*   <img src="images/logo.png" alt="" height="80">  */ ?>
             </a>
         </div>
 
+        <?php /* ?>
         <div class="slogan">
            <p>შეიძინე სხვადასხვა ბრენდის სასაჩუქრე ბარათები ონლაინ!</p>
         </div>
+         <?php */ ?>
 
         <jdoc:include type="modules" name="categories" />
 
@@ -40,7 +42,10 @@
 
 
     <jdoc:include type="message" />
-    <jdoc:include type="component" />
+
+    <?php /*   <jdoc:include type="component" />  */ ?>
+
+
 
     <div class="clear"></div>
 
