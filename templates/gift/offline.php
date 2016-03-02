@@ -14,16 +14,26 @@ $twofactormethods = UsersHelper::getTwoFactorMethods();
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
+
 	<jdoc:include type="head" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/gift/css/offline.css" type="text/css" />
 	<link rel="shortcut icon" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/icon/favicon.ico" />
 
-	<meta property="og:url"           content="http://www.siurpriz.ge/" />
-	<meta property="og:type"          content="website" />
-	<meta property="og:title"         content="siurpriz.ge" />
-	<meta property="og:description"   content="შეიძინე ნებისმიერი ბრენდის სასაჩუქრე ვაუჩერი ონლაინ" />
-	<meta property="og:image"         content="http://www.siurpriz.ge/images/logo.png" />
+	<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 
+	<meta property="og:url"           content="http://www.siurpriz.ge" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="SIURPRIZ.GE" />
+	<meta property="og:description"   content="რა არის SIURPRIZ.GE?... ამას ძალიან... ძალიან მალე შეიტყობთ :)" />
+	<meta property="og:image"     	  content="http://www.siurpriz.ge/images/fb-share.png" />
+	<meta property="og:image:width"   content="200"/>
+	<meta property="og:image:height"  content="200"/>
 
 </head>
 <body>
@@ -45,13 +55,7 @@ $twofactormethods = UsersHelper::getTwoFactorMethods();
 
 
 					<div id="fb-root"></div>
-					<script>(function(d, s, id) {
-							var js, fjs = d.getElementsByTagName(s)[0];
-							if (d.getElementById(id)) return;
-							js = d.createElement(s); js.id = id;
-							js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-							fjs.parentNode.insertBefore(js, fjs);
-						}(document, 'script', 'facebook-jssdk'));</script>
+
 
 					<div class="fb-like" data-href="https://www.facebook.com/siurprizge-1000968356632423/" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>
 

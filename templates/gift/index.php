@@ -47,14 +47,25 @@
 
 
 
-    <div class="clear"></div>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <jdoc:include type="modules" name="footer_menu" />
-        </div>
-    </footer>
+    <?php if ($this->countModules( 'footer_menu' )) : ?>
+        <div class="clear"></div>
+        <footer class="footer">
+            <div class="footer-container">
+                <jdoc:include type="modules" name="footer_menu" />
+            </div>
+        </footer>
 
+        <footer class="footer footer2">
+            <div class="footer-container footer-container2">
+                ff
+            </div>
+            <div class="footer-container">
+                2016
+            </div>
+        </footer>
+
+    <?php endif; ?>
 
 </body>
 </html>
