@@ -26,15 +26,15 @@
 
         <div>
             <a href="index.php"class="logo">
-               <?php /*   <img src="images/logo.png" alt="" height="80">  */ ?>
+                 <img src="images/logo.png" alt="" height="80">
             </a>
         </div>
 
-        <?php /* ?>
+        <?php  ?>
         <div class="slogan">
            <p>შეიძინე სხვადასხვა ბრენდის სასაჩუქრე ბარათები ონლაინ!</p>
         </div>
-         <?php */ ?>
+         <?php  ?>
 
         <jdoc:include type="modules" name="categories" />
 
@@ -42,10 +42,7 @@
 
 
     <jdoc:include type="message" />
-
-    <?php /*   <jdoc:include type="component" />  */ ?>
-
-
+    <jdoc:include type="component" />
 
 
     <?php if ($this->countModules( 'footer_menu' )) : ?>
@@ -58,10 +55,27 @@
 
         <footer class="footer footer2">
             <div class="footer-container footer-container2">
-                ff
+
+                <div class="left">
+                    <span>მომხმარებლების ცხელი ხაზი</span>
+                    <p>+995 (32) 242 20 42</p>
+                </div>
+
+                <div class="right">
+                    Yep.ge არის ინდივიდუალური და ჯგუფური შესყიდვების ვებ-გვერდი, სადაც თქვენ შეგიძლიათ ნებისმიერ დროს მიიღოთ ფასდაკლება თქვენთვის სასურველ საქონელსა და მომსახურებაზე. yep.ge-ს მეშვეობით ყოველდღიურად მიიღებთ ექსკლუზიურ შემოთავაზებებს სხვადასხვა კომპანიებისგან წარმოუდგენლად დაბალ ფასად. აირჩიე საუკეთესო! დარეგისტრირდით და შეიძინეთ საჩუქრები თქვენთვის და თქვენი მეგობრებისთვის
+                </div>
+
             </div>
-            <div class="footer-container">
-                2016
+            <div class="footer-container footer-container3">
+
+                <div class="left">
+                    SOMESITE.GE
+                </div>
+
+                <div class="right">
+                    ყველა უფლება დაცულია © 2016
+                </div>
+
             </div>
         </footer>
 

@@ -17,6 +17,6 @@
     </files>
     <positions>
         <position>categories</position>
-        <position>footer</position>
+        <position>footer_menu</position>
     </positions>
 </extension>

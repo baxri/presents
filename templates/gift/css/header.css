@@ -63,6 +63,103 @@ input.ng-invalid.ng-touched{
 }
 
 
+
+.gift-container {
+    position:relative;
+    overflow:auto;
+    margin:0 auto;
+    top: 180px;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+.gift-container.article{
+    font-size: 10pt;
+    text-align: justify;
+}
+
+@media (min-width: 300px) {
+
+    .gift-container {
+        width: 250px;
+    }
+    .footer-container {
+        width: 250px;
+    }
+
+    .footer li{
+        #width: 188px;
+        text-align: center;
+        border-right: 0px solid #808080 !important;
+        line-height: 30px;
+    }
+}
+
+@media (min-width: 518px) {
+    .gift-container {
+        width: 480px;
+    }
+    .footer-container {
+        width: 480px;
+    }
+}
+
+@media (min-width: 720px) {
+    .gift-container {
+        width: 680px;
+    }
+    .footer-container {
+        width: 680px;
+    }
+}
+
+@media (min-width: 960px){
+    .gift-container {
+        width: 940px;
+    }
+    .footer-container {
+        width: 940px;
+    }
+}
+@media (min-width: 1280px) {
+
+    .articleBody {
+        width: 1200px;
+    }
+
+    .gift-container {
+        width: 1200px;
+    }
+    .footer-container {
+        width: 1200px;
+    }
+}
+
+@media (min-width: 1478px) {
+    .gift-container {
+        width: 1440px;
+    }
+    .footer-container {
+        width: 1440px;
+    }
+
+}
+
+.footer-container {
+    overflow:auto;
+    position:relative;
+    margin:0 auto;
+}
+
+
+
+
+
+
+
 .header {
     display: block;
     position: fixed;
@@ -73,7 +170,7 @@ input.ng-invalid.ng-touched{
     width: 100%;
     height: 130px;
     background-color: rgba(0, 0, 0, 0.9);
-    border-bottom: 4px solid #DC0000;
+    border-bottom: 2px solid #DC0000;
 }
 
 .header a.logo {
@@ -256,9 +353,6 @@ input.ng-invalid.ng-touched{
 
 
 
-
-
-
 .footer {
     position:relative;
     overflow:auto;
@@ -270,8 +364,10 @@ input.ng-invalid.ng-touched{
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
-    background-color: #1a1a1a ;
+    background-color: #1a1a1a;
 }
+
+
 
 .footer ul{
     display: block;
@@ -295,14 +391,63 @@ input.ng-invalid.ng-touched{
 
 .footer2{
     background: #333333;
-    height: 200px;
+    height: auto;
+    border-top: 1px solid orange;
 }
 
 .footer2 .footer-container2{
+    padding-top: 40px;
     border-bottom: 1px solid #808080;
-    height: 150px;
+    height: auto;
+    padding-bottom: 130px;
 }
 
+.footer2 .footer-container2 .left{
+    width: 40%;
+    position: relative;
+    float: left;
+    font-size: 12pt;
+    text-align: center;
+}
+
+.footer2 .footer-container2 .left span{
+    color: gray;
+    line-height: 30px;
+}
+
+.footer2 .footer-container2 .left p{
+    color: lightgray;
+}
+
+.footer2 .footer-container2 .right{
+    position: relative;
+    float: right;
+    width: 40%;
+    padding-right: 10px;
+    color: gray;
+    text-align: justify;
+}
+
+
+.footer2 .footer-container3{
+    padding-top: 10px;
+    height: 70px;
+}
+
+.footer2 .footer-container3 div{
+    color: gray;
+    font-size: 10pt;
+}
+
+.footer2 .footer-container3 .left{
+    position: relative;
+    float: left;
+}
+
+.footer2 .footer-container3 .right{
+    position: relative;
+    float: right;
+}
 
 
 /*If you are going to use floats then you will NEED to clear the
