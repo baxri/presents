@@ -24,19 +24,27 @@
 
     <div id="headerbg" class="header">
 
-        <div>
-            <a href="index.php"class="logo">
-                 <img src="images/logo.png" alt="" height="80">
-            </a>
+        <div class="header-container">
+            <div>
+                <a href="index.php"class="logo">
+                    <img src="images/logo.png" alt="" height="80">
+                </a>
+            </div>
+
+            <?php /* ?>
+            <div class="slogan">
+                <p>შეიძინე სხვადასხვა ბრენდის სასაჩუქრე ბარათები ონლაინ!</p>
+            </div>
+             <?php */ ?>
+
+            <jdoc:include type="modules" name="categories" />
         </div>
 
-        <?php  ?>
-        <div class="slogan">
-           <p>შეიძინე სხვადასხვა ბრენდის სასაჩუქრე ბარათები ონლაინ!</p>
-        </div>
-         <?php  ?>
+        <div class="header-bottom">
+            <div class="header-container">
 
-        <jdoc:include type="modules" name="categories" />
+            </div>
+        </div>
 
     </div>
 
@@ -58,18 +66,20 @@
 
                 <div class="left">
                     <span>მომხმარებლების ცხელი ხაზი</span>
-                    <p>+995 (32) 242 20 42</p>
+                    <p>+995 (558) 24 44 88</p>
                 </div>
 
                 <div class="right">
-                    Yep.ge არის ინდივიდუალური და ჯგუფური შესყიდვების ვებ-გვერდი, სადაც თქვენ შეგიძლიათ ნებისმიერ დროს მიიღოთ ფასდაკლება თქვენთვის სასურველ საქონელსა და მომსახურებაზე. yep.ge-ს მეშვეობით ყოველდღიურად მიიღებთ ექსკლუზიურ შემოთავაზებებს სხვადასხვა კომპანიებისგან წარმოუდგენლად დაბალ ფასად. აირჩიე საუკეთესო! დარეგისტრირდით და შეიძინეთ საჩუქრები თქვენთვის და თქვენი მეგობრებისთვის
+                    ჩვენი ვებ გვერდის ( wwwsiurpriz.ge ) მეშვეობით თქვენ შეგიძლიათ ონლაინ რეჟიმში შეარჩიოთ სასურველი ბრენდის ან მაღაზიის სასაჩუქრე ბარათი (eGiftCard) და გაუგზავნოთ სასურველ ადრესატს ელექტრონული ან ფიზიკური ფორმით
+                    საიტზე არ არის საჭირო რეგისტრაციის გავლა. ამიტომ აუცილებელია გადახდისას აუცილელად მიუთითოთ თქვენი ელ-ფოსტის მისამართი სადაც გადმოგეგზავნებათ დასტური გადახდის შესახებ და ლინკი ვაუჩერზე გადასასვლელად.
+                    ვაუჩერის შეძენა შეძენა ხორციელდება  ქართული Visa ან MasterCard პლასტიკური ბარათების საშუალებით
                 </div>
 
             </div>
             <div class="footer-container footer-container3">
 
                 <div class="left">
-                    SOMESITE.GE
+                    SIURPRIZ.GE
                 </div>
 
                 <div class="right">

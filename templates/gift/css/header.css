@@ -75,6 +75,20 @@ input.ng-invalid.ng-touched{
     vertical-align: baseline;
 }
 
+.header-container {
+    margin:0 auto;
+    #border: 1px solid red;
+    height: auto;
+    height: 100%;
+}
+
+.footer-container {
+    overflow:auto;
+    position:relative;
+    margin:0 auto;
+}
+
+
 
 .gift-container.article{
     font-size: 10pt;
@@ -88,6 +102,9 @@ input.ng-invalid.ng-touched{
     }
     .footer-container {
         width: 250px;
+    }
+    .header-container {
+        width: 300px;
     }
 
     .footer li{
@@ -105,35 +122,45 @@ input.ng-invalid.ng-touched{
     .footer-container {
         width: 480px;
     }
+    .header-container {
+        width: 480px;
+    }
 }
 
 @media (min-width: 720px) {
     .gift-container {
-        width: 680px;
+        width: 720px;
     }
     .footer-container {
-        width: 680px;
+        width: 720px;
+    }
+    .header-container {
+        width: 720px;
     }
 }
 
-@media (min-width: 960px){
+@media (min-width: 980px){
     .gift-container {
-        width: 940px;
+        width: 980px;
     }
     .footer-container {
-        width: 940px;
+        width: 980px;
+    }
+    .header-container {
+        width: 980px;
     }
 }
 @media (min-width: 1280px) {
 
-    .articleBody {
-        width: 1200px;
-    }
+
 
     .gift-container {
         width: 1200px;
     }
     .footer-container {
+        width: 1200px;
+    }
+    .header-container {
         width: 1200px;
     }
 }
@@ -145,16 +172,11 @@ input.ng-invalid.ng-touched{
     .footer-container {
         width: 1440px;
     }
+    .header-container {
+        width: 1440px;
+    }
 
 }
-
-.footer-container {
-    overflow:auto;
-    position:relative;
-    margin:0 auto;
-}
-
-
 
 
 
@@ -168,9 +190,9 @@ input.ng-invalid.ng-touched{
     right: 0;
     top: 0;
     width: 100%;
-    height: 130px;
+    height: 134px;
     background-color: rgba(0, 0, 0, 0.9);
-    border-bottom: 2px solid #DC0000;
+
 }
 
 .header a.logo {
@@ -180,7 +202,7 @@ input.ng-invalid.ng-touched{
     float: left;
     width: auto;
     height: 40px;
-    margin: 25px 0 25px 12%;
+    margin: 15px 0 25px 0;
 }
 
 .slogan{
@@ -197,23 +219,21 @@ input.ng-invalid.ng-touched{
 
 .slogan p{
     position: absolute;
-    bottom: 32px;
+    bottom: 41px;
 }
 
 
 .header .categories {
-    position: absolute;
-    z-index: 3;
-    top: 0;
+    float: right;
     right: 0;
+    z-index: 3;
+
     width: 250px;
-    height: 130px;
+    #height: 130px;
     #background-color: rgba(255, 255, 255, 0.16);
     margin: 0;
     padding: 0;
     border: 0;
-    font: inherit;
-    vertical-align: baseline;
 }
 
 .header .categories button span{
@@ -225,7 +245,7 @@ input.ng-invalid.ng-touched{
     position: relative;
     cursor: pointer;
     width: 100%;
-    height: 130px;
+    #height: 130px;
     text-align: center;
     outline: none;
     border: 0px;
@@ -259,7 +279,7 @@ input.ng-invalid.ng-touched{
     top: 0;
     width: 25px;
     height: 22px;
-    background-image: url("http://192.168.16.125/giftcards/images/sprite.png");
+    background-image: url("../../../../giftcards/images/sprite.png");
     background-position: -3px 3px;
     background-repeat: no-repeat;
 
@@ -268,6 +288,19 @@ input.ng-invalid.ng-touched{
 .header .categories.active button span:after {
     background-position: -30px 3px;
 }
+
+
+.header-bottom{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 35px;
+    background: white;
+    border-top: 2px solid #DC0000;
+    opacity: 0.9;
+    border-bottom: 1px solid white;
+}
+
 
 
 .categories-block {
@@ -399,7 +432,7 @@ input.ng-invalid.ng-touched{
     padding-top: 40px;
     border-bottom: 1px solid #808080;
     height: auto;
-    padding-bottom: 130px;
+    padding-bottom: 90px;
 }
 
 .footer2 .footer-container2 .left{
@@ -426,6 +459,7 @@ input.ng-invalid.ng-touched{
     padding-right: 10px;
     color: gray;
     text-align: justify;
+    line-height: 18px;
 }
 
 
