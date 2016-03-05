@@ -19,22 +19,6 @@
     border: 0;
 }
 
-.arrow-fint{
-    width: 100%;
-    height: 80px;
-    position: absolute;
-    top: 0px;
-    #border: 1px solid red;
-}
-
-.arrow-fint div{
-    position: absolute;
-    color: white;
-    width: 100%;
-    font-size: 10pt;
-    bottom: 0px;
-    #border: 1px solid red;
-}
 
 .buy-div{
     top: 200px;
@@ -43,7 +27,36 @@
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.5);
     height: 350px;
-    padding-top: 100px;
+}
+
+.buy-div .title{
+    font-size: 9pt;
+    text-align: center !important;
+}
+
+.buy-div .title div{
+    display: table;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    color: white;
+    font-family: 'light-alokado' !important;
+    font-size: 13pt;
+}
+
+.buy-div .title div span{
+    display: block;
+    float: left;
+}
+
+.buy-div .title div .heart{
+    background-image: url("../../../images/heart.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
 }
 
 .myButton {
@@ -59,7 +72,6 @@
     height: 50px;
     line-height: 50px;
     margin-top: 25px;
-
 }
 
 .myButton:hover{

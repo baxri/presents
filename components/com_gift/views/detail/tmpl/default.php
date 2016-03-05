@@ -6,12 +6,25 @@
     <img src="<?php echo $this->gift->big_image ?>" style="height: 100%; display: none;" >
     <div class="buy-div">
 
+
+        <div class="title">
+            <div>
+                <span><?php echo $this->gift->name ?></span>
+                <span class="heart"></span>
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
         <div class="arrow-fint">
             <div>შეიყვანეთ სასურველი თანხა</div>
         </div>
 
-        <input type="text" ng-model="amount" name="amount" class="amount-input" placeholder="0.00" ng-required="amount < 1" autofocus autocomplete="off">
-        <div class="clear"></div>
+        <div class="input-amount">
+            <input type="text" ng-model="amount" name="amount" class="amount-input" placeholder="0.00" ng-required="amount < 1" autofocus autocomplete="off">
+         </div>
+
 
 
 

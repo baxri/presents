@@ -57,7 +57,12 @@ $twofactormethods = UsersHelper::getTwoFactorMethods();
 					<div id="fb-root"></div>
 
 
-					<div class="fb-like" data-href="https://www.facebook.com/siurprizge-1000968356632423/" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>
+					<div class="fb-like"
+						 data-href="https://www.facebook.com/siurprizge-1000968356632423/"
+						 data-layout="box_count"
+						 data-action="like"
+						 data-show-faces="true"
+						 data-share="false"></div>
 
 
 				</div>

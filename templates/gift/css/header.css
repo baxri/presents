@@ -9,6 +9,13 @@ If you prefer you could right or left align it.*/
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'light-alokado';
+    src: url('../fonts/alokado-extralight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 h1, p, body, html {
     margin:0;
@@ -104,7 +111,10 @@ input.ng-invalid.ng-touched{
         width: 250px;
     }
     .header-container {
-        width: 300px;
+        width: 260px;
+    }
+    .gift-container-inner{
+        width: 260px;
     }
 
     .footer li{
@@ -115,71 +125,82 @@ input.ng-invalid.ng-touched{
     }
 }
 
-@media (min-width: 518px) {
+@media (min-width: 430px) {
     .gift-container {
-        width: 480px;
+        width: 400px;
     }
     .footer-container {
-        width: 480px;
+        width: 400px;
     }
     .header-container {
-        width: 480px;
+        width: 310px;
+    }
+    .gift-container-inner{
+        width: 310px;
     }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 730px) {
     .gift-container {
-        width: 720px;
+        width: 700px;
     }
     .footer-container {
-        width: 720px;
+        width: 700px;
     }
     .header-container {
-        width: 720px;
+        width: 630px;
+    }
+    .gift-container-inner{
+        width: 630px;
     }
 }
 
-@media (min-width: 980px){
+@media (min-width: 1030px){
     .gift-container {
-        width: 980px;
+        width: 1000px;
     }
     .footer-container {
-        width: 980px;
+        width: 1000px;
     }
     .header-container {
-        width: 980px;
+        width: 935px;
     }
-}
-@media (min-width: 1280px) {
-
-
-
-    .gift-container {
-        width: 1200px;
-    }
-    .footer-container {
-        width: 1200px;
-    }
-    .header-container {
-        width: 1200px;
-    }
-}
-
-@media (min-width: 1478px) {
-    .gift-container {
-        width: 1440px;
-    }
-    .footer-container {
-        width: 1440px;
-    }
-    .header-container {
-        width: 1440px;
+    .gift-container-inner{
+        width: 935px;
     }
 
 }
 
+@media (min-width: 1330px) {
 
+    .gift-container {
+        width: 1300px;
+    }
+    .footer-container {
+        width: 1300px;
+    }
+    .header-container {
+        width: 1250px;
+    }
+    .gift-container-inner{
+        width: 1250px;
+    }
+}
 
+@media (min-width: 1630px) {
+    .gift-container {
+        width: 1600px;
+    }
+    .footer-container {
+        width: 1600px;
+    }
+    .header-container {
+        width: 1560px;
+    }
+    .gift-container-inner{
+        width: 1560px;
+    }
+}
 
 
 .header {
@@ -191,9 +212,37 @@ input.ng-invalid.ng-touched{
     top: 0;
     width: 100%;
     height: 134px;
-    background-color: rgba(0, 0, 0, 0.9);
-
 }
+
+.header-top{
+    width: 100%;
+    height: 97px;
+    background-color: rgba(25, 25, 25, 0.95);
+}
+
+.header-bottom{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 35px;
+    border-top: 1px solid #DC0000;
+    border-bottom: 1px solid lightgray;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.header-slogan{
+    position: relative;
+    float: left;
+    top: 10px;
+    color: gray;
+}
+
+.header-fb-pugins{
+    position: relative;
+    float: right;
+    top: 6px;
+}
+
 
 .header a.logo {
     display: block;
@@ -250,8 +299,6 @@ input.ng-invalid.ng-touched{
     outline: none;
     border: 0px;
     background-color: transparent;
-
-
 }
 
 .header .categories button:hover{
@@ -290,16 +337,6 @@ input.ng-invalid.ng-touched{
 }
 
 
-.header-bottom{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 35px;
-    background: white;
-    border-top: 2px solid #DC0000;
-    opacity: 0.9;
-    border-bottom: 1px solid white;
-}
 
 
 

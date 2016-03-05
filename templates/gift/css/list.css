@@ -3,78 +3,72 @@ Please use full reset when designing!
 Reseting the margin and padding is important for the body tag so the
 header and footer will hug the whole screen.*/
 
-
-
-
-
-
-
 .gift-container-inner{
-    width: 100%;
-    height: auto;
+    margin: 0 auto;
 }
 
 
 .giftItem{
     position: relative;
     float: left;
-    width: 230px;
-    height: auto;
+    width: 300px;
+    height: 500px;
     margin: 0 5px 30px;
     background-color: #ffffff;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
 }
 
 .giftPopup{
-    #background-color: black;
     position: absolute;
-    width: 230px;
-    height: 390px;
+    width: 300px;
+    height: 500px;
     display: none;
-    background-image: url("http://localhost/giftcards/images/list_hover.png");
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.4);
     cursor: default;
+    cursor: pointer;
 }
 
 .giftPopup div{
     position: absolute;
-    width: 230px;
-    height: 70px;
-    background-color: #DC0000;
+    width: 300px;
+    height: 100px;
     top: 210px;
-    line-height: 70px;
     text-align: center;
     color: white;
     font-size: 12pt;
-    border-bottom: 2px solid white;
-    border-top: 2px solid white;
+    background-image: url("../../../images/gift-send.png");
+    background-size: 70px 70px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .giftItem .poster img {
     display: block;
-    width: 230px;
-    height: 340px;
+    width: 300px;
+    height: 400px;
 }
 
 .giftItem h2 {
-    height: 19px;
-    line-height: 18px;
+    font-family: 'light-alokado';
+    padding-top: 20px;
+    height: 30px;
+    line-height: 30px;
     overflow: hidden;
     text-align: center;
-
 }
 
 .giftItem h2 a{
     text-decoration: none;
-    color: #999999;
+    color: gray;
 }
 
 .giftItem .poster {
     display: block;
     position: relative;
     cursor: pointer;
-    width: 230px;
-    height: 340px;
+    width: 300px;
+    height: 400px;
 }
 
 
