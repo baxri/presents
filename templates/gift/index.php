@@ -36,7 +36,7 @@
             <div class="header-container">
                 <div>
                     <a href="index.php"class="logo">
-                        <img src="images/logo.png" alt="" height="80">
+                        <img src="images/logo.png" alt="" height="70">
                     </a>
                 </div>
 
@@ -54,14 +54,22 @@
         <div class="header-bottom">
             <div class="header-container">
 
-                <div class="header-slogan">
-
+                <div class="header-menu">
+                    <jdoc:include type="modules" name="header_menu" />
                 </div>
 
                 <div class="header-fb-pugins">
-                    <div class="fb-share-button" data-href="http://siurpriz.ge/home" data-layout="button"></div>
-                    <div class="fb-like" data-href="https://www.facebook.com/siurprizge-1000968356632423/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-                 </div>
+
+
+                    <div class="fb-like fb-like-custom" data-href="https://www.facebook.com/siurprizge-1000968356632423/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+
+                    <div class="with-lowe">
+                        <span></span>
+                        <span class="heart"></span>
+                        <span>-ით</span>
+                    </div>
+
+                </div>
 
             </div>
         </div>

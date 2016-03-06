@@ -6,7 +6,14 @@
                 <div class="poster" >
                     <a href="<?php echo $gift->category ?>/<?php echo $gift->alias ?>">
                         <div class="giftPopup">
-                            <div></div>
+                            <div class="inside">
+                                <span class="send"></span>
+                                <div>
+                                    <span>აჩუქე</span>
+                                    <span class="with-heart"></span>
+                                    <span>- ით</span>
+                                </div>
+                            </div>
                         </div>
                     </a>
                     <?php if( !empty( $gift->list_image ) ): ?>

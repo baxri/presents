@@ -28,7 +28,7 @@ class GiftModelGift extends JModelAdmin
 		JForm::addFieldPath('JPATH_ADMINISTRATOR/components/'.$option.'/models/fields');
 
 		$form = $this->loadForm( $option.'.'.strtolower($type), strtolower($type), array('control' => 'jform', 'load_data' => $loadData));
-
+//script,applet,iframe
 		if (empty($form))
 		{
 			return false;

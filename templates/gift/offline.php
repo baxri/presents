@@ -47,11 +47,22 @@ $twofactormethods = UsersHelper::getTwoFactorMethods();
 			</div>
 			<div class="text">
 
-				<div style="clear: both; margin: 20px; font-size: 11pt; ">
-					რა არის siurpriz.ge?... ამას ძალიან... ძალიან მალე შეიტყობთ :)
+				<div style="clear: both; margin: 20px; font-size: 11pt; display: table; margin: 0 auto; text-align: center;">
+
+					<div>რა არის siurpriz.ge?... ამას ძალიან... ძალიან მალე შეიტყობთ :)</div>
+
+
+
+					<div class="with-lowe" style="margin: 0 auto; width: 200px; margin-top: 20px; margin-bottom: 20px;">
+						<span>მოიწონე და გააზირე</span>
+						<span class="heart"></span>
+						<span>-ით</span>
+					</div>
+
 				</div>
 
 				<div class="fb-block">
+
 
 
 					<div id="fb-root"></div>

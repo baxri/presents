@@ -82,6 +82,10 @@ input.ng-invalid.ng-touched{
     vertical-align: baseline;
 }
 
+.container{
+    margin: 0 auto;
+}
+
 .header-container {
     margin:0 auto;
     #border: 1px solid red;
@@ -107,6 +111,9 @@ input.ng-invalid.ng-touched{
     .gift-container {
         width: 250px;
     }
+    .container {
+        width: 250px;
+    }
     .footer-container {
         width: 250px;
     }
@@ -129,6 +136,9 @@ input.ng-invalid.ng-touched{
     .gift-container {
         width: 400px;
     }
+    .container {
+        width: 400px;
+    }
     .footer-container {
         width: 400px;
     }
@@ -144,6 +154,9 @@ input.ng-invalid.ng-touched{
     .gift-container {
         width: 700px;
     }
+    .container {
+        width: 700px;
+    }
     .footer-container {
         width: 700px;
     }
@@ -157,6 +170,9 @@ input.ng-invalid.ng-touched{
 
 @media (min-width: 1030px){
     .gift-container {
+        width: 1000px;
+    }
+    .container {
         width: 1000px;
     }
     .footer-container {
@@ -176,6 +192,9 @@ input.ng-invalid.ng-touched{
     .gift-container {
         width: 1300px;
     }
+    .container {
+        width: 1300px;
+    }
     .footer-container {
         width: 1300px;
     }
@@ -186,7 +205,7 @@ input.ng-invalid.ng-touched{
         width: 1250px;
     }
 }
-
+/*
 @media (min-width: 1630px) {
     .gift-container {
         width: 1600px;
@@ -201,7 +220,7 @@ input.ng-invalid.ng-touched{
         width: 1560px;
     }
 }
-
+*/
 
 .header {
     display: block;
@@ -211,12 +230,12 @@ input.ng-invalid.ng-touched{
     right: 0;
     top: 0;
     width: 100%;
-    height: 134px;
+    height: 150px;
 }
 
 .header-top{
     width: 100%;
-    height: 97px;
+    height: 110px;
     background-color: rgba(25, 25, 25, 0.95);
 }
 
@@ -224,24 +243,55 @@ input.ng-invalid.ng-touched{
     position: absolute;
     bottom: 0px;
     width: 100%;
-    height: 35px;
+    height: 40px;
     border-top: 1px solid #DC0000;
     border-bottom: 1px solid lightgray;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
-.header-slogan{
+
+.header-fb-pugins{
+    width: auto;
     position: relative;
+    float: right;
+    top: 9px;
+}
+
+.header-fb-pugins div{
     float: left;
-    top: 10px;
+    line-height: 20px;
+    margin-left: 5px;
+}
+
+.header-fb-pugins div:first-child{
     color: gray;
 }
 
-.header-fb-pugins{
-    position: relative;
-    float: right;
-    top: 6px;
+/*
+* Like and Send with love
+*
+*/
+
+.with-lowe span{
+    display: block;
+    float: left;
 }
+
+.with-lowe .heart{
+    width: 25px;
+    height: 25px;
+    background-image: url("../../../images/sprite.png");
+    background-position: -3px -69px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+/*
+* END Like and Send with love
+*
+*/
+
+
 
 
 .header a.logo {
@@ -251,7 +301,8 @@ input.ng-invalid.ng-touched{
     float: left;
     width: auto;
     height: 40px;
-    margin: 15px 0 25px 0;
+    margin: 20px 0 25px 0;
+    margin-left: 10px;
 }
 
 .slogan{
@@ -295,7 +346,7 @@ input.ng-invalid.ng-touched{
     cursor: pointer;
     width: 100%;
     #height: 130px;
-    text-align: center;
+    text-align: right;
     outline: none;
     border: 0px;
     background-color: transparent;
@@ -314,9 +365,9 @@ input.ng-invalid.ng-touched{
     font-size: 15px;
     font-weight: lighter;
     padding-right: 44px;
-    margin: 36px auto;
+    margin: 40px auto;
     line-height: 2;
-
+    font-family: 'light-alokado';
 }
 
 .header .categories button span:after {
@@ -346,7 +397,7 @@ input.ng-invalid.ng-touched{
     z-index: 1;
     left: 0;
     right: 0;
-    top: 130px;
+    top: 146px;
     width: 100%;
     min-height: 260px;
     background-color: rgba(255, 255, 255, 0.95);
@@ -408,28 +459,13 @@ input.ng-invalid.ng-touched{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer {
     position:relative;
     overflow:auto;
     margin:0 auto;
     width: 100%;
     height: 50px;
-    top: 200px;
+    top: 250px;
     padding: 0;
     border: 0;
     font-size: 100%;
@@ -438,6 +474,10 @@ input.ng-invalid.ng-touched{
 }
 
 
+/*
+* Footer Menu
+*
+*/
 
 .footer ul{
     display: block;
@@ -458,6 +498,57 @@ input.ng-invalid.ng-touched{
 .footer li a{
     color: #808080;
 }
+
+/*
+* END Footer Menu
+*
+*/
+
+.header-menu{
+    float: left;
+}
+
+
+.header-menu ul{
+    margin: 0px;
+    display: block;
+    list-style: none;
+    margin-left: -32px;
+    height: 40px;
+}
+
+.header-menu li {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    padding-right: 20px;
+    line-height: 40px;
+}
+
+
+.header-menu li a{
+    color: black;
+    font-size: 10pt;
+}
+
+.header-menu ul .active a {
+    color: darkred;
+}
+
+/*
+* Header Menu
+*
+*/
+
+
+
+/*
+* END Header Menu
+*
+*/
+
+
+
 
 .footer2{
     background: #333333;

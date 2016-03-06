@@ -18,5 +18,6 @@
     <positions>
         <position>categories</position>
         <position>footer_menu</position>
+        <position>header_menu</position>
     </positions>
 </extension>

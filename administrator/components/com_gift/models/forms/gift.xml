@@ -115,6 +115,7 @@
 			   size="1"
 			   label="Description"
 			   default=""
+			   filter="JComponentHelper::filterText"
 		/>
 
 

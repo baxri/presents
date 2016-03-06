@@ -29,18 +29,51 @@ header and footer will hug the whole screen.*/
     cursor: pointer;
 }
 
-.giftPopup div{
+.giftPopup .inside{
     position: absolute;
-    width: 300px;
-    height: 100px;
-    top: 210px;
+    top: 250px;
+    width: 100%;
+    height: 110px;
     text-align: center;
     color: white;
     font-size: 12pt;
-    background-image: url("../../../images/gift-send.png");
-    background-size: 70px 70px;
-    background-position: center;
+    margin: 0 auto;
+}
+
+.giftPopup .inside span{
+    display: block;
+    margin: 2px;
+}
+
+.giftPopup .inside .send{
+    width: 70px;
+    height: 70px;
+    background-image: url("../../../images/sprite.png");
+    background-position: -95px 3px;
     background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.giftPopup .inside div{
+    height: 50px;
+    width: 110px;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+}
+
+.giftPopup .inside div span{
+    float: left;
+}
+
+.giftPopup .inside div .with-heart{
+    #border: 1px solid red;
+    width: 25px;
+    height: 25px;
+    background-image: url("../../../images/sprite.png");
+    background-position: -3px -69px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
 }
 
 .giftItem .poster img {

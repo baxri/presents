@@ -50,15 +50,15 @@ jQuery(document).ready(function(){
     *
     * */
 
-    var item = $('.left');
-    var dimension  = $('.left img').width();
+    var item = $('.banner');
+    var dimension  = $('.banner img').width();
     var width = item.width();
     var area = dimension - width;
 
     var x = 0;
     var move_to = area;
     var direction = -1; /* -1 right 1 left */
-    var speed = 30;
+    var speed = 50;
 
     setInterval(function(){
 
@@ -88,6 +88,35 @@ jQuery(document).ready(function(){
             move_to = area;
 
     }
+
+
+    $('.big-tab').bind('click', function(){
+
+        $('.big-tab').removeClass('active');
+        $(this).addClass('active');
+
+        $('.brand-conrainer').hide();
+        $( '#' + $(this).attr('data-container')).show();
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /*
      * END Animate Background Image

@@ -63,3 +63,28 @@ body{
 }
 
 
+
+/*
+* Like and Send with love
+*
+*/
+
+.with-lowe span{
+	display: block;
+	float: left;
+}
+
+.with-lowe .heart{
+	width: 25px;
+	height: 25px;
+	background-image: url("../../../images/sprite.png");
+	background-position: -3px -69px;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
+
+/*
+* END Like and Send with love
+*
+*/
+

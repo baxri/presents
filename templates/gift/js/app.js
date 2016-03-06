@@ -4,7 +4,7 @@ var app = angular.module('gift', []);
 app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  '$timeout', '$window', function ($scope, $http, $location, $interval, $timeout, $window) {
 
     $scope.destination = 0;
-    $scope.amount = '30';
+    $scope.amount = '';
     $scope.deliver = 0;
 
     $scope.mobile = '';
