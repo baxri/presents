@@ -73,7 +73,7 @@ jQuery(document).ready(function(){
     }, speed);
 
     function changePosition(){
-        item.css('background-position', x + 'px 0');
+        item.css('background-position', x + 'px 50%');
     }
 
     function changeDirection(){
