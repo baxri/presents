@@ -26,15 +26,27 @@ class GiftModelGifts extends JModelList
         parent::populateState('a.id', 'desc');
     }
 
+    public function getTable($type = '', $prefix = '', $config = array())
+    {
+        $option = JRequest::getVar('option');
+        $clearName = substr( $option, 4 );
+        $prefix = ucfirst( $clearName ).'Table';
+        $type = str_replace( ucfirst($clearName).'Model', '', get_class() );
+        $type = substr( $type, 0, strlen($type) - 1 );
+        $table = JTable::getInstance($type, $prefix, $config);
+        return $table;
+    }
+
     protected function getListQuery()
     {
+        $table = $this->getTable( $type = '', $prefix = '', $config = array() );
         $group = (int)$this->getState('filter.group');
         $status = (int)$this->getState('filter.status');
         $db = $this->getDbo();
         $query = $db->getQuery(true);
 
         $query->select('a.*, g.name as category');
-        $query->from($db->quoteName('#__gifcards','a'));
+        $query->from($db->quoteName($table->getTableName(),'a'));
         $query->leftJoin( '#__groups as g on g.id = a.group_id' );
 
         if( !empty( $group ) ){

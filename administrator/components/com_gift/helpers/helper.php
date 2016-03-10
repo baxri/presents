@@ -24,6 +24,14 @@ class ComponentHelper extends JHelperContent
 				$vName == 'groups'
 			);
 		}
+
+		if( $canDo->get('core.show.giftcards') ){
+			JHtmlSidebar::addEntry(
+				JText::_('Gallery'),
+				'index.php?option='.$option.'&view=galereas',
+				$vName == 'galereas'
+			);
+		}
 	}
 
 }

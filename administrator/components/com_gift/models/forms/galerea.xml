@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldpath="/administrator/components/com_cinemax/models/fields">
+    <fieldset name="left_fields" >
+		<field name="id"
+			   type="hidden"
+			   label="JGLOBAL_FIELD_ID_LABEL"
+			   description="JGLOBAL_FIELD_ID_DESC"
+			   size="10"
+			   default="0"
+			   readonly="true"
+			   class="readonly"
+		/>
+
+		<field name="name"
+			   type="text"
+			   label="Title"
+			   default=""
+			   required="true"
+		/>
+
+		<field name="published" type="radio"
+			   class="btn-group btn-group-yesno"
+			   label="Published"
+			   default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="price"
+			   type="text"
+			   label="Price"
+			   default=""
+		/>
+
+		<field name="gift_id"
+			   type="gifts"
+			   label="Embed Gift"
+			   default=""
+			   required="true"
+		/>
+
+		<field name="img"
+			   type="media"
+			   label="Image"
+			   default=""
+			   required="true"
+		/>
+
+	</fieldset>
+
+</form>

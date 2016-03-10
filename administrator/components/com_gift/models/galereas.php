@@ -4,7 +4,7 @@ defined('_JEXEC') or die;
 
 use Joomla\Utilities\ArrayHelper;
 
-class GiftModelGroups extends JModelList
+class GiftModelGalereas extends JModelList
 {
     public function __construct($config = array())
     {
@@ -39,11 +39,18 @@ class GiftModelGroups extends JModelList
 
     protected function getListQuery()
     {
+        $gift = (int)$this->getState('filter.gift');
+
         $table = $this->getTable( $type = '', $prefix = '', $config = array() );
         $db = $this->getDbo();
         $query = $db->getQuery(true);
         $query->select('*');
         $query->from($db->quoteName($table->getTableName(),'a'));
+
+        if( !empty( $gift ) ){
+            $query->where( 'gift_id = '.$gift );
+        }
+
         $query->order($db->escape($this->getState('list.ordering', 'a.id')) . ' ' . $db->escape($this->getState('list.direction', 'ASC')));
         return $query;
     }
