@@ -116,8 +116,9 @@
     height: 100px;
     line-height: 100px;
     text-align: center;
-    width: 49%;
+    width: 33%;
     font-size: 11pt;
+    border-right: 1px solid lightgray;
 }
 
 .button-row .container a:hover{
@@ -125,8 +126,8 @@
     color: white;
 }
 
-.button-row .container .first {
-    border-right: 1px solid lightgray;
+.button-row .container .last {
+    border-right: none;
 }
 
 .button-row .container .active {
@@ -138,9 +139,10 @@
 .details-container{
     position: relative;
     top: 5px !important;
-    height: 800px;
+    padding: 5px;
+    overflow: hidden !important;
+    padding-bottom: 10px !important;
 }
-
 
 
 .details-container .brand-conrainer .left{
@@ -189,5 +191,35 @@
     opacity: 0.8;
 }
 
+
+.brand-galery .item{
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 300px;
+    border-bottom: 1px solid lightgray;
+    background-color: white;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.brand-galery .item img{
+    width: 200px;
+    height: 200px;
+}
+
+.brand-galery .content{
+    position: relative;
+    top: 25px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.brand-galery .item h2{
+    font-weight: normal;
+    font-size: 10pt;
+}
 
 

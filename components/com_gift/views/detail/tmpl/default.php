@@ -30,6 +30,7 @@
             <div  class="container" style="height: 100px;">
                 <a data-container="brand-info" href="javascript:void(0)" class="first active big-tab">ინფორმაცია ბრენდზე</a>
                 <a data-container="brand-galery" href="javascript:void(0)" class="big-tab">გალერეა და პროდუქცია</a>
+                <a data-container="brand-how-to-use" href="javascript:void(0)" class="last big-tab">მაჩუქეს და როგორ გამოვიყენო?</a>
             </div>
 
         </div>
@@ -56,8 +57,35 @@
 
             </div>
 
-            <div id="brand-galery" class="brand-conrainer" style="display: none;">
-                გასაკეთებელია გალერეაააა
+            <div id="brand-galery" class="brand-conrainer brand-galery" style="display: none;">
+
+               <div class="content">
+                   <?php if( !empty( $this->gallery ) ): ?>
+                       <?php foreach( $this->gallery as $item ): ?>
+                           <div class="item">
+                               <img src="<?php echo $item->img; ?>">
+                               <h2><?php echo $item->name; ?></h2>
+                               <p><?php echo $item->price; ?> GEL</p>
+                           </div>
+
+                       <?php endforeach; ?>
+                   <?php else: ?>
+                       <p>გალერეა არ არის წარმოდგენილი</p>
+                   <?php endif; ?>
+               </div>
+
+                <div class="clear"></div>
+            </div>
+
+
+            <div id="brand-how-to-use" class="brand-conrainer brand-galery" style="display: none;">
+
+                <div class="left">
+                    როგორ გამოვიყენო ვაუჩერი?
+                </div>
+
+
+                <div class="clear"></div>
             </div>
 
         </div>

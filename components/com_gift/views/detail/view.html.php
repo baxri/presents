@@ -13,6 +13,7 @@ class GiftViewDetail extends JViewLegacy
 		$gift_id = JRequest::getVar('gift');
 
 		$this->gift = $model->getGift( $gift_id );
+		$this->gallery = $model->getGiftGallery( $gift_id );
 
 		if( empty( $this->gift->id ) ){
 			$app->redirect('index.php');

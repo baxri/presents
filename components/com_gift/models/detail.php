@@ -22,4 +22,21 @@ class GiftModelDetail extends JModelLegacy
 
 		return $result;
 	}
+
+	public function getGiftGallery( $gift_id ){
+
+	$db = JFactory::getDBO();
+	$query = $db->getQuery(true);
+
+	$query->select('*')
+		->from( '#__gallery as g' );
+
+	$query->where('g.published = 1');
+	//$query->where('g.gift_id = '.$gift_id);
+
+	$db->setQuery( $query );
+	$result = $db->loadObjectList();
+
+	return $result;
+}
 }
