@@ -63,7 +63,9 @@
                    <?php if( !empty( $this->gallery ) ): ?>
                        <?php foreach( $this->gallery as $item ): ?>
                            <div class="item">
-                               <img src="<?php echo $item->img; ?>">
+                               <a class="show-image" href="<?php echo $item->img; ?>" data-imagelightbox="f">
+                                   <img src="<?php echo $item->img; ?>" alt="<?php echo $item->name; ?>">
+                               </a>
                                <h2><?php echo $item->name; ?></h2>
                                <p><?php echo $item->price; ?> GEL</p>
                            </div>
@@ -75,6 +77,7 @@
                </div>
 
                 <div class="clear"></div>
+
             </div>
 
 

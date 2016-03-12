@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/header.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/lightbox.css" type="text/css" />
 
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lib/jquery-1.11.3.min.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/custom.js"></script>
@@ -16,16 +17,20 @@
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lib/angular.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/app.js"></script>
 
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lib/lightbox.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox-work.js"></script>
+
     <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/icon/favicon.ico" />
 
-    <script>(function(d, s, id) {
+    <script>
+        /*(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
             js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
             fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        }(document, 'script', 'facebook-jssdk'));*/</script>
 
 </head>
 <body ng-app="gift" ng-controller="GiftController">
@@ -36,7 +41,7 @@
             <div class="header-container">
                 <div>
                     <a href="index.php"class="logo">
-                        <img src="images/logo.png" alt="" height="70">
+                        <img src="images/logo.pngp" alt="" height="70">
                     </a>
                 </div>
 
@@ -60,9 +65,9 @@
 
                 <div class="header-fb-pugins">
 
-
-                    <div class="fb-like fb-like-custom" data-href="https://www.facebook.com/siurprizge-1000968356632423/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-
+                    <?php /* ?>
+                        <div class="fb-like fb-like-custom" data-href="https://www.facebook.com/siurprizge-1000968356632423/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+                    <?php */ ?>
                     <div class="with-lowe">
                         <span></span>
                         <span class="heart"></span>

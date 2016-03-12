@@ -108,16 +108,6 @@ jQuery(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
     /*
      * END Animate Background Image
      *
@@ -168,6 +158,9 @@ jQuery(document).ready(function(){
      * END Show/Hide Tooltip
      *
      * */
+
+
+
 
 
 
