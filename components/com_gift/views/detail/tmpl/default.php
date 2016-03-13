@@ -15,7 +15,7 @@
                 </div>
                 <div class="right">
                     <p>გაუგზავნე <?php echo $this->gift->name ?> -ის სასაჩუქრე ვაუჩერი </p>
-                    <button>აჩუქე</button>
+                    <button class="start-process">აჩუქე</button>
                     <div class="fb-share-button" data-href="http://siurpriz.ge/home" data-layout="button"></div>
                 </div>
 
@@ -98,6 +98,7 @@
     </div>
 
 
+    <?php require_once 'process.php'?>
 
 
 </form>

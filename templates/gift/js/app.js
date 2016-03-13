@@ -64,5 +64,53 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
         $scope.date = $scope.y + "-" + $scope.m + "-" + $scope.d + "|" + $scope.h + ":" + $scope.mm;
     }
 
+    $scope.currentStep = 1;
+
+    $scope.nextStep = function(){
+
+        if( $scope.currentStep == 5 ){
+            return false;
+        }
+
+        $( '.step-' + $scope.currentStep).hide('fast', function(){
+            $scope.currentStep++;
+            $( '.step-' + $scope.currentStep).show('fast');
+            $scope.setProgress();
+
+        });
+
+    }
+
+
+    $scope.prevStep = function(){
+
+        if( $scope.currentStep == 1 ){
+            return false;
+        }
+
+        $( '.step-' + $scope.currentStep).hide('fast', function(){
+            $scope.currentStep--;
+            $( '.step-' + $scope.currentStep).show('fast');
+            $scope.setProgress();
+        });
+
+    }
+
+    $scope.setProgress = function(){
+
+        var width = 0;
+        var step_count = 5;
+
+        width = (100/step_count) * $scope.currentStep;
+
+        $( '.process-step-progress div span' ).animate({
+            width: width + '%'
+
+        }, 500, function() {
+            // Animation complete.
+        });
+
+    }
+
 
 }]);

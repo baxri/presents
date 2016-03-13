@@ -1,0 +1,204 @@
+
+.process-background{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.process {
+    position: relative;
+    position: fixed;
+    z-index: 999999;
+    width: 1000px;
+    height: 600px;
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin: auto;
+    background-color: white;
+}
+
+.process-footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+}
+
+.process-footer button{
+    float: left;
+    height: 50px;
+    border: 0;
+    width: 50%;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+    color: white;
+}
+
+.process-footer button:hover{
+   opacity: 0.8;
+}
+
+
+.process-header{
+    position: relative;
+    height: 40px;
+}
+
+.process-header a{
+    position: absolute;
+    display: block;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    background-image: url("../../../images/sprite.png");
+    background-position: -4px -92px;
+    background-repeat: no-repeat;
+    margin: 10px;
+    #border: 1px solid red;
+}
+
+.process-header a:hover{
+    opacity: 0.7;
+}
+
+.process-step-progress{
+    position: relative;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.process-step-progress div{
+    display: inline-block;
+    margin: 0 auto;
+    width: 70%;
+    height: 1px;
+    background-color: lightgrey;
+}
+
+.process-step-progress div span{
+    display: block;
+    background-color: red;
+    width: 16.6%;
+    height: 1px;
+}
+
+.process-body {
+    text-align: center;
+    height: 300px;
+}
+
+.process-body .step{
+    width: 100%;
+    display: none;
+}
+
+.step.active{
+    display: block;
+}
+
+
+
+
+
+.step-1{
+    text-align: center;
+}
+
+.step-1 div{
+    display: inline-block;
+    width: 140px;
+    height: 100px;
+    margin: 20px;
+    background-image: url("../../../images/sprite-process.png");
+    background-position: -3px -5px;
+    background-repeat: no-repeat;
+    #border: 1px solid red;
+}
+
+.step-1 p{
+    color: gray;
+    margin: 10px;
+    margin-bottom: 30px;
+    font-size: 10pt;
+}
+
+.step-1 input{
+    width: 200px;
+    height: 70px;
+    line-height: 70px;
+    border: 0;
+    border-bottom: 2px solid #DC0000;
+    color: #DC0000;
+    outline: none;
+    text-align: center;
+    font-size: 40pt;
+    font-style: italic;
+    #font-family: 'Kaushan Script', cursive;
+}
+
+.step-1 input::-moz-placeholder{
+    color: #DC0000;
+    opacity: 0.5;
+}
+
+.step-1 input::-webkit-input-placeholder{
+    color: #DC0000;
+    opacity: 0.5;
+}
+
+.step-1 input::-ms-input-placeholder{
+    color: #DC0000;
+    opacity: 0.5;
+}
+
+
+.step-2 p{
+    color: gray;
+    margin: 20px;
+    font-size: 10pt;
+    margin-bottom: 100px;
+}
+
+
+
+.step-2 div{
+    position: relative;
+    width: 400px;
+    height: 70px;
+    #border: 1px solid red;
+    margin-bottom: 20px;
+}
+
+.step-2 span{
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: lightgrey;
+    float: left;
+}
+
+.step-2 input{
+   position: absolute;
+    bottom: 0px;
+    left: 70px;
+    width: 330px;
+    line-height: 70px;
+    border: 0;
+    border-bottom: 1px solid #DC0000;
+    color: #DC0000;
+    outline: none;
+    text-align: center;
+    font-size: 11pt;
+}
+
+
+
