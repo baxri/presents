@@ -91,6 +91,11 @@ input.ng-invalid.ng-touched{
     #border: 1px solid red;
     height: auto;
     height: 100%;
+    text-align: center;
+}
+
+.header-container div{
+    display: inline-block;
 }
 
 .footer-container {
@@ -301,7 +306,7 @@ input.ng-invalid.ng-touched{
     float: left;
     width: auto;
     height: 40px;
-    margin: 20px 0 25px 0;
+    margin: 10px 0 25px 0;
     margin-left: 10px;
 }
 

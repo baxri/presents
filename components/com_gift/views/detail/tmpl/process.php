@@ -18,19 +18,37 @@
                 <input type="text" placeholder="0.00" ng-model="amount" name="amount" >
             </div>
             <div class="step step-2">
-                <p>სად გსურთ რომ გაუგზავნოთ სასაჩუქრე ვაუჩერი?</p>
-                <div>
-                    <span></span>
-                    <input type="text" placeholder="მობილური" ng-model="mobile" name="mobile" >
-                </div>
-                <div>
-                    <span></span>
-                    <input type="text" placeholder="ელ-ფოსტა" ng-model="email" name="email" >
+
+                <div class="image"></div>
+                <p>მიუთითეთ სადაც გსურთ რომ გაუგზავნოთ სასაჩუქრე ვაუჩერი?</p>
+                <div><input type="text" placeholder="მობილურზე" ng-model="mobile" name="mobile" ></div>
+                <div><input type="text" placeholder="ელ-ფოსტაზე" ng-model="email" name="email" ></div>
+
+            </div>
+            <div class="step step-3">
+                <div class="image"></div>
+                <p>როდის გსურთ რომ მიუვიდეს შეტყობინება ადრესატს?</p>
+                <div class="selector">
+                    <select style="width: 50px;">
+                        <option>5</option>
+                        <option>5</option>
+                    </select>
+                    <select style="width: 150px;">
+                        <option>სექტემბერი</option>
+                        <option>ოქტომბერი</option>
+                    </select>
+                    <select style="width: 50px;">
+                        <option>12</option>
+                        <option>12</option>
+                    </select>
                 </div>
             </div>
-            <div class="step step-3">step-3</div>
-            <div class="step step-4">step-4</div>
-            <div class="step step-5">step-5</div>
+            <div class="step step-4">
+
+            </div>
+            <div class="step step-5">
+
+            </div>
         </div>
 
         <div class="process-footer">

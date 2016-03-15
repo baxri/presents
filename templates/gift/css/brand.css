@@ -51,6 +51,8 @@
     color: white;
     font-size: 40pt;
     font-family: 'light-alokado' !important;
+
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.50);
 }
 
 .inner-banner .left p{
@@ -60,6 +62,7 @@
     color: white;
     font-size: 15pt;
     font-family: 'light-alokado' !important;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.50);
 }
 
 
@@ -80,6 +83,7 @@
     color: white;
     font-size: 12pt;
     font-family: 'light-alokado' !important;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.50);
 }
 
 .inner-banner .right button{
@@ -96,6 +100,10 @@
     width: 200px;
     height: 50px;
     cursor: pointer;
+
+    -webkit-box-shadow: 3px 3px 8px -1px rgba(0,0,0,0.40);
+    -moz-box-shadow: 3px 3px 8px -1px rgba(0,0,0,0.40);
+    box-shadow: 3px 3px 8px -1px rgba(0,0,0,0.40);
 }
 
 .inner-banner .right .fb-share-button{

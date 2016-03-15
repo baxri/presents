@@ -21,6 +21,10 @@
     top: 20%;
     margin: auto;
     background-color: white;
+
+    -webkit-box-shadow: 3px 3px 8px -1px rgba(0,0,0,0.22);
+    -moz-box-shadow: 3px 3px 8px -1px rgba(0,0,0,0.22);
+    box-shadow: 3px 3px 8px -1px rgba(0,0,0,0.22);
 }
 
 .process-footer{
@@ -80,7 +84,7 @@
     display: inline-block;
     margin: 0 auto;
     width: 70%;
-    height: 1px;
+    height: 2px;
     background-color: lightgrey;
 }
 
@@ -88,7 +92,7 @@
     display: block;
     background-color: red;
     width: 16.6%;
-    height: 1px;
+    height: 2px;
 }
 
 .process-body {
@@ -133,71 +137,116 @@
 
 .step-1 input{
     width: 200px;
-    height: 70px;
-    line-height: 70px;
-    border: 0;
-    border-bottom: 2px solid #DC0000;
-    color: #DC0000;
-    outline: none;
-    text-align: center;
-    font-size: 40pt;
-    font-style: italic;
-    #font-family: 'Kaushan Script', cursive;
-}
-
-.step-1 input::-moz-placeholder{
-    color: #DC0000;
-    opacity: 0.5;
-}
-
-.step-1 input::-webkit-input-placeholder{
-    color: #DC0000;
-    opacity: 0.5;
-}
-
-.step-1 input::-ms-input-placeholder{
-    color: #DC0000;
-    opacity: 0.5;
-}
-
-
-.step-2 p{
-    color: gray;
-    margin: 20px;
-    font-size: 10pt;
-    margin-bottom: 100px;
-}
-
-
-
-.step-2 div{
-    position: relative;
-    width: 400px;
-    height: 70px;
-    #border: 1px solid red;
-    margin-bottom: 20px;
-}
-
-.step-2 span{
-    display: block;
-    width: 70px;
-    height: 70px;
-    background-color: lightgrey;
-    float: left;
-}
-
-.step-2 input{
-   position: absolute;
-    bottom: 0px;
-    left: 70px;
-    width: 330px;
-    line-height: 70px;
+    height: 40px;
+    line-height: 40px;
     border: 0;
     border-bottom: 1px solid #DC0000;
     color: #DC0000;
     outline: none;
     text-align: center;
+    font-size: 20pt;
+    #font-style: italic;
+}
+
+.step-1 input::-moz-placeholder{
+    #color: #DC0000;
+    #opacity: 0.5;
+}
+
+.step-1 input::-webkit-input-placeholder{
+    #color: #DC0000;
+    #opacity: 0.5;
+}
+
+.step-1 input::-ms-input-placeholder{
+    #color: #DC0000;
+    #opacity: 0.5;
+}
+
+
+
+
+.step-2{
+    text-align: center;
+}
+
+.step-2 .image{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-image: url("../../../images/sprite-process.png");
+    background-position: -415px -5px;
+    background-repeat: no-repeat;
+    #border: 1px solid red;
+}
+
+.step-2 p{
+    color: gray;
+    margin: 10px;
+    margin-bottom: 30px;
+    font-size: 10pt;
+}
+
+.step-2 input{
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border: 0;
+    border-bottom: 1px solid #DC0000;
+    color: gray;
+    outline: none;
+    text-align: center;
     font-size: 11pt;
+    #font-style: italic;
+}
+
+
+
+
+
+
+
+
+.step-3{
+    text-align: center;
+}
+
+.step-3 .image{
+    display: inline-block;
+    width: 140px;
+    height: 100px;
+    margin: 20px;
+    background-image: url("../../../images/sprite-process.png");
+    background-position: -277px -5px;
+    background-repeat: no-repeat;
+    #border: 1px solid red;
+}
+
+.step-3 p{
+    color: gray;
+    margin: 10px;
+    margin-bottom: 30px;
+    font-size: 10pt;
+}
+
+.step-3 .selector{
+    width: 300px;
+    height: 70px;
+    display: inline-block;
+}
+
+.step-3 .selector select{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding-left: 10px;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #DC0000;
+    margin-left: 10px;
+    color: gray;
+    font-size: 12pt;
 }
 
 

@@ -1,4 +1,6 @@
 <?php defined('_JEXEC') or die; ?>
+
+
 <div id="gift-container" class="gift-container">
     <div class="gift-container-inner clear">
         <?php foreach( $this->gifts as $gift ): ?>

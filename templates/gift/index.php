@@ -50,12 +50,8 @@
                 </div>
 
                 <?php /* ?>
-            <div class="slogan">
-                <p>შეიძინე სხვადასხვა ბრენდის სასაჩუქრე ბარათები ონლაინ!</p>
-            </div>
-             <?php */ ?>
-
-                <jdoc:include type="modules" name="categories" />
+                    <jdoc:include type="modules" name="categories" />
+                <?php */ ?>
             </div>
         </div>
 
