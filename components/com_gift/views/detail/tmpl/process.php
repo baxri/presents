@@ -44,7 +44,44 @@
                 </div>
             </div>
             <div class="step step-4">
-
+                <div class="left">
+                    <input type="text" name="sender_fullname" ng-model="sender_fullname" placeholder="ვისგან?">
+                    <div class="clear"></div>
+                    <textarea placeholder="შეიყვანეთ მილოცვის ტექსტი" ng-model="text"></textarea>
+                    <div class="clear"></div>
+                    <div class="image"></div>
+                </div>
+                <div class="right">
+                    <div class="top">
+                        <div class="card">
+                            <div class="card-left">
+                                <h2><?php echo $this->gift->name ?></h2>
+                                <p>საუკეთესო საჩუქარი საყვარელი ადამიანისათვის</p>
+                                <h1>{{amount}} ლარი</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="text">
+                            <p ng-show="text.length > 0">{{text}}</p>
+                            <p ng-show="text.length == 0" style="color: lightgrey;">დამატებითი ტექსტი არ არის მითითებული</p>
+                            <div class="with-lowe">
+                                <span ng-show="sender_fullname.length > 0">{{sender_fullname}} &nbsp;</span>
+                                <span ng-show="sender_fullname.length == 0">ანონიმურად &nbsp;</span>
+                                <span class="heart"></span>
+                                <span>&nbsp;-ით</span>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="copyright">
+                                SIURPRIZ.GE
+                            </div>
+                            <div class="logo">
+                                ბერენდის ცხელი ხაზი: <?php echo $this->gift->hot_line ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="step step-5">
 
@@ -52,8 +89,9 @@
         </div>
 
         <div class="process-footer">
+
             <button ng-click="prevStep()">უკან დაბრუნება</button>
-            <button ng-click="nextStep()">შემდეგი</button>
+            <button class="next" ng-click="nextStep()">შემდეგი</button>
         </div>
 
     </div>

@@ -15,7 +15,8 @@
                 </div>
                 <div class="right">
                     <p>გაუგზავნე <?php echo $this->gift->name ?> -ის სასაჩუქრე ვაუჩერი </p>
-                    <button class="start-process">აჩუქე</button>
+                    <button class="start-process"><span ng-show="currentStep == 1">აჩუქე</span><span ng-show="currentStep > 1">გააგრძელე</span></button>
+
                     <div class="fb-share-button" data-href="http://siurpriz.ge/home" data-layout="button"></div>
                 </div>
 

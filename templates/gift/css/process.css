@@ -35,6 +35,10 @@
     background-color: gray;
 }
 
+.process-footer .next{
+    background-color: #BA0000;
+}
+
 .process-footer button{
     float: left;
     height: 50px;
@@ -172,11 +176,11 @@
 
 .step-2 .image{
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 105px;
     margin: 20px;
     background-image: url("../../../images/sprite-process.png");
-    background-position: -415px -5px;
+    background-position: -404px -5px;
     background-repeat: no-repeat;
     #border: 1px solid red;
 }
@@ -214,11 +218,11 @@
 
 .step-3 .image{
     display: inline-block;
-    width: 140px;
+    width: 120px;
     height: 100px;
     margin: 20px;
     background-image: url("../../../images/sprite-process.png");
-    background-position: -277px -5px;
+    background-position: -288px -5px;
     background-repeat: no-repeat;
     #border: 1px solid red;
 }
@@ -248,6 +252,151 @@
     color: gray;
     font-size: 12pt;
 }
+
+
+.step-4{
+    text-align: center;
+}
+
+.step-4 .left{
+    margin-left: 50px;
+    #display: inline-block;
+    width: 450px;
+    height: 430px;
+    border-right: 1px solid lightgrey;
+    #border: 1px solid red;
+    float: left;
+    position: relative;
+}
+
+.step-4 .right{
+    #display: inline-block;
+    width: 450px;
+    height: 430px;
+    #border: 1px solid red;
+    float: left;
+    margin-left: 20px;
+    position: relative;
+}
+
+
+.step-4 .left input{
+    height: 40px;
+    width: 320px;
+    border: 0;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    color: grey;
+}
+
+.step-4 .left textarea{
+    height: 150px;
+    width: 300px;
+    border: 1px solid lightgray;
+    outline: none;
+    text-align: center;
+    padding: 10px;
+    border: 0;
+    resize: none;
+    color: grey;
+}
+
+.step-4 .left .image{
+    position: absolute;
+    bottom: 0px;
+    left: 150px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-image: url("../../../images/sprite-process.png");
+    background-position: -2px -107px;
+    background-repeat: no-repeat;
+}
+
+.step-4 .right .top{
+    margin-top: 30px;
+    height: 180px;
+    width: 100%;
+    border-bottom: 1px dashed lightgrey;
+    background-image: url("../../../images/card-bd.png");
+    background-position: 0px 90px;
+    background-repeat: no-repeat;
+    font-style: italic;
+}
+
+.step-4 .right .center{
+    height: 180px;
+    width: 100%;
+    font-style: italic;
+}
+
+.step-4 .right .top .card{
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    height: 90%;
+    width: 90%;
+
+}
+
+.step-4 .right .top .card .card-left{
+    color: gray;
+}
+
+.step-4 .right .top .card .card-left  h1{
+   margin-top: 30px;
+    font-size: 20pt;
+   color: #DC0000;
+}
+
+
+.step-4 .right .center .text{
+    padding-top: 20px;
+    display: inline-block;
+    width: 300px;
+    color: gray;
+    text-align: center;
+    overflow: auto;
+}
+
+.step-4 .right .center .text p{
+    margin-bottom: 20px;
+}
+
+.with-lowe{
+    display: inline-block;
+}
+
+.step-4 .right .bottom{
+    font-style: normal;
+    position: relative;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    color: lightgrey;
+}
+
+.step-4 .right .bottom .copyright{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.step-4 .right .bottom .logo{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+}
+
+
+
+
+
 
 
 

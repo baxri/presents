@@ -4,7 +4,7 @@ var app = angular.module('gift', []);
 app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  '$timeout', '$window', function ($scope, $http, $location, $interval, $timeout, $window) {
 
     $scope.destination = 0;
-    $scope.amount = '';
+    $scope.amount = '50';
     $scope.deliver = 0;
 
     $scope.mobile = '';
@@ -72,9 +72,9 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
             return false;
         }
 
-        $( '.step-' + $scope.currentStep).hide('fast', function(){
-            $scope.currentStep++;
-            $( '.step-' + $scope.currentStep).show('fast');
+        $( '.step-' + $scope.currentStep).fadeOut('fast', function(){
+            $scope.currentStep = $scope.currentStep + 1;
+            $( '.step-' + $scope.currentStep).fadeIn('fast');
             $scope.setProgress();
 
         });
@@ -88,9 +88,9 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
             return false;
         }
 
-        $( '.step-' + $scope.currentStep).hide('fast', function(){
-            $scope.currentStep--;
-            $( '.step-' + $scope.currentStep).show('fast');
+        $( '.step-' + $scope.currentStep).fadeOut('fast', function(){
+            $scope.currentStep = $scope.currentStep - 1;
+            $( '.step-' + $scope.currentStep).fadeIn('fast');
             $scope.setProgress();
         });
 
