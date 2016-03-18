@@ -88,7 +88,7 @@
     display: inline-block;
     margin: 0 auto;
     width: 70%;
-    height: 2px;
+    height: 1px;
     background-color: lightgrey;
 }
 
@@ -96,7 +96,7 @@
     display: block;
     background-color: red;
     width: 16.6%;
-    height: 2px;
+    height: 1px;
 }
 
 .process-body {
@@ -390,11 +390,128 @@
     position: absolute;
     bottom: 0px;
     right: 0px;
-
 }
 
 
 
+
+.step-5 .sides{
+    float: left;
+    width: 450px;
+    height: 410px;
+}
+
+.step-5 .left{
+    position: relative;
+    padding-left: 30px;
+
+}
+
+.step-5 .left .info{
+   #border: 1px solid red;
+   width: 100%;
+   height: auto;
+   text-align: left;
+   margin-top: 30px;
+}
+
+.step-5 .left .info p{
+    line-height: 30px;
+    color: gray;
+}
+
+.step-5 .left .payer-info{
+    position: relative;
+    position: absolute;
+    bottom: 0px;
+    bottom: 50px;
+}
+
+.step-5 .left .payer-info a{
+    position: absolute;
+    left: 0px;
+    margin-top: 20px;
+}
+
+
+.step-5 .left .payer-info input{
+    display: block;
+    margin-top: 15px;
+    height: 50px;
+    width: 300px;
+    border: 1px solid lightgrey;
+    padding-left: 10px;
+}
+
+.step-5 .right{
+    padding: 10px;
+    padding-right: 20px;
+    position: relative;
+    margin-left: 20px;
+    border-right: 1px solid lightgrey;
+}
+
+
+
+.step-5 .right .pay-item{
+
+    display: inline-block;
+    position: relative;
+    height: 70px;
+    width: 80%;
+    border: 0px;
+    border-bottom: 1px dashed lightgrey;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: -1px;
+}
+
+.step-5 .right .pay-methods .last{
+    border: none;
+}
+
+.step-5 .right .pay-item .pay-select{
+    display: block;
+    width: 7px;
+    height: 7px;
+    background-color: lightgrey;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    border-radius: 100px;
+}
+
+
+.step-5 .right .pay-item .pay{
+    display: inline-block;
+    width: 200px;
+    height: 70px;
+}
+
+.step-5 .right .pay-item.active .pay-select{
+    background-color: orange;
+}
+
+
+
+
+.step-5 .right .pay-item .pay-visa{
+    background-image: url("../../../images/sprite-process.png");
+    background-position: -520px -2px;
+    background-repeat: no-repeat;
+}
+
+.step-5 .right .pay-item .pay-amex{
+    background-image: url("../../../images/sprite-process.png");
+    background-position: -524px -63px;
+    background-repeat: no-repeat;
+}
+
+.step-5 .right .pay-item .pay-nova{
+    background-image: url("../../../images/sprite-process.png");
+    background-position: -524px -136px;
+    background-repeat: no-repeat;
+}
 
 
 

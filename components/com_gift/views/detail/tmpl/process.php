@@ -57,7 +57,7 @@
                             <div class="card-left">
                                 <h2><?php echo $this->gift->name ?></h2>
                                 <p>საუკეთესო საჩუქარი საყვარელი ადამიანისათვის</p>
-                                <h1>{{amount}} ლარი</h1>
+                                <h1>{{amount | currency: ""}} ლარი</h1>
                             </div>
                         </div>
                     </div>
@@ -85,11 +85,48 @@
             </div>
             <div class="step step-5">
 
+                <div class="right sides">
+                    <div class="pay-methods">
+                        <div class="pay-item active">
+                            <span class="pay-select"></span>
+                            <span class="pay pay-visa"></span>
+                        </div>
+                        <div class="pay-item" style="opacity: 0.4;">
+                            <span class="pay-select"></span>
+                            <span class="pay pay-amex"></span>
+                        </div>
+                        <div class="pay-item last" style="opacity: 0.4;">
+                            <span class="pay-select"></span>
+                            <span class="pay pay-nova"></span>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="left sides">
+                    <div class="info">
+                        <p>მაღაზია/ობიექტი <?php echo $this->gift->name ?></p>
+                        <p ng-if="mobile.length > 0">მიმღების მობილური: {{mobile}}</p>
+                        <p ng-if="email.length > 0">მიმღების ელ-ფოსტა: {{email}}</p>
+                        <p ng-if="amount.length > 0" style="font-weight: bold;">თანხა: {{amount | currency: ""}} ლარი</p>
+                        <p ng-if="amount.length > 0" style="font-weight: bold;">სულ გადასახდელი: {{amount | currency: ""}} ლარი</p>
+                    </div>
+
+                    <div class="payer-info">
+                       <input name="" placeholder="თქვენი ელ-ფოსტა" ng-model="sender_mobile">
+                       <input name="" placeholder="თქვენი მობილური" ng-model="sender_email">
+
+                        <a href="#">ვეთანხმები წესებსა და პირობებს</a>
+
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <div class="process-footer">
-
             <button ng-click="prevStep()">უკან დაბრუნება</button>
             <button class="next" ng-click="nextStep()">შემდეგი</button>
         </div>

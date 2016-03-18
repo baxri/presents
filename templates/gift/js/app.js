@@ -7,8 +7,8 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
     $scope.amount = '50';
     $scope.deliver = 0;
 
-    $scope.mobile = '';
-    $scope.email = '';
+    $scope.mobile = '598602084';
+    $scope.email = 'sruutuna@gmail.com';
 
     $scope.sender_fullname = '';
     $scope.sender_mobile = '';
@@ -16,10 +16,6 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
 
     $scope.text = '';
     $scope.date = '0000-00-00|00:00';
-
-
-
-
 
     $scope.d = '';
     $scope.m = '';
