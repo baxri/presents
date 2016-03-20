@@ -1,8 +1,33 @@
 <?php defined('_JEXEC') or die; ?>
 
 
+<div class="list-banner-bg banner" style="background-image: url('images/list-banner-bg.png');">
+    <img src="images/list-banner-bg.png" style="width: 110%; display: none;" />
+    <div>
+        <div class="gift-container list-banner">
+            <div class="right-big-text">SIURPRIZ.GE</div>
+            <div class="right-medium-text">გაუკეთე სიურპრიზი საყვარელ ადამიანს</div>
+            <div class="clear"></div>
+            <div class="banner-with-love">
+                <span>აჩუქე</span>
+                <span class="big-love"></span>
+                <span>-ით</span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-shadow"></div>
+</div>
+
+
+
 <div id="gift-container" class="gift-container">
+
+
+
     <div class="gift-container-inner clear">
+
+        <p>აირჩიეთ ბრენდი</p>
+
         <?php foreach( $this->gifts as $gift ): ?>
             <div class="giftItem">
                 <div class="poster" >

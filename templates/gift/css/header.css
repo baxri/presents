@@ -75,7 +75,7 @@ input.ng-invalid.ng-touched{
     position:relative;
     overflow:auto;
     margin:0 auto;
-    top: 180px;
+    top: 10px;
     padding: 0;
     border: 0;
     font-size: 100%;
@@ -109,6 +109,8 @@ input.ng-invalid.ng-touched{
 .gift-container.article{
     font-size: 10pt;
     text-align: justify;
+    line-height: 27px;
+    top: 170px;
 }
 
 @media (min-width: 300px) {
@@ -157,7 +159,7 @@ input.ng-invalid.ng-touched{
 
 @media (min-width: 730px) {
     .gift-container {
-        width: 700px;
+        width: 630px;
     }
     .container {
         width: 700px;
@@ -175,7 +177,7 @@ input.ng-invalid.ng-touched{
 
 @media (min-width: 1030px){
     .gift-container {
-        width: 1000px;
+        width: 935px;
     }
     .container {
         width: 1000px;
@@ -195,7 +197,7 @@ input.ng-invalid.ng-touched{
 @media (min-width: 1330px) {
 
     .gift-container {
-        width: 1300px;
+        width: 1250px;
     }
     .container {
         width: 1300px;
@@ -249,7 +251,7 @@ input.ng-invalid.ng-touched{
     bottom: 0px;
     width: 100%;
     height: 40px;
-    border-top: 1px solid #DC0000;
+    border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
     background-color: rgba(255, 255, 255, 0.6);
 }
@@ -475,7 +477,7 @@ input.ng-invalid.ng-touched{
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
-    background-color: #1a1a1a;
+    background-color: white;
 }
 
 
@@ -553,17 +555,15 @@ input.ng-invalid.ng-touched{
 */
 
 
-
-
 .footer2{
-    background: #333333;
+    background: #E6E6E6;
     height: auto;
-    border-top: 1px solid orange;
+    border-top: 1px solid red;
 }
 
 .footer2 .footer-container2{
-    padding-top: 40px;
-    border-bottom: 1px solid #808080;
+    padding-top: 30px;
+    border-bottom: 1px solid lightgrey;
     height: auto;
     padding-bottom: 90px;
 }
@@ -582,7 +582,7 @@ input.ng-invalid.ng-touched{
 }
 
 .footer2 .footer-container2 .left p{
-    color: lightgray;
+    color: gray;
 }
 
 .footer2 .footer-container2 .right{

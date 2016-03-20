@@ -195,7 +195,7 @@
                     </div>
                 </div>
 
-                <textarea ng-disabled="destination == 0" placeholder="მისალოცი ტექსტი ბარათზე" style=" height: 80px; width: 282px;" ng-model="text"></textarea>
+                    <textarea ng-disabled="destination == 0" placeholder="მისალოცი ტექსტი ბარათზე" style=" height: 80px; width: 282px;" ng-model="text"></textarea>
 
 
             </div>

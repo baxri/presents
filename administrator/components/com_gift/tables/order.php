@@ -64,19 +64,14 @@ class GiftTableOrder extends JTable
         switch( $this->destinnation ){
 
             case 1:
-                $this->_sendMobile();
-                break;
             case 2:
+                $this->_sendMobile();
                 $this->_sendEmail();
-                break;
             case 3:
-
                 //shipping delivery
-
                 break;
 
         }
-
     }
 
     private function _sendMobile(){

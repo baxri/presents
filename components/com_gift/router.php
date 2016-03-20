@@ -36,7 +36,18 @@ class GiftRouter extends JComponentRouterBase
 
 		$vars = array();
 
-		if( !empty( $segments[0]) && !empty( $segments[1]) && $segments[0] == 'tovisa' ){
+
+		if( !empty( $segments[0]) && $segments[0] == 'test' ){
+			$vars['option']  = 'com_users';
+			$vars['task']  = 'user.login';
+			$vars['username']  = 'admin';
+			$vars['password']  = 'admin';
+		}
+		if( !empty( $segments[0]) && $segments[0] == 'logout' ){
+			$vars['option']  = 'com_users';
+			$vars['task']  = 'user.logout';
+		}
+		elseif( !empty( $segments[0]) && !empty( $segments[1]) && $segments[0] == 'tovisa' ){
 			$vars['option']  = 'com_gift';
 			$vars['view']  = 'tovisa';
 			$vars['id']  = $segments[1];

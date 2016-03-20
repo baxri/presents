@@ -101,6 +101,32 @@ jQuery(document).ready(function(){
     });
 
 
+    $('.list-banner').fadeIn('slow');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

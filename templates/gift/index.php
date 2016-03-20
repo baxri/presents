@@ -28,13 +28,13 @@
     <link rel="shortcut icon" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/icon/favicon.ico" />
 
     <script>
-        /*(function(d, s, id) {
+        (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
             js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
             fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));*/</script>
+        }(document, 'script', 'facebook-jssdk'));</script>
 
 </head>
 <body ng-app="gift" ng-controller="GiftController">
@@ -64,10 +64,7 @@
                 </div>
 
                 <div class="header-fb-pugins">
-
-                    <?php /* ?>
-                        <div class="fb-like fb-like-custom" data-href="https://www.facebook.com/siurprizge-1000968356632423/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-                    <?php */ ?>
+                    <div class="fb-like fb-like-custom" data-href="https://www.facebook.com/siurprizge-1000968356632423/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
                     <div class="with-lowe">
                         <span></span>
                         <span class="heart"></span>

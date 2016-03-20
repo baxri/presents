@@ -3,25 +3,24 @@ var app = angular.module('gift', []);
 
 app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  '$timeout', '$window', function ($scope, $http, $location, $interval, $timeout, $window) {
 
-    $scope.destination = 0;
-    $scope.amount = '50';
+    $scope.destination = 1;
+    $scope.amount = '';
     $scope.deliver = 0;
 
-    $scope.mobile = '598602084';
-    $scope.email = 'sruutuna@gmail.com';
+    $scope.mobile = '';
+    $scope.email = '';
 
     $scope.sender_fullname = '';
     $scope.sender_mobile = '';
     $scope.sender_email = '';
 
     $scope.text = '';
-    $scope.date = '0000-00-00|00:00';
 
-    $scope.d = '';
-    $scope.m = '';
-    $scope.y = '';
-    $scope.h = '';
-    $scope.mm = '00';
+    $scope.d = "";
+    $scope.m = "";
+    $scope.y = "";
+    $scope.h = "";
+    $scope.mm;
 
     $scope.setFullDate = function( d, m, y, h ){
         $scope.d = d;
@@ -64,12 +63,45 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
 
     $scope.nextStep = function(){
 
+        switch ( $scope.currentStep ){
+            case 1:
+                var valid = $scope.validateStep1();
+                break;
+            case 2:
+                var valid = $scope.validateStep2();
+                break;
+            case 3:
+                var valid = $scope.validateStep3();
+                break;
+            case 4:
+                var valid = $scope.validateStep4();
+                break;
+            case 5:
+                var valid = $scope.validateStep5();
+                break;
+        }
+
+        if( !valid ){
+            return false;
+        }
+
         if( $scope.currentStep == 5 ){
+
+            /*
+             *
+             * Go to checkout
+             *
+             * */
+
+            $('#giftForm').submit();
             return false;
         }
 
         $( '.step-' + $scope.currentStep).fadeOut('fast', function(){
             $scope.currentStep = $scope.currentStep + 1;
+
+
+            $('.process').animate({ backgroundColor: "orange" }, "slow");
             $( '.step-' + $scope.currentStep).fadeIn('fast');
             $scope.setProgress();
 
@@ -105,8 +137,44 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
         }, 500, function() {
             // Animation complete.
         });
-
     }
 
+    /*
+    * Validation functions
+    *
+    * */
+
+    $scope.validateStep1 = function(){
+
+        if( $('#amount').val().length == 0 ){
+            return false;
+        }
+
+        return true;
+    }
+
+    $scope.validateStep2 = function(){
+        if( $('#mobile').val().length == 0 && $('#email').val().length == 0 ){
+            return false;
+        }
+
+        return true;
+    }
+
+    $scope.validateStep3 = function(){
+        return true;
+    }
+
+    $scope.validateStep4 = function(){
+        return true;
+    }
+
+    $scope.validateStep5 = function(){
+        if( $('#sender_mobile').val().length == 0 || $('#sender_email').val().length == 0 ){
+            return false;
+        }
+
+        return true;
+    }
 
 }]);

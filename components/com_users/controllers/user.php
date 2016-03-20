@@ -27,7 +27,7 @@ class UsersControllerUser extends UsersController
 	 */
 	public function login()
 	{
-		JSession::checkToken('post') or jexit(JText::_('JINVALID_TOKEN'));
+		//JSession::checkToken('post') or jexit(JText::_('JINVALID_TOKEN'));
 
 		$app    = JFactory::getApplication();
 		$input  = $app->input;
@@ -40,6 +40,15 @@ class UsersControllerUser extends UsersController
 		$data['username']  = $input->$method->get('username', '', 'USERNAME');
 		$data['password']  = $input->$method->get('password', '', 'RAW');
 		$data['secretkey'] = $input->$method->get('secretkey', '', 'RAW');
+
+		if( empty( $data['username'] ) ){
+			$data['username'] = JRequest::getVar( 'username','' );
+		}
+
+		if( empty( $data['password'] ) ){
+			$data['password'] = JRequest::getVar( 'password','' );
+		}
+
 
 		// Don't redirect to an external URL.
 		if (!JUri::isInternal($data['return']))
@@ -77,14 +86,16 @@ class UsersControllerUser extends UsersController
 			}
 
 			$app->setUserState('users.login.form.data', array());
-			$app->redirect(JRoute::_($app->getUserState('users.login.form.return'), false));
+			//$app->redirect(JRoute::_($app->getUserState('users.login.form.return'), false));
+			$app->redirect('index.php');
 		}
 		else
 		{
 			// Login failed !
 			$data['remember'] = (int) $options['remember'];
 			$app->setUserState('users.login.form.data', $data);
-			$app->redirect(JRoute::_('index.php?option=com_users&view=login', false));
+			//$app->redirect(JRoute::_('index.php?option=com_users&view=login', false));
+			$app->redirect('index.php');
 		}
 	}
 
@@ -97,7 +108,7 @@ class UsersControllerUser extends UsersController
 	 */
 	public function logout()
 	{
-		JSession::checkToken('request') or jexit(JText::_('JINVALID_TOKEN'));
+		//JSession::checkToken('request') or jexit(JText::_('JINVALID_TOKEN'));
 
 		$app = JFactory::getApplication();
 

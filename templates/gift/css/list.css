@@ -7,6 +7,13 @@ header and footer will hug the whole screen.*/
     margin: 0 auto;
 }
 
+.gift-container-inner p{
+    margin-left: 10px;
+    font-size: 15pt;
+    line-height: 50px;
+    #color: gray;
+    font-family: 'light-alokado';
+}
 
 .giftItem{
     position: relative;
@@ -89,6 +96,8 @@ header and footer will hug the whole screen.*/
     line-height: 30px;
     overflow: hidden;
     text-align: center;
+
+
 }
 
 .giftItem h2 a{
@@ -102,6 +111,98 @@ header and footer will hug the whole screen.*/
     cursor: pointer;
     width: 300px;
     height: 400px;
+}
+
+
+
+
+/*
+* List Banner
+*
+*/
+
+
+.list-banner-bg{
+    position: relative;
+    margin-top: 90px;
+    width: 100%;
+    height: 400px;
+    background-size: 110% auto;
+    background-repeat: no-repeat;
+
+}
+
+.list-banner-bg .bottom-shadow{
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    bottom: 0px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.50) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.50) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.50) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
+
+
+}
+
+.list-banner{
+    position: relative;
+    text-align: center;
+    font-family: 'light-alokado';
+    color: white;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.70);
+    display: none;
+    height: 400px;
+    z-index: 555;
+
+}
+
+.list-banner .right-medium-text{
+    position: absolute;
+    left: 10px;
+    bottom: 20%;
+    font-size: 20pt;
+    width: auto;
+    height: 100px;
+    font-family: 'light-alokado' !important;
+}
+
+.list-banner .right-big-text{
+    position: absolute;
+    left: 10px;
+    bottom: 35%;
+    font-size: 30pt;
+    width: auto;
+    height: 100px;
+    font-family: 'light-alokado' !important;
+}
+
+.banner-with-love{
+    position: absolute;
+    left: 10px;
+    bottom: 20%;
+    width: auto;
+
+}
+
+.banner-with-love span{
+    display: block;
+    float: left;
+    font-size: 12pt;
+    height: 50px;
+    line-height: 50px;
+    font-family: 'light-alokado' !important;
+}
+
+.banner-with-love .big-love{
+    width: 40px;
+    background-image: url("../../../images/sprite.png");
+    background-position: -7px -115px;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    margin-left: 10px;
 }
 
 

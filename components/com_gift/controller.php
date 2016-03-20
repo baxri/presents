@@ -6,9 +6,6 @@ JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_gift/tables');
 
 class GiftController extends JControllerLegacy
 {
-
-    // http://localhost/presents/toPay?date=2016-March-1|22:00&gift_id=15&amount=150&destination=2&mobile=598602084&email=test@mail.ru&sender_fullname=testtest&sender_mobile=598954880&sender_email=sender@mail.ru&test=congratulatoinnnnn!
-
     public function toPay(){
 
         date_default_timezone_set(JFactory::getConfig()->get('offset'));
@@ -22,12 +19,12 @@ class GiftController extends JControllerLegacy
             $destinnation = JRequest::getCmd('destination', 0);
             $amount = @number_format( JRequest::getCmd('amount', 0), 2 );
 
-            $deliver = number_format( ($destinnation == 3 ? 5 : 0), 2 );
+            $deliver = number_format( ($destinnation == 3 ? 10 : 0), 2 );
 
             $mobile = JRequest::getVar('mobile', '');
             $email = JRequest::getVar('email', '');
 
-            $date = $this->_formatDate( JRequest::getVar('date', '') ); /* 2016-March-1|22:00 */
+            $date = $this->_formatDate();
 
             $sender_fullname = JRequest::getVar('sender_fullname', '');
             $sender_mobile = JRequest::getVar('sender_mobile', '');
@@ -45,20 +42,16 @@ class GiftController extends JControllerLegacy
 
             switch( $destinnation ){
                 case 1:
-
-                    if( empty( $mobile ) ){
-                        throw  new Exception('MOBILE_IS_REQUIRED');
-                    }
-
-                    break;
                 case 2:
-
-                    if( empty( $email ) ){
-                        throw  new Exception('EMAIL_IS_REQUIRED');
+                    if( empty( $mobile ) && empty( $email ) ){
+                        throw  new Exception('EMAL_OR_MOBILE_IS_REQUIRED');
                     }
 
                     break;
                 case 3:
+
+                    throw  new Exception('SERVICE_IS_UNAVAILABLE');
+
                     break;
                 default;
                     throw  new Exception('BAD_FORMAT_OF_DESTINATION');
@@ -88,8 +81,6 @@ class GiftController extends JControllerLegacy
             );
 
             $order->store();
-
-
             $app->redirect( JUri::root().'tovisa/'.$order->id );
 
         }catch( Exception $e ){
@@ -116,7 +107,7 @@ class GiftController extends JControllerLegacy
         exit();
     }
 
-    private function _formatDate( $date ){
+    private function _formatDate(){
 
         $months = array(
             '1' => 'January',
@@ -135,51 +126,42 @@ class GiftController extends JControllerLegacy
 
         $months = array_flip( $months );
 
-        $explode_date = explode( '|', $date);
+        $d = JRequest::getVar('d', 0);
+        $m = JRequest::getVar('m', 0);
+        $y = JRequest::getVar('y', 0);
 
-        if( empty( $explode_date[0] ) ){
-            throw new Exception('EXPLODE_0_IS_EMPTY');
+        if( empty( $d ) ){
+            throw new Exception('EMPTY_D');
         }
 
-        if( empty( $explode_date[1] ) ){
-            throw new Exception('EXPLODE_1_IS_EMPTY');
+        if( empty( $m ) ){
+            throw new Exception('EMPTY_M');
         }
 
-        $explode_date_0 = explode('-', $explode_date[0] );
-
-        if( empty( $explode_date_0[0] ) ){
-            throw new Exception('DATE_0_IS_EMPTY');
+        if( empty( $y ) ){
+            throw new Exception('EMPTY_Y');
         }
 
-        if( empty( $explode_date_0[1] ) ){
-            throw new Exception('DATE_1_IS_EMPTY');
+        if( !isset( $months[$m] ) ){
+            throw new Exception('BAD_M');
         }
 
-        if( empty( $explode_date_0[2] ) ){
-            throw new Exception('DATE_2_IS_EMPTY');
+        $m = $months[$m];
+
+        $date = $y.'-'.( $m < 10 ? '0'.$m : $m ).'-'.( $d < 10 ? '0'.$d : $d );
+
+        $h = JRequest::getVar('h', 0);
+
+        if( empty( $h ) ){
+            throw new Exception('EMPTY_H');
         }
 
-        if( !isset( $months[$explode_date_0[1]] ) ){
-            throw new Exception('BAD_FORMAT_OF_MONTH');
-        }
+        $h = ( $h < 10 ? '0'.$h : $h );
 
-        $correct_date_format = $explode_date_0[0].'-'.( $months[$explode_date_0[1]] < 10 ? '0'.$months[$explode_date_0[1]] : $months[$explode_date_0[1]] ).'-'.( $explode_date_0[2] < 10 ? '0'.$explode_date_0[2] : $explode_date_0[2] );
+        $hour = $h.':00:00';
 
+        $full_date = $date.' '.$hour;
 
-        $explode_time_1 = explode(':', $explode_date[1] );
-
-        if( empty( $explode_time_1[0] ) ){
-            throw new Exception('TIME_0_IS_EMPTY');
-        }
-
-        if( empty( $explode_time_1[1] ) ){
-            throw new Exception('TIME_1_IS_EMPTY');
-        }
-
-        $correc_time = ( $explode_time_1[0] < 10 ? '0'.$explode_time_1[0] : $explode_time_1[0] ).':'.( $explode_time_1[1] < 10 && $explode_time_1[1] != '00' ? '0'.$explode_time_1[1] : $explode_time_1[1] );
-
-        $date = $correct_date_format.' '.$correc_time;
-
-        return $date;
+        return $full_date;
     }
 }

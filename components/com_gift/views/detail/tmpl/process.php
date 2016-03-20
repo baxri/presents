@@ -1,5 +1,7 @@
 <?php defined('_JEXEC') or die; ?>
 
+<form  name="giftForm" id="giftForm" action="<?php echo JUri::root().'toPay' ?>" method="post" novalidate>
+
 <div class="process-background">
     <div class="process">
 
@@ -15,39 +17,52 @@
             <div class="step active step-1">
                 <div></div>
                 <p>რამდენ ლარიანი სასაჩუქრე ბარათი გსურთ რომ აჩუქოთ?</p>
-                <input type="text" placeholder="0.00" ng-model="amount" name="amount" >
+                <input type="text" placeholder="შეიყვანეთ სასურველი თანხა" ng-model="amount" name="amount" id="amount" >
             </div>
             <div class="step step-2">
-
                 <div class="image"></div>
                 <p>მიუთითეთ სადაც გსურთ რომ გაუგზავნოთ სასაჩუქრე ვაუჩერი?</p>
-                <div><input type="text" placeholder="მობილურზე" ng-model="mobile" name="mobile" ></div>
-                <div><input type="text" placeholder="ელ-ფოსტაზე" ng-model="email" name="email" ></div>
-
+                <div><input type="text" placeholder="მობილურზე" ng-model="mobile" name="mobile" id="mobile" ></div>
+                <div><input type="text" placeholder="ელ-ფოსტაზე" ng-model="email" name="email" id="email" ></div>
             </div>
-            <div class="step step-3">
-                <div class="image"></div>
+
+            <div class="step step-3"
+                 ng-init="setFullDate( '<?php echo $this->today['mday'] ?>', '<?php echo $this->today['month'] ?>', '<?php echo $this->today['year'] ?>', '<?php echo $this->today['hours'] ?>' )"
+            >
+
+              <div class="image"></div>
                 <p>როდის გსურთ რომ მიუვიდეს შეტყობინება ადრესატს?</p>
                 <div class="selector">
-                    <select style="width: 50px;">
-                        <option>5</option>
-                        <option>5</option>
+                    <select style="width: 70px;" name="d"  ng-model="d" >
+                        <?php for( $i = 1; $i <= 31; $i++ ): ?>
+                            <option value="<?php echo $i ?>"><?php echo $i ?></option>
+                        <?php endfor; ?>
                     </select>
-                    <select style="width: 150px;">
-                        <option>სექტემბერი</option>
-                        <option>ოქტომბერი</option>
+                    <select style="width: 120px;" name="m" ng-model="m">
+                        <?php foreach( $this->months as $month ): ?>
+                            <option value="<?php echo $month ?>"><?php echo $month ?></option>
+                        <?php endforeach; ?>
                     </select>
-                    <select style="width: 50px;">
-                        <option>12</option>
-                        <option>12</option>
+                    <select style="width: 80px;" name="y" ng-model="y">
+                        <?php foreach( $this->years as $year ): ?>
+                            <option value="<?php echo $year ?>"><?php echo $year ?></option>
+                        <?php endforeach; ?>
                     </select>
+                    <select style="width: 80px;" name="h"  ng-model="h" >
+                        <?php for( $i = 1; $i <= 24; $i++ ): ?>
+                            <option value="<?php echo $i ?>"><?php echo $i ?> სთ</option>
+                        <?php endfor; ?>
+                    </select>
+
+                    <input type="hidden" value="{{mm}}" ng-model="mm" name="mm" maxlength="2">
                 </div>
+
             </div>
             <div class="step step-4">
                 <div class="left">
-                    <input type="text" name="sender_fullname" ng-model="sender_fullname" placeholder="ვისგან?">
+                    <input type="text" name="sender_fullname" ng-model="sender_fullname" name="sender_fullname" placeholder="ვისგან?">
                     <div class="clear"></div>
-                    <textarea placeholder="შეიყვანეთ მილოცვის ტექსტი" ng-model="text"></textarea>
+                    <textarea placeholder="შეიყვანეთ მილოცვის ტექსტი" ng-model="text" name="text"></textarea>
                     <div class="clear"></div>
                     <div class="image"></div>
                 </div>
@@ -115,8 +130,8 @@
                     </div>
 
                     <div class="payer-info">
-                       <input name="" placeholder="თქვენი ელ-ფოსტა" ng-model="sender_mobile">
-                       <input name="" placeholder="თქვენი მობილური" ng-model="sender_email">
+                       <input placeholder="თქვენი ელ-ფოსტა" ng-model="sender_mobile" name="sender_mobile" id="sender_mobile">
+                       <input placeholder="თქვენი მობილური" ng-model="sender_email" name="sender_email" id="sender_email">
 
                         <a href="#">ვეთანხმები წესებსა და პირობებს</a>
 
@@ -128,9 +143,14 @@
 
         <div class="process-footer">
             <button ng-click="prevStep()">უკან დაბრუნება</button>
-            <button class="next" ng-click="nextStep()">შემდეგი</button>
+            <button class="next" ng-click="nextStep()">გაგრძელება</button>
         </div>
 
     </div>
 </div>
 
+
+    <input type="hidden" name="deliver" ng-model="deliver" value="{{deliver}}">
+    <input type="hidden" name="destination" ng-model="destination" value="{{destination}}" >
+    <input type="hidden" name="gift_id" value="<?php echo $this->gift->id ?>"  >
+</form>
