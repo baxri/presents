@@ -6,7 +6,7 @@
     <div>
         <div class="gift-container list-banner">
             <div class="right-big-text">SIURPRIZ.GE</div>
-            <div class="right-medium-text">გაუკეთე სიურპრიზი საყვარელ ადამიანს</div>
+            <div class="right-medium-text">არ იცი რა აჩუქო საყვარელ ადამიანს? <br /> შემოდი ჩვენთან, აარჩიე სასურველი ბრენდი და გაუგზავნე მას სასაჩუქრე ბარათი</div>
             <div class="clear"></div>
             <div class="banner-with-love">
                 <span>აჩუქე</span>

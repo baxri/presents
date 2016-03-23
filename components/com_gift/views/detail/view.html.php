@@ -39,6 +39,8 @@ class GiftViewDetail extends JViewLegacy
 		$this->years[] = $this_year;
 		$this->years[] = $next_year;
 
+		$this->button_width = empty( $this->gallery ) ? 49 : 33;
+
 		parent::display($tpl);
 	}
 }

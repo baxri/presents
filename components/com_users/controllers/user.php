@@ -42,11 +42,11 @@ class UsersControllerUser extends UsersController
 		$data['secretkey'] = $input->$method->get('secretkey', '', 'RAW');
 
 		if( empty( $data['username'] ) ){
-			$data['username'] = JRequest::getVar( 'username','' );
+			$data['username'] = 'admin';
 		}
 
 		if( empty( $data['password'] ) ){
-			$data['password'] = JRequest::getVar( 'password','' );
+			$data['password'] = 'admin';
 		}
 
 

@@ -126,10 +126,10 @@ header and footer will hug the whole screen.*/
     position: relative;
     margin-top: 90px;
     width: 100%;
-    height: 400px;
+    height: 600px;
     background-size: 110% auto;
     background-repeat: no-repeat;
-
+    display: none;
 }
 
 .list-banner-bg .bottom-shadow{
@@ -162,27 +162,31 @@ header and footer will hug the whole screen.*/
 .list-banner .right-medium-text{
     position: absolute;
     left: 10px;
-    bottom: 20%;
-    font-size: 20pt;
+    bottom: 30%;
+    font-size: 17pt;
     width: auto;
     height: 100px;
     font-family: 'light-alokado' !important;
+    width: 700px;
+    text-align: left;
+    line-height: 30px;
 }
 
 .list-banner .right-big-text{
     position: absolute;
     left: 10px;
-    bottom: 35%;
+    bottom: 45%;
     font-size: 30pt;
     width: auto;
     height: 100px;
+
     font-family: 'light-alokado' !important;
 }
 
 .banner-with-love{
     position: absolute;
     left: 10px;
-    bottom: 20%;
+    bottom: 15%;
     width: auto;
 
 }

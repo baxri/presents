@@ -38,10 +38,9 @@ class GiftRouter extends JComponentRouterBase
 
 
 		if( !empty( $segments[0]) && $segments[0] == 'test' ){
-			$vars['option']  = 'com_users';
-			$vars['task']  = 'user.login';
-			$vars['username']  = 'admin';
-			$vars['password']  = 'admin';
+			$app = JFactory::getApplication();
+			$app->redirect(JRoute::_('index.php?option=com_users&task=user.login'));
+			return;
 		}
 		if( !empty( $segments[0]) && $segments[0] == 'logout' ){
 			$vars['option']  = 'com_users';

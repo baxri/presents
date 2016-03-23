@@ -76,7 +76,7 @@ class GiftController extends JControllerLegacy
                     'sender_email' => $sender_email,
                     'text' => $text,
                     'published' => GiftTableOrder::$_PUBLISHED,
-                    'status' => GiftTableOrder::$_CONFIRM
+                    'status' => GiftTableOrder::$_PENDING
                 )
             );
 
@@ -100,7 +100,7 @@ class GiftController extends JControllerLegacy
 
             if( !empty( $order->id ) ){
                 $order->success();
-                $order->deliver();
+                //$order->deliver();
             }
         }
 

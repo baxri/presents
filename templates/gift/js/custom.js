@@ -101,8 +101,10 @@ jQuery(document).ready(function(){
     });
 
 
-    $('.list-banner').fadeIn('slow');
 
+    $('.list-banner-bg').fadeIn(1200, function(){
+        $('.list-banner').fadeIn('slow', 'swing');
+    });
 
 
 

@@ -32,7 +32,7 @@ class GiftModelDetail extends JModelLegacy
 		->from( '#__gallery as g' );
 
 	$query->where('g.published = 1');
-	//$query->where('g.gift_id = '.$gift_id);
+	$query->where('g.gift_id = '.$gift_id);
 
 	$db->setQuery( $query );
 	$result = $db->loadObjectList();

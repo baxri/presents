@@ -35,7 +35,7 @@
 
 .inner-banner .left{
     margin: 0px;
-    width: 500px;
+    width: 550px;
     #border: 1px solid red;
     position: absolute;
 
@@ -47,7 +47,7 @@
 .inner-banner .left h1{
     position: absolute;
     bottom: 30%;
-    left: 50px;
+    #left: 50px;
     color: white;
     font-size: 40pt;
     font-family: 'light-alokado' !important;
@@ -55,14 +55,15 @@
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.50);
 }
 
-.inner-banner .left p{
+.inner-banner .left div{
     position: absolute;
-    bottom: 20%;
-    left: 50px;
+    top: 75%;
+    #left: 50px;
     color: white;
     font-size: 15pt;
     font-family: 'light-alokado' !important;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.50);
+    line-height: 30px;
 }
 
 
@@ -124,7 +125,6 @@
     height: 100px;
     line-height: 100px;
     text-align: center;
-    width: 33%;
     font-size: 11pt;
     border-right: 1px solid lightgray;
 }
@@ -161,6 +161,7 @@
     line-height: 20px;
     text-align: justify;
     color: gray;
+
 }
 
 
@@ -199,13 +200,18 @@
     opacity: 0.8;
 }
 
+.brand-galery{
+    min-height: 500px;
+    color: gray;
+}
+
 
 .brand-galery .item{
     position: relative;
     text-align: center;
     width: 200px;
-    height: 300px;
-    border-bottom: 1px solid lightgray;
+    height: 200px;
+    #border-bottom: 1px solid lightgray;
     background-color: white;
     margin-right: 5px;
     margin-bottom: 5px;

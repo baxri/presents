@@ -32,6 +32,13 @@
 			   required="true"
 		/>
 
+		<field name="slogan"
+			   type="text"
+			   label="Slogan"
+			   default=""
+			   required="true"
+		/>
+
 		<field name="published" type="radio"
 			   class="btn-group btn-group-yesno"
 			   label="Published"
