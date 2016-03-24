@@ -89,6 +89,12 @@
 			   required="true"
 		/>
 
+		<field name="amounts"
+			   type="text"
+			   label="Amounts (;)"
+			   default=""
+		/>
+
 		<field name="list_image"
 			   type="media"
 			   label="List Image"

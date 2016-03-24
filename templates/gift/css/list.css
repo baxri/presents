@@ -129,7 +129,7 @@ header and footer will hug the whole screen.*/
     height: 600px;
     background-size: 110% auto;
     background-repeat: no-repeat;
-    display: none;
+
 }
 
 .list-banner-bg .bottom-shadow{

@@ -3,6 +3,8 @@ var app = angular.module('gift', []);
 
 app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  '$timeout', '$window', function ($scope, $http, $location, $interval, $timeout, $window) {
 
+    $scope.maxLetters = 120;
+
     $scope.destination = 1;
     $scope.amount = '';
     $scope.deliver = 0;

@@ -41,6 +41,12 @@ class GiftViewDetail extends JViewLegacy
 
 		$this->button_width = empty( $this->gallery ) ? 49 : 33;
 
+		if( !empty( $this->gift->amounts ) ){
+			$this->amounts = explode(';', $this->gift->amounts);
+		}else{
+			$this->amounts = array();
+		}
+
 		parent::display($tpl);
 	}
 }

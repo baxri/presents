@@ -17,12 +17,24 @@
             <div class="step active step-1">
                 <div></div>
                 <p>რამდენ ლარიანი სასაჩუქრე ბარათი გსურთ რომ აჩუქოთ?</p>
-                <input type="text" placeholder="შეიყვანეთ სასურველი თანხა" ng-model="amount" name="amount" id="amount" >
+
+                <?php if( empty( $this->amounts ) ): ?>
+                    <input type="text" placeholder="შეიყვანეთ სასურველი თანხა" ng-model="amount" name="amount" id="amount" >
+                <?php else: ?>
+                    <select style="padding-left: 20px; width: 180px; height: 40px; color: gray;" ng-model="amount" name="amount" id="amount" >
+                        <option value=""> აირჩიეთ თანხა </option>
+                        <?php foreach( $this->amounts as $amount ): ?>
+                            <option value="<?php echo $amount ?>"><?php echo $amount ?> ლარი</option>
+                        <?php endforeach; ?>
+                    </select>
+                <?php endif; ?>
+
+
             </div>
             <div class="step step-2">
                 <div class="image"></div>
                 <p>მიუთითეთ სადაც გსურთ რომ გაუგზავნოთ სასაჩუქრე ვაუჩერი?</p>
-                <div><input type="text" placeholder="მობილურზე" ng-model="mobile" name="mobile" id="mobile" ></div>
+                <div><input type="number" placeholder="მობილურზე" ng-model="mobile" name="mobile" min="0" id="mobile" ></div>
                 <div><input type="text" placeholder="ელ-ფოსტაზე" ng-model="email" name="email" id="email" ></div>
             </div>
 
@@ -62,7 +74,8 @@
                 <div class="left">
                     <input type="text" name="sender_fullname" ng-model="sender_fullname" name="sender_fullname" placeholder="ვისგან?">
                     <div class="clear"></div>
-                    <textarea placeholder="შეიყვანეთ მილოცვის ტექსტი" ng-model="text" name="text"></textarea>
+                    <textarea placeholder="შეიყვანეთ მილოცვის ტექსტი" ng-model="text" name="text">{{text}}</textarea>
+                    <p style="color: gray;">სიმბოლოების მაქსიმალური რაოდენობა: {{maxLetters}} ( {{text.length}} )</p>
                     <div class="clear"></div>
                     <div class="image"></div>
                 </div>
@@ -71,14 +84,14 @@
                         <div class="card">
                             <div class="card-left">
                                 <h2><?php echo $this->gift->name ?></h2>
-                                <p>საუკეთესო საჩუქარი საყვარელი ადამიანისათვის</p>
+                                <p style="line-height: 20px;"><?php echo $this->gift->slogan ?></p>
                                 <h1>{{amount | currency: ""}} ლარი</h1>
                             </div>
                         </div>
                     </div>
                     <div class="center">
                         <div class="text">
-                            <p ng-show="text.length > 0">{{text}}</p>
+                            <p ng-show="text.length > 0">{{ text | limitTo:maxLetters }}</p>
                             <p ng-show="text.length == 0" style="color: lightgrey;">დამატებითი ტექსტი არ არის მითითებული</p>
                             <div class="with-lowe">
                                 <span ng-show="sender_fullname.length > 0">{{sender_fullname}} &nbsp;</span>
@@ -92,7 +105,7 @@
                                 SIURPRIZ.GE
                             </div>
                             <div class="logo">
-                                ბერენდის ცხელი ხაზი: <?php echo $this->gift->hot_line ?>
+                                ბრენდის ცხელი ხაზი: <?php echo $this->gift->hot_line ?>
                             </div>
                         </div>
                     </div>

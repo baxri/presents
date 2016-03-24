@@ -100,11 +100,9 @@ jQuery(document).ready(function(){
 
     });
 
+    $('.list-banner').slideDown(1200, 'swing');
 
 
-    $('.list-banner-bg').fadeIn(1200, function(){
-        $('.list-banner').fadeIn('slow', 'swing');
-    });
 
 
 
