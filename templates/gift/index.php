@@ -49,9 +49,9 @@
                     </a>
                 </div>
 
-                <?php /* ?>
-                    <jdoc:include type="modules" name="categories" />
-                <?php */ ?>
+
+                <jdoc:include type="modules" name="categories" />
+
             </div>
         </div>
 
@@ -75,7 +75,6 @@
 
             </div>
         </div>
-
     </div>
 
 

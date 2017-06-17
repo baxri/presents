@@ -10,7 +10,7 @@
             <div  class="container inner-banner">
 
                 <div class="left">
-                    <h1><?php echo $this->gift->name ?></h1>
+                    <h1>#<?php echo $this->gift->name ?></h1>
                     <div><?php echo $this->gift->slogan ?></div>
                 </div>
                 <div class="right">

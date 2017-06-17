@@ -1,6 +1,5 @@
 
 .process-background{
-    display: none;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -305,15 +304,116 @@
     background-repeat: no-repeat;
 }
 
+.step-4 .right .preview-tabs{
+    width: 100%;
+    height: 16px;
+    text-align: center;
+}
+
+.step-4 .right .preview-tabs a{
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    margin-left: 5px;
+    border: 1px solid lightgray;
+    border-bottom: none;
+    padding: 10px;
+    color: lightgray;
+}
+
+.step-4 .right .preview-tabs .active{
+    color: gray;
+}
+
 .step-4 .right .top{
-    margin-top: 30px;
+    margin-top: 50px;
     height: 190px;
     width: 100%;
     border-bottom: 1px dashed lightgrey;
-    background-image: url("../../../images/card-bd.png");
-    background-position: 0px 90px;
+    background-image: url("../../../images/device-bg.jpg");
+    background-position: 0px 0px;
     background-repeat: no-repeat;
     font-style: italic;
+}
+
+.step-4 .right .on-mobile-preview-inside{
+    margin-top: 50px;
+    height: 385px;
+    width: 100%;
+
+    background-image: url("../../../images/device-bg.jpg");
+    background-position: 29px 41px;
+    background-repeat: no-repeat;
+}
+
+.step-4 .right .on-mobile-preview-inside .device-header{
+    color: gray;
+    border-bottom: 1px dashed lightgray;
+    height: 40px;
+    line-height: 40px;
+}
+
+.step-4 .right .on-mobile-preview-inside .device{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+
+}
+
+.step-4 .right .on-mobile-preview-inside .message-from{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+
+
+}
+
+.step-4 .right .on-mobile-preview-inside .message-from div{
+    float: left;
+}
+
+.step-4 .right .on-mobile-preview-inside .message-from .message{
+    width: 50%;
+    padding: 10px;
+    height: auto;
+    background-color: #FFCCCC;
+    border-radius: 6px;
+    text-align: left;
+    border: 2px solid white;
+}
+
+.step-4 .right .on-mobile-preview-inside .message-from .message-date{
+    position: absolute;
+    bottom: 5px;
+    left: 57%;
+    text-align: left;
+    font-size: 8pt;
+    color: gray;
+    padding: 3px;
+}
+
+.step-4 .right .on-mobile-preview-inside .message-to{
+    position: relative;
+}
+
+.step-4 .right .on-mobile-preview-inside .message-to div{
+    float: right;
+}
+
+.step-4 .right .on-mobile-preview-inside .message-to .message{
+    background-color: #EFEFEF;
+
+}
+
+.step-4 .right .on-mobile-preview-inside .message-to .message-date{
+    position: absolute;
+    left: 0%;
+    text-align: right;
+    font-size: 8pt;
+    width: 150px;
+
 }
 
 .step-4 .right .center{

@@ -8,6 +8,10 @@ class GiftModelGift extends JModelLegacy
 
 		$cat = (int)JRequest::getVar('cat', '');
 
+		if( $cat == 8 ){
+			$cat = '';
+		}
+
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);
 

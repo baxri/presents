@@ -100,7 +100,33 @@ jQuery(document).ready(function(){
 
     });
 
+
+    $('.step-4 .right .preview-tabs a').bind('click', function(){
+
+        $('.step-4 .right .preview-tabs a').removeClass('active');
+        $(this).addClass('active');
+
+        $('.preview-container').hide();
+        $( '.' + $(this).attr('data-container')).show();
+
+    });
+
     $('.list-banner').slideDown(1200, 'swing');
+
+
+
+    $('.arrow-slide-to').bind('click', function(){
+        slideToList();
+    });
+
+    if ( $('#gift-container').attr('data-category') > 0 ){
+        slideToList();
+    }
+
+    function slideToList(){
+        var height = $('.gift-container-inner').offset().top;
+        $('body,html').animate({ scrollTop: (height - 140) }, 1000);
+    }
 
 
 

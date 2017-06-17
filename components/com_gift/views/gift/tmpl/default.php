@@ -5,7 +5,7 @@
     <img src="images/list-banner-bg.png" style="width: 110%; display: none;" />
     <div>
         <div class="gift-container list-banner">
-            <div class="right-big-text">SIURPRIZ.GE</div>
+            <div class="right-big-text">#სასაჩუქრებარათები</div>
             <div class="right-medium-text">არ იცი რა აჩუქო საყვარელ ადამიანს? <br /> შემოდი ჩვენთან, აარჩიე სასურველი ბრენდი და გაუგზავნე მას სასაჩუქრე ბარათი</div>
             <div class="clear"></div>
             <div class="banner-with-love">
@@ -13,16 +13,26 @@
                 <span class="big-love"></span>
                 <span>-ით</span>
             </div>
+
+            <div class="clear"></div>
+
+            <a href="https://www.facebook.com/siurpriz.ge" target="_blank">გვიპოვეთ Facebook - ზე</a>
+
+
         </div>
+
     </div>
+
+    <a class="arrow-slide-to">
+
+    </a>
+
     <div class="bottom-shadow"></div>
 </div>
 
 
 
-<div id="gift-container" class="gift-container">
-
-
+<div id="gift-container" class="gift-container" data-category="<?php echo $this->cat ?>">
 
     <div class="gift-container-inner clear">
 

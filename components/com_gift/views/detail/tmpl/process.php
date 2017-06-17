@@ -2,7 +2,7 @@
 
 <form  name="giftForm" id="giftForm" action="<?php echo JUri::root().'toPay' ?>" method="post" novalidate>
 
-<div class="process-background">
+<div class="process-background hide">
     <div class="process">
 
         <div class="process-header">
@@ -34,7 +34,7 @@
             <div class="step step-2">
                 <div class="image"></div>
                 <p>მიუთითეთ სადაც გსურთ რომ გაუგზავნოთ სასაჩუქრე ვაუჩერი?</p>
-                <div><input type="number" placeholder="მობილურზე" ng-model="mobile" name="mobile" min="0" id="mobile" ></div>
+                <div><input type="text" placeholder="მობილურზე" ng-model="mobile" name="mobile" id="mobile" ></div>
                 <div><input type="text" placeholder="ელ-ფოსტაზე" ng-model="email" name="email" id="email" ></div>
             </div>
 
@@ -80,35 +80,104 @@
                     <div class="image"></div>
                 </div>
                 <div class="right">
-                    <div class="top">
-                        <div class="card">
-                            <div class="card-left">
-                                <h2><?php echo $this->gift->name ?></h2>
-                                <p style="line-height: 20px;"><?php echo $this->gift->slogan ?></p>
-                                <h1>{{amount | currency: ""}} ლარი</h1>
+
+                    <div class="preview-tabs">
+                        <a data-container="on-email-preview" href="#" class="active">როგორ მივა ელ-ფოსტაზე</a>
+                        <a data-container="on-mobile-preview"" href="#">როგორ მივა მობილურზე</a>
+                    </div>
+
+                    <div class="on-email-preview preview-container " >
+                        <div class="top">
+                            <div class="card">
+                                <div class="card-left">
+                                    <h2># <?php echo $this->gift->name ?></h2>
+                                    <p>თქვენ გაჩუქეს "<?php echo $this->gift->name ?>" - ის სასაჩუქრე ვაუჩერი</p>
+                                    <h3>ვაუჩერის კოდია: xxxxx</h3>
+                                    <h1>{{amount | currency: ""}} ლარი</h1>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="center">
+                            <div class="text">
+                                <p ng-show="text.length > 0">{{ text | limitTo:maxLetters }}</p>
+                                <p ng-show="text.length == 0" style="color: lightgrey;">დამატებითი ტექსტი არ არის მითითებული</p>
+                                <div class="with-lowe">
+                                    <span ng-show="sender_fullname.length > 0">{{sender_fullname}} &nbsp;</span>
+                                    <span ng-show="sender_fullname.length == 0">ანონიმურად &nbsp;</span>
+                                    <span class="heart"></span>
+                                    <span>&nbsp;-ით</span>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="copyright">
+                                    SIURPRIZ.GE
+                                </div>
+                                <div class="logo">
+                                    ბრენდის ცხელი ხაზი: <?php echo $this->gift->hot_line ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="center">
-                        <div class="text">
-                            <p ng-show="text.length > 0">{{ text | limitTo:maxLetters }}</p>
-                            <p ng-show="text.length == 0" style="color: lightgrey;">დამატებითი ტექსტი არ არის მითითებული</p>
-                            <div class="with-lowe">
-                                <span ng-show="sender_fullname.length > 0">{{sender_fullname}} &nbsp;</span>
-                                <span ng-show="sender_fullname.length == 0">ანონიმურად &nbsp;</span>
-                                <span class="heart"></span>
-                                <span>&nbsp;-ით</span>
+
+                    <div class="on-mobile-preview preview-container hide">
+                        <div class="on-mobile-preview-inside">
+
+                            <div class="device">
+
+                                <div class="device-header"> <h2 style="font-style: italic;"># <?php echo $this->gift->name ?></h2></div>
+
+                                <div class="message-from">
+                                    <div class="message">
+                                        Tqven gachuqes "<?php echo $this->gift->name ?>" - is sasachuqre vaucheri {{amount | currency: ""}} lari.
+
+                                        vaucheris kodi aris: xxxxx.
+
+                                        {{ text | limitTo:maxLetters }}  {{sender_fullname}}.
+
+                                        rogor gamoviyeno: http://www.siurpriz.ge/how-to-use
+
+                                    </div>
+                                    <div class="message-date">
+                                        <p>Received</p>
+                                        <p>Today 21:00 PM</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="message-from message-to">
+                                    <div class="message-date" style="margin-right: 5px;">
+                                        <p>Sent</p>
+                                        <p>Today 21:00 PM</p>
+                                    </div>
+                                    <div class="message">
+                                       madlobaaaa
+                                       :))
+                                    </div>
+
+                                </div>
+
                             </div>
+
+                            <div class="bottom">
+                                <div class="copyright">
+                                    SIURPRIZ.GE
+                                </div>
+                                <div class="logo">
+                                    ბრენდის ცხელი ხაზი: <?php echo $this->gift->hot_line ?>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="bottom">
-                            <div class="copyright">
-                                SIURPRIZ.GE
-                            </div>
-                            <div class="logo">
-                                ბრენდის ცხელი ხაზი: <?php echo $this->gift->hot_line ?>
-                            </div>
-                        </div>
+
                     </div>
+
+
+
+
+
+
                 </div>
             </div>
             <div class="step step-5">
@@ -136,7 +205,7 @@
                 <div class="left sides">
                     <div class="info">
                         <p>მაღაზია/ობიექტი <?php echo $this->gift->name ?></p>
-                        <p ng-if="mobile.length > 0">მიმღების მობილური: {{mobile}}</p>
+                        <p ng-if="mobile.length > 0">მიმღების მობილური: +995 {{mobile}}</p>
                         <p ng-if="email.length > 0">მიმღების ელ-ფოსტა: {{email}}</p>
                         <p ng-if="amount.length > 0" style="font-weight: bold;">თანხა: {{amount | currency: ""}} ლარი</p>
                         <p ng-if="amount.length > 0" style="font-weight: bold;">სულ გადასახდელი: {{amount | currency: ""}} ლარი</p>

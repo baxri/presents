@@ -1,19 +1,11 @@
-<?php
-
-defined('_JEXEC') or die;
-
-?>
-
+<?php defined('_JEXEC') or die; ?>
 
 <div class="categories ">
-	<button class="categories-button"><span class="">კატეგორიები</span></button>
+	<button class="categories-button"><span class="">აირჩიე კატეგორიები</span></button>
 </div>
-<div class="categories-block" style="display: none;">
+<div class="categories-block hide" style="display: none;">
 
-	<div class="categories-block-inner">
-
-		<div class="categories-block-inner-content">
-
+	<div class="categories-block-inner" >
 			<ul>
 				<?php foreach( $categories as $category ): ?>
 					<li>
@@ -25,9 +17,6 @@ defined('_JEXEC') or die;
 					</li>
 				<?php endforeach; ?>
 			</ul>
-
-		</div>
-
 	</div>
 
 

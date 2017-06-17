@@ -9,8 +9,8 @@ app.controller('GiftController', ['$scope', '$http', '$location', '$interval',  
     $scope.amount = '';
     $scope.deliver = 0;
 
-    $scope.mobile = '';
-    $scope.email = '';
+    $scope.mobile = '598602084';
+    $scope.email = 'giorgi.bibilashvili89@gmail.cm';
 
     $scope.sender_fullname = '';
     $scope.sender_mobile = '';

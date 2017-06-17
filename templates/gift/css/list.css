@@ -126,21 +126,20 @@ header and footer will hug the whole screen.*/
     position: relative;
     margin-top: 90px;
     width: 100%;
-    height: 600px;
+    height: 95vh;
     background-size: 110% auto;
     background-repeat: no-repeat;
-
 }
 
 .list-banner-bg .bottom-shadow{
     position: absolute;
-    height: 200px;
+    height: 10px;
     width: 100%;
     bottom: 0px;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
-    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.50) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.50) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.50) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.20) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.20) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.20) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
 
 
@@ -157,6 +156,21 @@ header and footer will hug the whole screen.*/
     height: 400px;
     z-index: 555;
 
+}
+
+.arrow-slide-to{
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 100px;
+    left: 48%;
+    cursor: pointer;
+
+    background-image: url("../../../images/sprite.png");
+    background-position: -175px 0px;
+    background-repeat: no-repeat;
+    z-index: 888;
 }
 
 .list-banner .right-medium-text{
@@ -179,17 +193,36 @@ header and footer will hug the whole screen.*/
     font-size: 30pt;
     width: auto;
     height: 100px;
-
+    font-weight: bold;
     font-family: 'light-alokado' !important;
 }
 
 .banner-with-love{
+    font-family: 'alokado' !important;
     position: absolute;
     left: 10px;
     bottom: 15%;
     width: auto;
+}
+
+.list-banner a{
+    display: block;
+    position: absolute;
+    left: 10px;
+    bottom: 0px;
+    font-size: 10pt;
+    height: 30px;
+    font-family: 'alokado' !important;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #3B5998;
+    text-shadow: none;
+    width: 170px;
 
 }
+
 
 .banner-with-love span{
     display: block;
