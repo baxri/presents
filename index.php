@@ -1,4 +1,8 @@
 <?php
+
+phpinfo();
+die;
+
 /**
  * @package    Joomla.Site
  *
