@@ -57,8 +57,7 @@ RewriteRule .* index.php [F]
 # is not directly related to physical file paths.
 # Update Your Joomla! Directory (just / for root).
 ##
-
-# RewriteBase /
+RewriteBase /
 
 ## Begin - Joomla! core SEF Section.
 #
