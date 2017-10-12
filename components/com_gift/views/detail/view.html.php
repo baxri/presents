@@ -19,7 +19,7 @@ class GiftViewDetail extends JViewLegacy
 			$app->redirect('index.php');
 		}
 
-		$doc =& JFactory::getDocument();
+		$doc = JFactory::getDocument();
 		$doc->addStyleSheet( $this->baseurl.'/templates/gift/css/brand.css' );
 
 		$this->months = array();
