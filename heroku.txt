@@ -1,0 +1,17 @@
+comand: heroku info
+
+Addons:         cleardb:ignite
+Auto Cert Mgmt: false
+Dynos:
+Git URL:        https://git.heroku.com/siurpriz.git
+Owner:          giorgi.bibilashvili89@gmail.com
+Region:         us
+Repo Size:      0 B
+Slug Size:      0 B
+Stack:          heroku-16
+Web URL:        https://siurpriz.herokuapp.com/
+
+
+comand heroku config:get CLEARDB_DATABASE_URL
+
+mysql://be55a39419b52c:b98c3df8@us-cdbr-iron-east-05.cleardb.net/heroku_d7f8b49b9b90368?reconnect=true

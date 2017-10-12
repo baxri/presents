@@ -12,10 +12,17 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'pdomysql';
-	public $host = 'localhost';
-	public $user = 'root';
-	public $password = '';
-	public $db = 'presents';
+
+//    public $host = 'localhost';
+//	public $db = 'presents';
+//	public $user = 'root';
+//	public $password = '';
+
+    public $host = 'us-cdbr-iron-east-05.cleardb.net';
+	public $db = 'heroku_d7f8b49b9b90368';
+    public $user = 'be55a39419b52c';
+	public $password = 'b98c3df8';
+
 	public $dbprefix = 'gift_';
 	public $live_site = '';
 	public $secret = '7ytONRzUZFqcnhVV';
