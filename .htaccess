@@ -75,4 +75,4 @@ RewriteRule .* index.php [L]
 #
 ## End - Joomla! core SEF Section.
 
-php_flag magic_quotes_gpc off
+#php_flag magic_quotes_gpc off
